@@ -373,6 +373,12 @@
               "anker": "a4"
             },
             {
+              "code": "A5",
+              "art": "Pflicht",
+              "titel": "Zytostatika in der Krebstherapie",
+              "anker": "a5"
+            },
+            {
               "code": "BW",
               "art": "Basiswissen",
               "titel": "Mitose und Kennzeichen des Lebens",
@@ -432,6 +438,12 @@
               "art": "Pflicht",
               "titel": "Mitose und Meiose im Vergleich",
               "anker": "a4"
+            },
+            {
+              "code": "A5",
+              "art": "Pflicht",
+              "titel": "Von der Urspermienzelle zum Spermium: die DNA-Masse",
+              "anker": "a5"
             },
             {
               "code": "W1",
@@ -516,7 +528,7 @@
             {
               "code": "BW",
               "art": "Basiswissen",
-              "titel": "Basiskompetenz: Vom Diagramm zur Hypothese",
+              "titel": "Vom Diagramm zur Hypothese",
               "anker": "abw"
             },
             {
@@ -530,6 +542,12 @@
               "art": "Pflicht",
               "titel": "Pränataldiagnostik: invasive und nicht-invasive Verfahren",
               "anker": "a5"
+            },
+            {
+              "code": "A6",
+              "art": "Pflicht",
+              "titel": "Down-Syndrom in mehreren Generationen",
+              "anker": "a6"
             },
             {
               "code": "W1",
