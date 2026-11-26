@@ -330,12 +330,6 @@
               "anker": "a4"
             },
             {
-              "code": "A5",
-              "art": "Pflicht",
-              "titel": "Eine Kröte mit drei Chromosomensätzen",
-              "anker": "a5"
-            },
-            {
               "code": "W1",
               "art": "Wahl",
               "titel": "Antworten aus einer Stegreifaufgabe",
@@ -346,6 +340,12 @@
               "art": "Wahl",
               "titel": "Telomere und Altern",
               "anker": "aw2"
+            },
+            {
+              "code": "W3",
+              "art": "Wahl",
+              "titel": "Eine Kröte mit drei Chromosomensätzen",
+              "anker": "aw3"
             }
           ]
         },
@@ -379,12 +379,6 @@
               "anker": "a4"
             },
             {
-              "code": "A5",
-              "art": "Pflicht",
-              "titel": "Zytostatika in der Krebstherapie",
-              "anker": "a5"
-            },
-            {
               "code": "BW",
               "art": "Basiswissen",
               "titel": "Mitose und Kennzeichen des Lebens",
@@ -407,6 +401,12 @@
               "art": "Wahl",
               "titel": "Fehler im Text",
               "anker": "aw3"
+            },
+            {
+              "code": "W4",
+              "art": "Wahl",
+              "titel": "Zytostatika in der Krebstherapie",
+              "anker": "aw4"
             }
           ]
         },
@@ -446,12 +446,6 @@
               "anker": "a4"
             },
             {
-              "code": "A5",
-              "art": "Pflicht",
-              "titel": "Von der Urspermienzelle zum Spermium: die DNA-Masse",
-              "anker": "a5"
-            },
-            {
               "code": "W1",
               "art": "Wahl",
               "titel": "Fehler im Text",
@@ -462,6 +456,12 @@
               "art": "Wahl",
               "titel": "Meiose bei polyploiden Zellen",
               "anker": "aw2"
+            },
+            {
+              "code": "W3",
+              "art": "Wahl",
+              "titel": "Von der Urspermienzelle zum Spermium: die DNA-Masse",
+              "anker": "aw3"
             }
           ]
         },
@@ -495,12 +495,6 @@
               "anker": "abw"
             },
             {
-              "code": "A4",
-              "art": "Pflicht",
-              "titel": "Honigbienen: besonders ähnliche Schwestern",
-              "anker": "a4"
-            },
-            {
               "code": "W1",
               "art": "Wahl",
               "titel": "Kombinationen und Weltbevölkerung",
@@ -511,6 +505,12 @@
               "art": "Wahl",
               "titel": "Das Meiose-Spiel",
               "anker": "aw2"
+            },
+            {
+              "code": "W3",
+              "art": "Wahl",
+              "titel": "Honigbienen: besonders ähnliche Schwestern",
+              "anker": "aw3"
             }
           ]
         },
@@ -556,12 +556,6 @@
               "anker": "a5"
             },
             {
-              "code": "A6",
-              "art": "Pflicht",
-              "titel": "Down-Syndrom in mehreren Generationen",
-              "anker": "a6"
-            },
-            {
               "code": "W1",
               "art": "Wahl",
               "titel": "Triple-X-Syndrom",
@@ -590,6 +584,12 @@
               "art": "Wahl",
               "titel": "Polkörperdiagnostik",
               "anker": "aw5"
+            },
+            {
+              "code": "W6",
+              "art": "Wahl",
+              "titel": "Down-Syndrom in mehreren Generationen",
+              "anker": "aw6"
             }
           ]
         }
