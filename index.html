@@ -1,6 +1,112 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SOL-Hilfen Biologie</title>
-<style>body{font-family:system-ui,sans-serif;max-width:40rem;margin:3rem auto;padding:0 1rem;line-height:1.5}</style></head>
-<body><h1>SOL-Hilfen Biologie</h1><p>Gestufte Hilfen zu den SOL-Lerneinheiten. Die Seiten werden über die QR-Codes im Material geöffnet.</p>
-<p><small>Material: M. Oster-Brandt, FOS BOS Würzburg (erstellt mit KI-Unterstützung)</small></p></body></html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestufte Hilfen · Übersicht</title>
+<style>
+:root{--ink:#1d2433;--mut:#5d6677;--line:#e3e6ee;--bg:#f6f7fa;--card:#fff;--blue:#1f5f8b;--blue-l:#e6f0f7;--red:#b42335;--orange:#c9711a;--green:#2e7d4f;--purple:#5b3f99}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+header{background:var(--blue);color:#fff;padding:18px 20px 16px}
+header h1{margin:0;font-size:1.35rem;letter-spacing:.01em}
+header p{margin:4px 0 0;font-size:.88rem;opacity:.9}
+main{max-width:980px;margin:0 auto;padding:16px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:16px;position:sticky;top:0;z-index:2}
+.bar input{flex:1 1 220px;padding:8px 11px;border:1px solid var(--line);border-radius:8px;font:inherit}
+.grp{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.grp span{font-size:.78rem;color:var(--mut);margin-right:2px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:16px;padding:5px 11px;font:inherit;font-size:.85rem;cursor:pointer;color:var(--ink)}
+.chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.stats{font-size:.85rem;color:var(--mut);margin:0 2px 12px}
+h2.fach{font-size:1.15rem;margin:22px 0 8px;color:var(--blue)}
+h3.lp{font-size:.95rem;margin:14px 0 8px;color:var(--mut);font-weight:600;text-transform:none}
+.unit{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.unit>.head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+.unit .t{font-weight:700;font-size:1.02rem;margin-right:auto}
+.tag{font-size:.75rem;padding:2px 8px;border-radius:10px;background:var(--blue-l);color:var(--blue);font-weight:600}
+.tag.sol{background:#efe9f8;color:var(--purple)}
+.tag.ur{background:#e7f4ec;color:var(--green)}
+details.mod{border-top:1px solid var(--line)}
+details.mod:first-of-type{border-top:0}
+details.mod summary{list-style:none;cursor:pointer;padding:10px 14px;display:flex;gap:10px;align-items:center}
+details.mod summary::-webkit-details-marker{display:none}
+details.mod summary:before{content:"▸";color:var(--mut);width:1em}
+details.mod[open] summary:before{content:"▾"}
+.mn{font-weight:700;color:var(--blue);min-width:4.2em}
+.mt{flex:1}
+.cnt{font-size:.78rem;color:var(--mut)}
+.st{font-size:.72rem;padding:2px 7px;border-radius:9px;background:#eee;color:#666}
+.st.ok{background:#e7f4ec;color:var(--green)}
+.st.no{background:#fdecee;color:var(--red)}
+a.open{font-size:.82rem;color:var(--blue);text-decoration:none;font-weight:600;white-space:nowrap}
+ul.tasks{list-style:none;margin:0;padding:0 14px 12px 42px;display:grid;gap:4px}
+ul.tasks a{display:flex;gap:10px;align-items:baseline;text-decoration:none;color:var(--ink);padding:3px 6px;border-radius:6px}
+ul.tasks a:hover{background:var(--bg)}
+.code{font-weight:700;min-width:4.5em;font-size:.85rem}
+.k-Pflicht .code{color:var(--red)}.k-Basiswissen .code{color:var(--orange)}.k-Wahl .code{color:var(--green)}
+.empty{color:var(--mut);padding:20px;text-align:center}
+footer{max-width:980px;margin:10px auto 30px;padding:0 16px;font-size:.78rem;color:var(--mut)}
+</style>
+</head>
+<body>
+<header>
+<h1>Gestufte Hilfen · Übersicht</h1>
+<p>Alle Hilfeseiten nach Fach, Lehrplanthema und Unterrichtsform – mit Direktlink zu jeder Aufgabe.</p>
+</header>
+<main>
+<div class="bar">
+  <input id="q" type="search" placeholder="Suchen, z. B. Phagozytose, Meiose, Antibiotika …" aria-label="Suchen">
+  <div class="grp" id="fFach"><span>Fach</span></div>
+  <div class="grp" id="fArt"><span>Form</span></div>
+  <div class="grp" id="fKlasse"><span>Klasse</span></div>
+</div>
+<p class="stats" id="stats"></p>
+<div id="out"></div>
+</main>
+<footer id="foot"></footer>
+<script>
+const state={fach:'Alle',art:'Alle',klasse:'Alle',q:''};
+const ART={SOL:'SOL',Unterricht:'normaler Unterricht'};
+let K=null; const status={};
+function chips(id,key,vals){const el=document.getElementById(id);el.querySelectorAll('button').forEach(b=>b.remove());['Alle',...vals].forEach(v=>{const b=document.createElement('button');b.className='chip'+(state[key]===v?' on':'');b.textContent=key==='art'&&ART[v]?ART[v]:v;b.onclick=()=>{state[key]=v;render()};el.appendChild(b)})}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+async function check(url){if(url in status)return;status[url]='?';try{const r=await fetch(url,{method:'HEAD',cache:'no-store'});status[url]=r.ok?'ok':'no'}catch(e){status[url]='no'}document.querySelectorAll('[data-st="'+url+'"]').forEach(setSt)}
+function setSt(el){const s=status[el.dataset.st];el.className='st'+(s==='ok'?' ok':s==='no'?' no':'');el.textContent=s==='ok'?'online':s==='no'?'noch nicht online':'…'}
+function render(){
+  const E=K.einheiten;
+  chips('fFach','fach',[...new Set(E.map(e=>e.fach))]);
+  chips('fArt','art',[...new Set(E.map(e=>e.art))]);
+  chips('fKlasse','klasse',[...new Set(E.map(e=>e.klasse))]);
+  const q=state.q.toLowerCase().trim();
+  const sel=E.filter(e=>(state.fach==='Alle'||e.fach===state.fach)&&(state.art==='Alle'||e.art===state.art)&&(state.klasse==='Alle'||e.klasse===state.klasse));
+  let html='',nU=0,nM=0,nA=0;
+  const byF={};sel.forEach(e=>{(byF[e.fach]??={});(byF[e.fach][e.lehrplan]??=[]).push(e)});
+  for(const f of Object.keys(byF).sort()){
+    let fh='';
+    for(const lp of Object.keys(byF[f]).sort()){
+      let lh='';
+      for(const e of byF[f][lp]){
+        const mods=e.module.map(m=>{const hit=t=>!q||t.toLowerCase().includes(q);const tasks=m.aufgaben.filter(a=>hit(a.titel+' '+a.code)||hit(m.titel)||hit(e.titel));return {m,tasks,show:!q||hit(m.titel)||hit(e.titel)||tasks.length}}).filter(x=>x.show);
+        if(!mods.length)continue; nU++;
+        lh+=`<div class="unit"><div class="head"><span class="t">${esc(e.titel)}</span><span class="tag ${e.art==='SOL'?'sol':'ur'}">${esc(ART[e.art]||e.art)}</span><span class="tag">${esc(e.klasse)}</span><span class="tag">${esc(e.schuljahr)}</span></div>`;
+        for(const {m,tasks} of mods){nM++;nA+=tasks.length;const url=m.url;
+          lh+=`<details class="mod"${q?' open':''}><summary><span class="mn">${m.nr?'Modul '+m.nr:'Extra'}</span><span class="mt">${esc(m.titel)}</span><span class="cnt">${m.aufgaben.length?m.aufgaben.length+' Hilfen':''}</span><span class="st" data-st="${esc(url)}"></span><a class="open" href="${esc(url)}" target="_blank" rel="noopener">öffnen ↗</a></summary>`;
+          if(tasks.length)lh+='<ul class="tasks">'+tasks.map(a=>`<li class="k-${esc(a.art)}"><a href="${esc(url)}#${esc(a.anker)}" target="_blank" rel="noopener"><span class="code">${esc(a.code)}</span><span>${esc(a.titel)}</span></a></li>`).join('')+'</ul>';
+          lh+='</details>'}
+        lh+='</div>';
+      }
+      if(lh)fh+=`<h3 class="lp">${esc(lp)}</h3>`+lh;
+    }
+    if(fh)html+=`<h2 class="fach">${esc(f)}</h2>`+fh;
+  }
+  document.getElementById('out').innerHTML=html||'<p class="empty">Keine Treffer.</p>';
+  document.getElementById('stats').textContent=`${nU} Einheit${nU===1?'':'en'} · ${nM} Hilfeseiten · ${nA} Aufgaben mit Hilfen`;
+  document.querySelectorAll('[data-st]').forEach(el=>{setSt(el);check(el.dataset.st)});
+}
+document.getElementById('q').addEventListener('input',e=>{state.q=e.target.value;render()});
+fetch('katalog.json',{cache:'no-store'}).then(r=>r.json()).then(k=>{K=k;document.getElementById('foot').textContent='Stand: '+new Date(k.stand).toLocaleDateString('de-DE')+' · Material: '+k.autorin;render()}).catch(()=>{document.getElementById('out').innerHTML='<p class="empty">Katalog konnte nicht geladen werden.</p>'});
+</script>
+</body>
+</html>
