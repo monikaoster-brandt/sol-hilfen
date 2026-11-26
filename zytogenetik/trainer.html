@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zytogenetik-Trainer · SOL Biologie BOS 12</title>
+<style>
+:root{--teal:#1f6f78;--teal-l:#e3f1f2;--purp:#5b3f99;--purp-l:#efe9f8;--or:#c9711a;--red:#d64545;--blue:#3b6fd1;--ok:#2e8b57;--bad:#c0392b;--g:#666}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f7f7fb;color:#222;line-height:1.45}
+header{background:var(--purp);color:#fff;padding:12px 16px}
+header h1{margin:0;font-size:1.15rem}
+header p{margin:2px 0 0;font-size:.8rem;opacity:.85}
+nav{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px;background:#fff;border-bottom:1px solid #ddd;position:sticky;top:0;z-index:5}
+nav a{padding:7px 11px;border-radius:18px;background:var(--purp-l);color:var(--purp);text-decoration:none;font-size:.88rem;font-weight:600}
+nav a.on{background:var(--purp);color:#fff}
+main{max-width:980px;margin:0 auto;padding:14px}
+section{display:none}section.on{display:block}
+h2{color:var(--purp);font-size:1.15rem;margin:.2em 0 .4em}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:14px;margin-bottom:14px}
+.hint{font-size:.88rem;color:var(--g)}
+button{font:inherit;cursor:pointer;border:0;border-radius:9px;padding:8px 13px;background:var(--teal);color:#fff;font-weight:600}
+button.sec{background:#e8eaee;color:#333}
+button:disabled{opacity:.45;cursor:default}
+.opt:disabled{opacity:1}
+.fb{padding:8px 11px;border-radius:8px;margin-top:8px;font-size:.92rem}
+.fb.ok{background:#e2f3e8;color:#1d5e38}.fb.bad{background:#fbe5e2;color:#8c2a1f}.fb.info{background:var(--teal-l);color:#174f55}
+/* Karyogramm */
+#pool{display:flex;flex-wrap:wrap;gap:4px;min-height:90px;padding:8px;background:#fafafa;border:1px dashed #bbb;border-radius:10px}
+.chr{cursor:pointer;border-radius:6px;padding:2px;display:inline-flex;align-items:flex-end}
+.chr.sel{outline:3px solid var(--or);background:#fff3e3}
+#slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px;margin-top:10px}
+.slot{border:1px solid #ccd;border-radius:8px;min-height:76px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;background:#fff;cursor:pointer}
+.slot .in{display:flex;gap:1px;align-items:flex-end;min-height:56px}
+.slot .lb{font-size:.75rem;color:var(--g)}
+.slot.done{background:#eef8f1;border-color:#9fd3b0}
+.shake{animation:sh .35s}@keyframes sh{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+/* Phasen */
+.cards{display:flex;flex-wrap:wrap;gap:8px}
+.pc{width:120px;background:#fff;border:2px solid #dde;border-radius:10px;padding:5px;text-align:center;cursor:pointer;font-size:.78rem}
+.pc.used{opacity:.3;cursor:default}
+.seq{display:flex;flex-wrap:wrap;gap:6px;min-height:150px;padding:8px;border:1px dashed #bbb;border-radius:10px;background:#fafafa;margin-top:8px}
+.seq .pc{cursor:default;border-color:#9fd3b0}
+.seq .pc.wrong{border-color:var(--bad)}
+/* Meiose */
+.mrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:8px 0}
+.stage{font-weight:700;color:var(--teal)}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
+select{font:inherit;padding:6px;border-radius:8px;border:1px solid #bbb}
+.types{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tchip{border:1px solid #ccd;border-radius:7px;padding:2px 6px;background:#fff}
+/* Quiz */
+.opt{display:block;width:100%;text-align:left;margin:6px 0;background:#fff;color:#222;border:2px solid #dde;font-weight:500}
+.opt.right{border-color:var(--ok);background:#e9f6ee}.opt.wrong{border-color:var(--bad);background:#fbecea}
+.prog{height:8px;background:#e5e5ef;border-radius:5px;overflow:hidden;margin:6px 0 10px}.prog div{height:100%;background:var(--teal)}
+footer{font-size:.75rem;color:var(--g);text-align:center;padding:16px}
+svg text{font-family:system-ui,sans-serif}
+</style>
+</head>
+<body>
+<header><h1>Zytogenetik-Trainer</h1><p>SOL Biologie · BOS 12 · FOS BOS Würzburg</p></header>
+<nav>
+ <a href="#karyogramm" data-s="karyogramm">Karyogramm-Puzzle</a>
+ <a href="#zellzyklus" data-s="zellzyklus">Phasen-Sortierer</a>
+ <a href="#meiose" data-s="meiose">Meiose-Labor</a>
+ <a href="#detektiv" data-s="detektiv">Karyogramm-Detektiv</a>
+ <a href="#quiz" data-s="quiz">Quiz</a>
+</nav>
+<main>
+<!-- KARYOGRAMM -->
+<section id="s-karyogramm">
+ <div class="card"><h2>Karyogramm-Puzzle (Modul 1)</h2>
+  <p class="hint">Tippen Sie ein Chromosom an und danach das passende Feld. Ordnen Sie nach <b>Größe</b>, <b>Lage des Centromers</b> (gelber Punkt) und <b>Bandenmuster</b>. Die Gonosomen kommen in das Feld „X/Y“.</p>
+  <div id="kstat" class="fb info">0 von 46 Chromosomen eingeordnet</div>
+  <div id="pool"></div>
+  <div id="slots"></div>
+  <div id="kfb"></div>
+  <div class="ctrl" style="margin-top:10px"><button id="knew">Neues Karyogramm</button><button class="sec" id="khelp">Tipp: ein Paar automatisch einordnen</button></div>
+  <div id="kq"></div>
+ </div>
+</section>
+<!-- ZELLZYKLUS -->
+<section id="s-zellzyklus">
+ <div class="card"><h2>Phasen-Sortierer (Modul 2)</h2>
+  <p class="hint">Teil 1: Tippen Sie die Stadien des Zellzyklus in der richtigen Reihenfolge an – beginnend mit der G1-Phase. Die Zelle hat 2n = 4 Chromosomen.</p>
+  <div class="cards" id="pcards"></div>
+  <div class="seq" id="pseq"></div>
+  <div id="pfb"></div>
+  <div class="ctrl"><button class="sec" id="preset">Neu mischen</button></div>
+ </div>
+ <div class="card" id="zcard"><h2>Teil 2: Zustandsformen</h2><p class="hint">Welche Zustandsform haben die Chromosomen im jeweiligen Stadium?</p><div id="zq"></div></div>
+</section>
+<!-- MEIOSE -->
+<section id="s-meiose">
+ <div class="card"><h2>Meiose-Labor (Module 3 bis 5)</h2>
+  <p class="hint">Rot = Chromosom von der Mutter, blau = vom Vater. Klicken Sie sich mit „Weiter“ durch die Meiose. In der Metaphase I können Sie die Lage jedes Paares ändern (Zufallsverteilung). Probieren Sie auch Crossing-over und Non-Disjunction aus.</p>
+  <div class="ctrl">
+   <label>Chromosomenpaare <select id="mpairs"><option>2</option><option>3</option></select></label>
+   <label><input type="checkbox" id="mco"> Crossing-over (Paar 1)</label>
+   <label>Non-Disjunction <select id="mnd"><option value="0">keine</option><option value="1">in Reduktionsteilung (Paar 1)</option><option value="2">in Äquationsteilung (Paar 1)</option></select></label>
+  </div>
+  <div class="mrow"><span class="stage" id="mstage"></span></div>
+  <div id="mview" style="overflow-x:auto"></div>
+  <div id="mtext" class="fb info"></div>
+  <div class="ctrl"><button class="sec" id="mback">◀ Zurück</button><button id="mnext">Weiter ▶</button><button class="sec" id="mrand">Zufällige Anordnung</button></div>
+  <div class="card" style="background:#fafafa;margin-top:10px"><b>Gefundene Keimzelltypen (ohne Crossing-over / Non-Disjunction):</b> <span id="mcount"></span><div class="types" id="mtypes"></div></div>
+ </div>
+</section>
+<!-- DETEKTIV -->
+<section id="s-detektiv">
+ <div class="card"><h2>Karyogramm-Detektiv (Modul 5)</h2>
+  <p class="hint">Analysieren Sie das Karyogramm. Zählen Sie die Chromosomen und betrachten Sie die Gonosomen genau.</p>
+  <div id="dk" style="overflow-x:auto"></div>
+  <div id="dq"></div>
+  <div class="ctrl"><button id="dnew">Nächster Fall</button><span class="hint" id="dscore"></span></div>
+ </div>
+</section>
+<!-- QUIZ -->
+<section id="s-quiz">
+ <div class="card"><h2>Quiz</h2>
+  <div class="ctrl" id="qsel"></div>
+  <div id="qbox"></div>
+ </div>
+</section>
+</main>
+<footer>© Monika Oster-Brandt · FOS BOS Würzburg · erstellt mit KI-Unterstützung · Es werden keine Daten gespeichert oder übertragen.</footer>
+<script>
+const QUIZ = {"1": [["Woraus besteht ein Nucleosom?", ["DNA, die um Histone gewickelt ist", "zwei Schwesterchromatiden", "RNA und Ribosomen", "Centromer und Telomer"], "Denken Sie an die „Lockenwickler“ der DNA."], ["Was verbindet die beiden Schwesterchromatiden eines Zwei-Chromatid-Chromosoms?", ["das Centromer", "das Telomer", "die Kernhülle", "der Spindelapparat"], "Es ist die Einschnürung des Chromosoms."], ["Wie viele Autosomen besitzt eine menschliche Körperzelle?", ["44", "46", "22", "23"], "46 Chromosomen insgesamt – davon sind zwei Gonosomen."], ["Welche Aussage über homologe Chromosomen ist richtig?", ["Sie tragen Informationen für die gleichen Merkmale, eines stammt von der Mutter, eines vom Vater.", "Sie sind genetisch identisch.", "Sie sind die beiden Chromatiden eines Chromosoms.", "Sie kommen nur in Keimzellen vor."], "Homolog bedeutet nicht identisch."], ["Nach welchen Kriterien werden Chromosomen im Karyogramm geordnet?", ["Größe, Lage des Centromers, Bandenmuster", "Farbe, Form, Gewicht", "Anzahl der Gene und Telomerlänge", "Herkunft von Mutter oder Vater"], "Drei Merkmale, die man im Mikroskopbild erkennt."], ["Welcher Karyotyp gehört zu einem gesunden Mann?", ["46,XY", "46,XX", "47,XXY", "23,Y"], "Gesamtzahl, Komma, Gonosomen."]], "2": [["In welcher Phase des Zellzyklus wird die DNA repliziert?", ["S-Phase", "G1-Phase", "Prophase", "Anaphase"], "S steht für Synthese."], ["In welcher Mitosephase ordnen sich die Chromosomen in der Äquatorialebene an?", ["Metaphase", "Prophase", "Anaphase", "Telophase"], "Meta – in der Mitte."], ["Was wird in der Anaphase der Mitose getrennt?", ["die Schwesterchromatiden", "die homologen Chromosomen", "die Zellorganellen", "die Kernhüllen"], "Danach liegen Ein-Chromatid-Chromosomen vor."], ["Welche Zustandsform haben die Chromosomen in der G2-Phase?", ["Zwei-Chromatid-Chromosomen", "Ein-Chromatid-Chromosomen", "maximal verdichtete Ein-Chromatid-Chromosomen", "keine Chromosomen vorhanden"], "Die Replikation ist bereits abgeschlossen."], ["Wie viele Chromatiden enthält eine menschliche Zelle in der Metaphase der Mitose?", ["92", "46", "23", "184"], "46 Chromosomen mit je zwei Chromatiden."], ["Wofür ist die Mitose NICHT verantwortlich?", ["Bildung haploider Keimzellen", "Wachstum", "Wundheilung", "Vermehrung durch Stecklinge"], "Keimzellen entstehen durch eine andere Teilungsform."]], "3": [["Was wird in der Anaphase I der Meiose getrennt?", ["die homologen Chromosomen", "die Schwesterchromatiden", "die Telomere", "Eizelle und Polkörperchen"], "Reduktionsteilung = Reduktionsteilung."], ["Welchen Chromosomensatz haben die Zellen am Ende der Reduktionsteilung?", ["haploid mit Zwei-Chromatid-Chromosomen", "diploid mit Zwei-Chromatid-Chromosomen", "haploid mit Ein-Chromatid-Chromosomen", "diploid mit Ein-Chromatid-Chromosomen"], "Der Satz ist schon halbiert, die Chromatiden sind noch verbunden."], ["Was ist eine Tetrade?", ["ein Paar homologer Zwei-Chromatid-Chromosomen in der Prophase I", "vier Keimzellen nach der Meiose", "ein Chromosom mit vier Armen", "vier Polkörperchen"], "Tetra = vier Chromatiden."], ["Wie viele funktionsfähige Eizellen entstehen aus einer Ureizelle?", ["1", "2", "4", "8"], "Die anderen Zellen heißen Polkörperchen."], ["Wann wird die Äquationsteilung bei der Eizellbildung abgeschlossen?", ["nach dem Eindringen eines Spermiums", "vor der Geburt", "mit Beginn der Pubertät", "beim Eisprung"], "Ohne Befruchtung wird sie nicht beendet."], ["Welche Aussage trifft auf die Meiose, aber nicht auf die Mitose zu?", ["Homologe Chromosomen paaren sich.", "Schwesterchromatiden werden getrennt.", "Ein Spindelapparat wird gebildet.", "Die Kernhülle löst sich auf."], "Nur in der Prophase I."]], "4": [["Wie viele verschiedene Keimzelltypen sind beim Menschen allein durch Zufallsverteilung möglich?", ["2²³ ≈ 8,4 Millionen", "23² = 529", "46", "2 · 23 = 46"], "Pro Chromosomenpaar zwei Möglichkeiten – 23 Paare."], ["In welcher Phase findet das Crossing-over statt?", ["Prophase I", "Metaphase II", "Anaphase I", "Interphase"], "Wenn die Homologen eng gepaart sind."], ["Zwischen welchen Chromatiden findet das Crossing-over statt?", ["Nicht-Schwesterchromatiden homologer Chromosomen", "Schwesterchromatiden", "Chromatiden nicht homologer Chromosomen", "Chromatiden von Eizelle und Spermium"], "Ein Austausch zwischen Schwesterchromatiden würde nichts verändern."], ["Wie nennt man die Überkreuzungsstelle beim Crossing-over?", ["Chiasma", "Centromer", "Telomer", "Tetrade"], "Griechischer Buchstabe χ."], ["Warum sind eineiige Zwillinge genetisch identisch?", ["Sie entstehen aus einer Zygote durch Mitosen.", "Sie entstehen aus zwei Eizellen und einem Spermium.", "Bei ihnen findet kein Crossing-over statt.", "Sie erhalten nur mütterliche Chromosomen."], "Nach der Befruchtung ist keine Meiose mehr beteiligt."], ["Die zufällige Verteilung ganzer Chromosomen bezeichnet man als …", ["interchromosomale Rekombination", "intrachromosomale Rekombination", "Translokation", "Non-Disjunction"], "inter = zwischen (den Chromosomen)."]], "5": [["Welcher Karyotyp liegt beim Klinefelter-Syndrom vor?", ["47,XXY", "45,X", "47,XX,+21", "47,XXX"], "Männlich – aber ein Gonosom zu viel."], ["Was versteht man unter Non-Disjunction?", ["die Nicht-Trennung von Chromosomen bzw. Chromatiden in der Meiose", "den Verlust eines Chromosomenabschnitts", "den Austausch zwischen Nicht-Schwesterchromatiden", "die Verschmelzung zweier Spermien"], "disjunction = Trennung."], ["Eine Non-Disjunction in der Äquationsteilung betrifft …", ["zwei der vier Keimzellen", "alle vier Keimzellen", "keine Keimzelle", "nur die Polkörperchen"], "Nur in einer der beiden Zellen werden die Schwesterchromatiden nicht getrennt."], ["Beim Katzenschrei-Syndrom fehlt ein Stück von Chromosom 5. Welcher Mutationstyp liegt vor?", ["Deletion (Chromosomenmutation)", "Duplikation (Chromosomenmutation)", "Trisomie (Genommutation)", "Punktmutation (Genmutation)"], "Etwas fehlt."], ["Welche Mutation verändert die Anzahl der Chromosomen?", ["Genommutation", "Chromosomenmutation", "Genmutation", "Inversion"], "Genom = gesamter Chromosomenbestand."], ["Warum steigt das Risiko für Trisomie 21 mit dem Alter der Mutter?", ["Die Eizellen verharren jahrzehntelang in der Prophase I.", "Ältere Frauen bilden mehr Eizellen.", "Ältere Frauen haben mehr Chromosomen.", "Die Spermien werden mit dem Alter der Mutter schlechter."], "Denken Sie an den Zeitablauf der Oogenese."], ["Welche Aussage zum nicht-invasiven Pränataltest (NIPT) ist richtig?", ["Er liefert eine Wahrscheinlichkeit; ein auffälliges Ergebnis wird invasiv abgeklärt.", "Er liefert ein Karyogramm des Kindes und damit eine sichere Diagnose.", "Er erfordert eine Punktion der Fruchtblase.", "Er ist mit einem erhöhten Fehlgeburtsrisiko verbunden."], "Untersucht wird nur Blut der Mutter."], ["Welches Verfahren der Pränataldiagnostik ist invasiv?", ["Amniozentese", "Bluttest (NIPT)", "Ultraschall", "Ersttrimester-Screening"], "Invasiv = Eingriff mit einer Hohlnadel in die Gebärmutter."]]};
+const $ = s => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const LEN=[249,243,198,190,181,171,159,145,138,134,135,133,114,107,102,90,83,80,59,64,47,51], CI=[.49,.39,.46,.27,.27,.35,.36,.31,.35,.30,.40,.27,.15,.16,.17,.41,.31,.23,.47,.45,.26,.27];
+const XG={len:156,ci:.39}, YG={len:57,ci:.30};
+function rng(seed){let s=seed*9301+49297;return()=>{s=(s*9301+49297)%233280;return s/233280}}
+function bands(seed){const r=rng(seed+7),out=[];let y=.06;while(y<.94){const h=.04+r()*.05;if(r()<.5)out.push([y,Math.min(y+h,.94)]);y+=h+.03+r()*.05}return out}
+function info(id){ if(id==="X")return{len:XG.len,ci:XG.ci,seed:100}; if(id==="Y")return{len:YG.len,ci:YG.ci,seed:101}; return{len:LEN[id-1],ci:CI[id-1],seed:id}}
+// Chromosom als SVG (Zwei-Chromatid, Metaphase)
+function chromSVG(id,scale=0.28,fill="#ececec"){
+ const {len,ci,seed}=info(id); const H=Math.max(len*scale,14), w=6, W=2*w+4;
+ const top=2, cen=top+Math.max(ci*H,5), bot=top+H;
+ const svg=document.createElementNS(NS,"svg"); svg.setAttribute("width",W); svg.setAttribute("height",H+4);
+ let s="";
+ for(const x of [2,2+w]){
+  s+=`<rect x="${x}" y="${top}" width="${w}" height="${cen-top-1}" rx="3" fill="${fill}" stroke="#333" stroke-width="1"/>`;
+  s+=`<rect x="${x}" y="${cen+1}" width="${w}" height="${bot-cen-1}" rx="3" fill="${fill}" stroke="#333" stroke-width="1"/>`;
+  for(const [a,b] of bands(seed)){let ya=top+a*H, yb=top+b*H; ya=Math.max(ya,top+3); yb=Math.min(yb,bot-3); if(yb-ya<1)continue; if(ya<cen+2&&yb>cen-2)continue; s+=`<rect x="${x+1}" y="${ya}" width="${w-2}" height="${yb-ya}" fill="#333"/>`}
+ }
+ s+=`<circle cx="${2+w}" cy="${cen}" r="2.6" fill="#f2c14e" stroke="#333" stroke-width=".7"/>`;
+ svg.innerHTML=s; return svg;
+}
+// ---------- Navigation
+function show(){const h=(location.hash||"#karyogramm").slice(1).split("-")[0]; document.querySelectorAll("section").forEach(s=>s.classList.toggle("on",s.id==="s-"+h)); document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.dataset.s===h)); if(!document.querySelector("section.on")){$("#s-karyogramm").classList.add("on")}}
+window.addEventListener("hashchange",show);
+// ---------- KARYOGRAMM-PUZZLE
+let kSel=null, kPlaced=0, kSex="XY";
+function kInit(){
+ kSel=null;kPlaced=0;kSex=Math.random()<.5?"XX":"XY";$("#kfb").innerHTML="";$("#kq").innerHTML="";
+ const items=[];for(let i=1;i<=22;i++){items.push(i,i)} items.push("X"); items.push(kSex==="XX"?"X":"Y");
+ items.sort(()=>Math.random()-.5);
+ const pool=$("#pool");pool.innerHTML="";
+ items.forEach((id,k)=>{const d=document.createElement("div");d.className="chr";d.dataset.id=id;d.appendChild(chromSVG(id));d.onclick=()=>{document.querySelectorAll(".chr").forEach(c=>c.classList.remove("sel"));kSel=d;d.classList.add("sel")};pool.appendChild(d)});
+ const sl=$("#slots");sl.innerHTML="";
+ [...Array(22).keys()].map(i=>i+1).concat(["G"]).forEach(id=>{const s=document.createElement("div");s.className="slot";s.dataset.id=id;s.innerHTML=`<div class="in"></div><div class="lb">${id==="G"?"X/Y":id}</div>`;s.onclick=()=>kDrop(s);sl.appendChild(s)});
+ kStat();
+}
+function kStat(){$("#kstat").textContent=`${kPlaced} von 46 Chromosomen eingeordnet`}
+function kDrop(s){
+ if(!kSel){$("#kfb").innerHTML='<div class="fb info">Tippen Sie zuerst ein Chromosom an.</div>';return}
+ const id=kSel.dataset.id, target=s.dataset.id;
+ const ok=(target==="G")?(id==="X"||id==="Y"):(String(id)===target);
+ if(ok&&s.querySelector(".in").children.length<2){s.querySelector(".in").appendChild(kSel.firstChild);kSel.remove();kSel=null;kPlaced++;if(s.querySelector(".in").children.length===2)s.classList.add("done");$("#kfb").innerHTML="";kStat();if(kPlaced===46)kDone()}
+ else{s.classList.add("shake");setTimeout(()=>s.classList.remove("shake"),400);
+  let tip="Das passt nicht. ";const n=parseInt(id);
+  if(target==="G")tip+="In dieses Feld gehören nur die Geschlechtschromosomen.";
+  else if(id==="X"||id==="Y")tip+="Dieses Chromosom ist ein Gonosom – es gehört in das Feld X/Y.";
+  else if(n<parseInt(target))tip+="Das Chromosom ist größer als die Chromosomen dieses Paares – probieren Sie eine kleinere Nummer.";
+  else tip+="Das Chromosom ist kleiner – probieren Sie eine größere Nummer. Achten Sie auch auf die Lage des Centromers.";
+  $("#kfb").innerHTML=`<div class="fb bad">${tip}</div>`}
+}
+function kHelp(){const counts={};document.querySelectorAll("#pool .chr").forEach(c=>{counts[c.dataset.id]=(counts[c.dataset.id]||0)+1});const id=Object.keys(counts).find(k=>k!=="X"&&k!=="Y"&&counts[k]===2)||Object.keys(counts)[0];if(!id)return;
+ document.querySelectorAll(`#pool .chr[data-id="${id}"]`).forEach(c=>{kSel=c;kDrop(document.querySelector(`.slot[data-id="${(id==="X"||id==="Y")?"G":id}"]`))})}
+function kDone(){$("#kfb").innerHTML='<div class="fb ok">Geschafft – alle 46 Chromosomen sind geordnet!</div>';
+ mcq($("#kq"),"Welchen Karyotyp hat diese Person?",[kSex==="XX"?"46,XX":"46,XY",kSex==="XX"?"46,XY":"46,XX","23,"+kSex,kSex==="XX"?"47,XXX":"47,XXY"],"Zählen Sie alle Chromosomen und schauen Sie, ob ein Y-Chromosom vorhanden ist.")}
+// generisches MC mit zweiter Chance
+function mcq(box,q,opts,tip,after){
+ const right=opts[0]; const sh=[...opts].sort(()=>Math.random()-.5); let tries=0;
+ box.innerHTML=`<p><b>${q}</b></p>`; const fb=document.createElement("div");
+ sh.forEach(o=>{const b=document.createElement("button");b.className="opt";b.textContent=o;b.onclick=()=>{if(b.disabled)return;tries++;
+  if(o===right){b.classList.add("right");box.querySelectorAll(".opt").forEach(x=>x.disabled=true);fb.className="fb ok";fb.textContent=tries===1?"Richtig!":"Richtig – im zweiten Versuch.";after&&after(tries===1)}
+  else{b.classList.add("wrong");b.disabled=true;if(tries>=2){box.querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(x.textContent===right)x.classList.add("right")});fb.className="fb bad";fb.textContent="Leider falsch. Die richtige Antwort ist markiert.";after&&after(false)}else{fb.className="fb bad";fb.textContent="Noch nicht. Tipp: "+tip+" Zweiter Versuch!"}}};box.appendChild(b)});
+ box.appendChild(fb);
+}
+// ---------- PHASEN-SORTIERER
+const PH=[{k:"G1",n:"G1-Phase",z:"Ein-Chromatid-Chromosomen"},{k:"S",n:"S-Phase",z:"Ein- werden zu Zwei-Chromatid-Chromosomen"},{k:"G2",n:"G2-Phase",z:"Zwei-Chromatid-Chromosomen"},{k:"P",n:"Prophase",z:"Zwei-Chromatid-Chromosomen"},{k:"M",n:"Metaphase",z:"Zwei-Chromatid-Chromosomen"},{k:"A",n:"Anaphase",z:"Ein-Chromatid-Chromosomen"},{k:"T",n:"Telophase und Cytokinese",z:"Ein-Chromatid-Chromosomen"}];
+function cellSVG(k){
+ const W=110,H=90;let s=`<svg width="${W}" height="${H}" viewBox="0 0 110 90">`;
+ const mem=(cx,rx)=>`<ellipse cx="${cx}" cy="45" rx="${rx}" ry="38" fill="#fff7e6" stroke="#b08a4a" stroke-width="1.5"/>`;
+ const one=(x,y,h,c,rot=0)=>`<rect x="${x-2}" y="${y-h/2}" width="4" height="${h}" rx="2" fill="${c}" stroke="#222" stroke-width=".6" transform="rotate(${rot} ${x} ${y})"/>`;
+ const two=(x,y,h,c,rot=0)=>`<g transform="rotate(${rot} ${x} ${y})">${one(x-2.2,y,h,c)}${one(x+2.2,y,h,c)}<circle cx="${x}" cy="${y-h*.15}" r="1.8" fill="#f2c14e"/></g>`;
+ const C=["#d64545","#3b6fd1"];
+ if(k==="G1"||k==="S"||k==="G2"){s+=mem(55,48)+`<circle cx="55" cy="45" r="24" fill="#f0ecfa" stroke="#7b4fc2" stroke-dasharray="${k==="G1"?"0":"0"}"/>`;
+  const dash=k==="G1"?"":"";for(let i=0;i<4;i++){const c=C[i%2];const x=44+i*7;if(k==="G1")s+=`<path d="M${x} 32 q6 6 0 12 q-6 6 0 12" fill="none" stroke="${c}" stroke-width="1.6"/>`;else{s+=`<path d="M${x-1.5} 32 q6 6 0 12 q-6 6 0 12" fill="none" stroke="${c}" stroke-width="1.6"/>`;s+=`<path d="M${x+1.5} 32 q6 6 0 12 q-6 6 0 12" fill="none" stroke="${c}" stroke-width="1.6" ${k==="S"?'stroke-dasharray="2 2"':''}/>`}}}
+ if(k==="P"){s+=mem(55,48)+`<circle cx="55" cy="45" r="25" fill="none" stroke="#7b4fc2" stroke-dasharray="3 3"/>`;s+=two(45,40,16,C[0],-20)+two(62,38,16,C[1],25)+two(48,55,10,C[0],40)+two(64,55,10,C[1],-10)+`<circle cx="12" cy="45" r="2.5" fill="#e0a800"/><circle cx="98" cy="45" r="2.5" fill="#e0a800"/>`}
+ if(k==="M"){s+=mem(55,48)+`<line x1="12" y1="45" x2="98" y2="45" stroke="#e0b44a" stroke-width=".6"/>`;[[26,16,0],[39,16,1],[60,10,0],[73,10,1]].forEach(([y,h,c],i)=>{s+=`<line x1="12" y1="45" x2="55" y2="${y+12}" stroke="#e0b44a" stroke-width=".5"/><line x1="98" y1="45" x2="55" y2="${y+12}" stroke="#e0b44a" stroke-width=".5"/>`;s+=two(55,y+12,h,C[c],90)});s=s.replace(/<g transform="rotate\(90/g,'<g transform="rotate(90')}
+ if(k==="A"){s+=mem(55,48);[[30,16,0],[42,16,1],[56,10,0],[66,10,1]].forEach(([y,h,c])=>{s+=one(35,y,h,C[c],90)+one(75,y,h,C[c],90)});s+=`<circle cx="12" cy="45" r="2.5" fill="#e0a800"/><circle cx="98" cy="45" r="2.5" fill="#e0a800"/>`}
+ if(k==="T"){s+=`<ellipse cx="30" cy="45" rx="26" ry="34" fill="#fff7e6" stroke="#b08a4a" stroke-width="1.5"/><ellipse cx="80" cy="45" rx="26" ry="34" fill="#fff7e6" stroke="#b08a4a" stroke-width="1.5"/>`;[30,80].forEach(cx=>{s+=`<circle cx="${cx}" cy="45" r="15" fill="#f0ecfa" stroke="#7b4fc2"/>`+one(cx-6,42,13,C[0])+one(cx-1,42,13,C[1])+one(cx+4,48,8,C[0])+one(cx+8,48,8,C[1])})}
+ return s+"</svg>";
+}
+let pPos=0;
+function pInit(){pPos=0;$("#pseq").innerHTML="";$("#pfb").innerHTML="";const c=$("#pcards");c.innerHTML="";[...PH].sort(()=>Math.random()-.5).forEach(p=>{const d=document.createElement("div");d.className="pc";d.innerHTML=cellSVG(p.k)+`<div>${p.n}</div>`;d.onclick=()=>pPick(d,p);c.appendChild(d)})}
+function pPick(d,p){if(d.classList.contains("used"))return;if(p.k===PH[pPos].k){d.classList.add("used");const e=d.cloneNode(true);e.classList.remove("used");$("#pseq").appendChild(e);pPos++;$("#pfb").innerHTML="";if(pPos===PH.length)$("#pfb").innerHTML='<div class="fb ok">Perfekt! Der Zellzyklus ist vollständig. Danach beginnt er bei den Tochterzellen wieder mit der G1-Phase.</div>'}
+ else{d.classList.add("shake");setTimeout(()=>d.classList.remove("shake"),400);const tips={G1:"Die Zelle wächst zuerst.",S:"Nach dem Wachstum wird die DNA repliziert.",G2:"Vor der Kernteilung bereitet sich die Zelle vor.",P:"Die Chromosomen verdichten sich, die Kernhülle löst sich auf.",M:"Die Chromosomen ordnen sich in der Mitte an.",A:"Die Schwesterchromatiden werden getrennt.",T:"Zuletzt entstehen zwei Tochterzellen."};$("#pfb").innerHTML=`<div class="fb bad">Nicht als Nächstes. Tipp: ${tips[PH[pPos].k]}</div>`}}
+function zInit(){const box=$("#zq");box.innerHTML="";const opts=["Ein-Chromatid-Chromosomen","Zwei-Chromatid-Chromosomen","Ein- werden zu Zwei-Chromatid-Chromosomen"];
+ PH.forEach(p=>{const r=document.createElement("div");r.className="mrow";r.innerHTML=`<span style="min-width:170px"><b>${p.n}</b></span>`;const sel=document.createElement("select");sel.innerHTML='<option value="">– wählen –</option>'+opts.map(o=>`<option>${o}</option>`).join("");const fb=document.createElement("span");sel.onchange=()=>{fb.textContent=sel.value===p.z?" ✔":" ✘ (noch einmal überlegen)";fb.style.color=sel.value===p.z?"var(--ok)":"var(--bad)"};r.appendChild(sel);r.appendChild(fb);box.appendChild(r)})}
+// ---------- MEIOSE-LABOR
+const PAIRS=[{h:70,cen:.35,name:"Paar 1"},{h:48,cen:.45,name:"Paar 2"},{h:30,cen:.3,name:"Paar 3"}];
+let mStep=0, mFlip=[false,false,false], mSeen=new Set();
+const STEPS=["Urkeimzelle (G1-Phase, 2n)","Nach der Replikation (Interphase, 2n)","Prophase I: Paarung der Homologen (Tetraden)","Metaphase I: Paare in der Äquatorialebene","Ende der Reduktionsteilung: zwei haploide Zellen (n)","Metaphase II","Ende der Äquationsteilung: vier Keimzellen (n)"];
+function chrom(x,y,h,cen,cols,two=true,w=7){ // cols: array of colors per chromatid [upperSegments]
+ let s="";const top=y-h/2,c=top+h*cen;const cw=two?[x-w/2-1,x+w/2+1]:[x];
+ cw.forEach((cx,i)=>{const col=cols[i]||cols[0];if(Array.isArray(col)){s+=`<rect x="${cx-w/2}" y="${top}" width="${w}" height="${h*.62}" rx="3" fill="${col[0]}" stroke="#222"/><rect x="${cx-w/2}" y="${top+h*.62}" width="${w}" height="${h*.38}" rx="3" fill="${col[1]}" stroke="#222"/>`}else s+=`<rect x="${cx-w/2}" y="${top}" width="${w}" height="${h}" rx="3" fill="${col}" stroke="#222"/>`});
+ s+=`<circle cx="${x}" cy="${c}" r="3.2" fill="#f2c14e" stroke="#222" stroke-width=".7"/>`;return s;}
+function mState(){
+ const n=+$("#mpairs").value, co=$("#mco").checked, nd=+$("#mnd").value;
+ // Jedes Paar: mütterlich R, väterlich B; Chromatiden nach Replikation [R,R] / [B,B]; CO tauscht unteres Stück innerer Chromatiden von Paar 1
+ const P=[];for(let i=0;i<n;i++){let m=["#d64545","#d64545"],v=["#3b6fd1","#3b6fd1"];if(i===0&&co&&mStep>=2){m=["#d64545",["#d64545","#3b6fd1"]];v=[["#3b6fd1","#d64545"],"#3b6fd1"]}P.push({m,v,flip:mFlip[i]})}
+ return{n,co,nd,P}}
+function mDraw(){
+ const st=mState(), n=st.n; let W=760,H=260, s="";
+ const cell=(cx,cy,rx,ry)=>`<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="#fff7e6" stroke="#b08a4a" stroke-width="1.6"/>`;
+ const lbl=(x,y,t,col="#333")=>`<text x="${x}" y="${y}" text-anchor="middle" font-size="13" font-weight="700" fill="${col}">${t}</text>`;
+ let txt="";
+ if(mStep<=2){s+=cell(380,130,180,110);st.P.forEach((p,i)=>{const pp=PAIRS[i];const x=300+i*80;
+   if(mStep===0){s+=chrom(x-14,130,pp.h,pp.cen,[p.m[0]],false)+chrom(x+14,130,pp.h,pp.cen,[p.v[0]],false)}
+   else if(mStep===1){s+=chrom(x-16,130,pp.h,pp.cen,p.m)+chrom(x+16,130,pp.h,pp.cen,p.v)}
+   else{s+=chrom(x-8,130,pp.h,pp.cen,p.m)+chrom(x+8,130,pp.h,pp.cen,p.v)}});
+  txt=["Jedes Chromosom liegt zweimal vor (homologe Chromosomen): eines von der Mutter (rot), eines vom Vater (blau). Die Chromosomen bestehen aus einem Chromatid.","In der S-Phase wurde die DNA repliziert: Jetzt liegen Zwei-Chromatid-Chromosomen vor. Die Zelle ist weiterhin diploid.","Die homologen Chromosomen lagern sich zu Tetraden zusammen."+(st.co?" Zwischen Nicht-Schwesterchromatiden von Paar 1 hat ein Crossing-over stattgefunden: Abschnitte wurden ausgetauscht.":" Hier kann Crossing-over stattfinden (Kästchen oben aktivieren).")][mStep]}
+ if(mStep===3){s+=cell(380,130,200,110)+`<line x1="380" y1="25" x2="380" y2="235" stroke="#999" stroke-dasharray="4 4"/>`;st.P.forEach((p,i)=>{const pp=PAIRS[i];const y=60+i*75;const L=p.flip?p.v:p.m,R=p.flip?p.m:p.v;s+=`<g>`+chrom(362,y+pp.h/2-10,pp.h*.8,pp.cen,L)+chrom(398,y+pp.h/2-10,pp.h*.8,pp.cen,R)+`</g>`;s+=`<text x="600" y="${y+20}" font-size="12" fill="#1f6f78" style="cursor:pointer" data-flip="${i}">⇄ ${pp.name} drehen</text>`});
+  txt="Die homologen Paare ordnen sich in der Äquatorialebene an. Welche Seite das mütterliche und welche das väterliche Chromosom einnimmt, ist zufällig. Drehen Sie die Paare und beobachten Sie das Ergebnis!"}
+ // Verteilung nach Reduktionsteilung
+ const cellsMI=[[],[]]; st.P.forEach((p,i)=>{const L=p.flip?p.v:p.m,R=p.flip?p.m:p.v;if(st.nd===1&&i===0){cellsMI[0].push({c:L,i},{c:R,i})}else{cellsMI[0].push({c:L,i});cellsMI[1].push({c:R,i})}});
+ if(mStep===4||mStep===5){[200,560].forEach((cx,k)=>{s+=cell(cx,130,140,100);cellsMI[k].forEach((o,j)=>{const pp=PAIRS[o.i];s+=chrom(cx-40+j*34,130,pp.h*.8,pp.cen,o.c)});if(mStep===5)s+=`<line x1="${cx}" y1="40" x2="${cx}" y2="220" stroke="#999" stroke-dasharray="4 4"/>`;s+=lbl(cx,250,cellsMI[k].length===n?"n":(cellsMI[k].length>n?"n + 1":"n − 1"),cellsMI[k].length===n?"#2e8b57":"#c0392b")});
+  txt=mStep===4?(st.nd===1?"Non-Disjunction in Reduktionsteilung: Das homologe Paar 1 wurde NICHT getrennt. Eine Zelle hat ein Chromosom zu viel, die andere eines zu wenig.":"Die homologen Chromosomen wurden getrennt. Beide Zellen sind haploid (n), die Chromosomen bestehen aber noch aus zwei Chromatiden. Es folgt keine Replikation!"):"Äquationsteilung verläuft wie eine Mitose: Die Zwei-Chromatid-Chromosomen ordnen sich in der Äquatorialebene an, gleich werden die Schwesterchromatiden getrennt."}
+ if(mStep===6){const gam=[];cellsMI.forEach((cl,k)=>{const a=[],b=[];cl.forEach(o=>{if(st.nd===2&&k===0&&o.i===0){a.push({c:[o.c[0]],i:o.i},{c:[o.c[1]],i:o.i})}else{a.push({c:[o.c[0]],i:o.i});b.push({c:[o.c[1]],i:o.i})}});gam.push(a,b)});
+  gam.forEach((g,k)=>{const cx=95+k*190;s+=cell(cx,130,80,80);g.forEach((o,j)=>{const pp=PAIRS[o.i];s+=chrom(cx-28+j*20,130,pp.h*.75,pp.cen,o.c,false,6)});const lab=g.length===n?"n":(g.length>n?"n + 1":"n − 1");s+=lbl(cx,232,lab,g.length===n?"#2e8b57":"#c0392b")});
+  txt=st.nd?(st.nd===1?"Folge der Non-Disjunction in Reduktionsteilung: Alle vier Keimzellen sind fehlerhaft (2 × n + 1, 2 × n − 1).":"Folge der Non-Disjunction in Äquationsteilung: Zwei Keimzellen sind normal (n), eine hat ein Chromosom zu viel (n + 1), eine eines zu wenig (n − 1).")+" Nach Befruchtung mit einer normalen Keimzelle entsteht eine Trisomie bzw. Monosomie.":"Vier haploide Keimzellen mit Ein-Chromatid-Chromosomen."+(st.co?" Durch das Crossing-over enthalten einige Chromatiden mütterliche und väterliche Abschnitte.":"");
+  if(!st.co&&!st.nd){gam.forEach(g=>{mSeen.add(g.map(o=>o.c[0]==="#d64545"?"M":"V").join(""))})}}
+ $("#mview").innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;min-width:560px">${s}</svg>`;
+ $("#mstage").textContent=`Schritt ${mStep+1}/7: ${STEPS[mStep]}`;$("#mtext").textContent=txt;
+ $("#mback").disabled=mStep===0;$("#mnext").disabled=mStep===6;
+ document.querySelectorAll("[data-flip]").forEach(t=>t.onclick=()=>{mFlip[+t.dataset.flip]=!mFlip[+t.dataset.flip];mDraw()});
+ const tot=2**n;$("#mcount").textContent=`${[...mSeen].filter(t=>t.length===n).length} von ? gefunden (bei ${n} Paaren)`;
+ $("#mtypes").innerHTML=[...mSeen].filter(t=>t.length===n).sort().map(t=>`<span class="tchip">${t.split("").map((c,i)=>`<span style="color:${c==="M"?"#d64545":"#3b6fd1"}">■</span>`).join("")}</span>`).join("");
+ if([...mSeen].filter(t=>t.length===n).length===tot)$("#mcount").textContent=`Alle ${tot} Keimzelltypen gefunden – bei ${n} Paaren gibt es 2^${n} = ${tot} Kombinationen!`;
+}
+// ---------- DETEKTIV
+const CASES=[{k:"46,XX",ex:{},g:["X","X"],name:"regulärer weiblicher Chromosomensatz"},{k:"46,XY",ex:{},g:["X","Y"],name:"regulärer männlicher Chromosomensatz"},{k:"47,XX,+21",ex:{21:1},g:["X","X"],name:"Trisomie 21 (Down-Syndrom)"},{k:"47,XY,+21",ex:{21:1},g:["X","Y"],name:"Trisomie 21 (Down-Syndrom)"},{k:"45,X",ex:{},g:["X"],name:"Turner-Syndrom (Monosomie X)"},{k:"47,XXY",ex:{},g:["X","X","Y"],name:"Klinefelter-Syndrom"},{k:"47,XXX",ex:{},g:["X","X","X"],name:"Triple-X-Syndrom"},{k:"47,XY,+18",ex:{18:1},g:["X","Y"],name:"Trisomie 18 (Edwards-Syndrom)"},{k:"47,XX,+13",ex:{13:1},g:["X","X"],name:"Trisomie 13 (Pätau-Syndrom)"}];
+let dScore=[0,0];
+function dDraw(c){const box=document.createElement("div");box.style.cssText="display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:4px;min-width:520px";
+ for(let i=1;i<=22;i++){const s=document.createElement("div");s.className="slot";const k=2+(c.ex[i]||0);const inn=document.createElement("div");inn.className="in";for(let j=0;j<k;j++)inn.appendChild(chromSVG(i,.24));s.appendChild(inn);s.insertAdjacentHTML("beforeend",`<div class="lb">${i}</div>`);box.appendChild(s)}
+ const s=document.createElement("div");s.className="slot";const inn=document.createElement("div");inn.className="in";c.g.forEach(g=>inn.appendChild(chromSVG(g,.24)));s.appendChild(inn);s.insertAdjacentHTML("beforeend",`<div class="lb">Gonosomen</div>`);box.appendChild(s);return box}
+function dNew(){const c=CASES[Math.floor(Math.random()*CASES.length)];$("#dk").innerHTML="";$("#dk").appendChild(dDraw(c));
+ const others=[...new Set(CASES.map(x=>x.k).filter(k=>k!==c.k))].sort(()=>Math.random()-.5).slice(0,3);
+ const q1=document.createElement("div"),q2=document.createElement("div");$("#dq").innerHTML="";$("#dq").append(q1,q2);
+ mcq(q1,"1. Welcher Karyotyp liegt vor?",[c.k,...others],"Zählen Sie die Chromosomen jedes Paares und die Gonosomen. Ein Y-Chromosom bedeutet männlich.",ok=>{dScore[1]++;if(ok)dScore[0]++;$("#dscore").textContent=`Richtig im ersten Versuch: ${dScore[0]} von ${dScore[1]}`;
+  const names=[...new Set(CASES.map(x=>x.name).filter(x=>x!==c.name))].sort(()=>Math.random()-.5).slice(0,3);
+  mcq(q2,"2. Wie bezeichnet man diesen Befund?",[c.name,...names],"Trisomie = ein Chromosom dreifach; Turner = nur ein X; Klinefelter = XXY.")})}
+// ---------- QUIZ
+let qList=[],qIdx=0,qWrong=[],qRight=0,qMod=1,qRound=1;
+function qStart(m){qMod=m;qList=QUIZ[m].map(q=>q).sort(()=>Math.random()-.5);qIdx=0;qWrong=[];qRight=0;qRound=1;qShow()}
+function qShow(){const box=$("#qbox");if(qIdx>=qList.length){if(qWrong.length){box.innerHTML=`<div class="fb info">Runde ${qRound} beendet: ${qRight} von ${qList.length} im ersten Versuch richtig. Jetzt werden die ${qWrong.length} schwierigen Fragen wiederholt.</div><div class="ctrl"><button id="qrep">Wiederholen</button></div>`;$("#qrep").onclick=()=>{qList=qWrong;qWrong=[];qIdx=0;qRight=0;qRound++;qShow()}}else{box.innerHTML=`<div class="fb ok">Modul ${qMod}: Alle Fragen sitzen! 🎉</div><div class="ctrl"><button onclick="qStart(${qMod})">Noch einmal</button></div>`}return}
+ const q=qList[qIdx];box.innerHTML=`<div class="hint">Modul ${qMod} · Frage ${qIdx+1} von ${qList.length}${qRound>1?" (Wiederholung)":""}</div><div class="prog"><div style="width:${100*qIdx/qList.length}%"></div></div><div id="qq"></div><div class="ctrl"><button id="qn" disabled>Nächste Frage</button></div>`;
+ mcq($("#qq"),q[0],q[1],q[2],ok=>{if(ok)qRight++;else qWrong.push(q);$("#qn").disabled=false});$("#qn").onclick=()=>{qIdx++;qShow()}}
+// ---------- Init
+window.addEventListener("DOMContentLoaded",()=>{
+ show();kInit();$("#knew").onclick=kInit;$("#khelp").onclick=kHelp;
+ pInit();zInit();$("#preset").onclick=pInit;
+ $("#mnext").onclick=()=>{if(mStep<6){mStep++;mDraw()}};$("#mback").onclick=()=>{if(mStep>0){mStep--;mDraw()}};
+ $("#mrand").onclick=()=>{mFlip=mFlip.map(()=>Math.random()<.5);if(mStep<3)mStep=3;mDraw()};
+ ["#mpairs","#mco","#mnd"].forEach(id=>$(id).onchange=()=>{mDraw()});mDraw();
+ dNew();$("#dnew").onclick=dNew;
+ const sel=$("#qsel");[1,2,3,4,5].forEach(m=>{const b=document.createElement("button");b.className="sec";b.textContent="Modul "+m;b.onclick=()=>{sel.querySelectorAll("button").forEach(x=>x.className="sec");b.className="";qStart(m)};sel.appendChild(b)});
+ const qm=(location.hash.match(/quiz-m(\d)/)||[])[1];sel.children[(qm?+qm:1)-1].click();
+});
+</script>
+</body>
+</html>
