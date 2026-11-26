@@ -330,6 +330,12 @@
               "anker": "a4"
             },
             {
+              "code": "A5",
+              "art": "Pflicht",
+              "titel": "Eine Kröte mit drei Chromosomensätzen",
+              "anker": "a5"
+            },
+            {
               "code": "W1",
               "art": "Wahl",
               "titel": "Antworten aus einer Stegreifaufgabe",
@@ -487,6 +493,12 @@
               "art": "Basiswissen",
               "titel": "Vielfalt als Vorteil",
               "anker": "abw"
+            },
+            {
+              "code": "A4",
+              "art": "Pflicht",
+              "titel": "Honigbienen: besonders ähnliche Schwestern",
+              "anker": "a4"
             },
             {
               "code": "W1",
