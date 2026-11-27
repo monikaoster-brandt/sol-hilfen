@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-26",
+ "stand": "2026-11-27",
  "autorin": "M. Oster-Brandt, FOS BOS Würzburg (erstellt mit KI-Unterstützung)",
  "einheiten": [
   {
@@ -628,6 +628,593 @@
        "anker": "aw6"
       }
      ]
+    }
+   ]
+  },
+  {
+   "id": "oekologie-bos13",
+   "fach": "Biologie",
+   "schulart": "BOS",
+   "jgst": "13",
+   "zweig": "Gesundheit",
+   "klasse": "BOS 13U",
+   "schuljahr": "2026/27",
+   "lehrplan": "LB 3 · Ökologie",
+   "thema": "Ökologie",
+   "art": "SOL",
+   "titel": "SOL Ökologie",
+   "module": [
+    {
+     "nr": 1,
+     "titel": "Fotosynthese – Energie für das Leben",
+     "url": "oekologie/hilfen-m1.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Grundprinzip der Fotosynthese",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Autotroph oder heterotroph?",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Diagramme zur Fotosyntheserate auswerten",
+       "anker": "a3"
+      },
+      {
+       "code": "BW",
+       "art": "Basiswissen",
+       "titel": "Der naturwissenschaftliche Erkenntnisweg",
+       "anker": "bw"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Eigener Versuch im Fotosynthese-Labor",
+       "anker": "a4"
+      },
+      {
+       "code": "S",
+       "art": "Pflicht",
+       "titel": "Sichern: Fachsprache und Denkfallen",
+       "anker": "sichern"
+      },
+      {
+       "code": "F",
+       "art": "Pflicht",
+       "titel": "Fallakte – Befund Kapitel 1",
+       "anker": "fall"
+      },
+      {
+       "code": "W1",
+       "art": "Wahl",
+       "titel": "Van Helmonts Weidenversuch",
+       "anker": "w1"
+      },
+      {
+       "code": "W2",
+       "art": "Wahl",
+       "titel": "Sonnenblätter und Schattenblätter",
+       "anker": "w2"
+      },
+      {
+       "code": "W3",
+       "art": "Wahl",
+       "titel": "Algenfarmen neben Kraftwerken",
+       "anker": "w3"
+      },
+      {
+       "code": "W4",
+       "art": "Wahl",
+       "titel": "Echter Versuch zu Hause: Schwimmende Blattscheiben",
+       "anker": "w4"
+      }
+     ]
+    },
+    {
+     "nr": 2,
+     "titel": "Abiotische Umweltfaktoren und Toleranz",
+     "url": "oekologie/hilfen-m2.html",
+     "aufgaben": [
+      {
+       "code": "BW",
+       "art": "Basiswissen",
+       "titel": "Abiotische und biotische Umweltfaktoren",
+       "anker": "bw"
+      },
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Das Ökosystem Steinbachsee",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Die Toleranzkurve",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Bachforelle und Karpfen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Bioindikatoren und optimales Wachstum",
+       "anker": "a4"
+      },
+      {
+       "code": "S",
+       "art": "Pflicht",
+       "titel": "Sichern: Fachsprache und Denkfallen",
+       "anker": "sichern"
+      },
+      {
+       "code": "F",
+       "art": "Pflicht",
+       "titel": "Fallakte – Befund Kapitel 2",
+       "anker": "fall"
+      },
+      {
+       "code": "W1",
+       "art": "Wahl",
+       "titel": "Hasenohren in Arktis und Wüste",
+       "anker": "w1"
+      },
+      {
+       "code": "W2",
+       "art": "Wahl",
+       "titel": "Kellerasseln in der Feuchtigkeitsorgel",
+       "anker": "w2"
+      },
+      {
+       "code": "W3",
+       "art": "Wahl",
+       "titel": "Flechten verraten die Luftqualität",
+       "anker": "w3"
+      }
+     ]
+    },
+    {
+     "nr": 3,
+     "titel": "Heilpflanzen erkennen und nutzen",
+     "url": "oekologie/hilfen-m3.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Wissenschaftliche Pflanzennamen",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Pflanzen bestimmen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Heilpflanzen und ihre Anwendung",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Wo wachsen Heilpflanzen?",
+       "anker": "a4"
+      },
+      {
+       "code": "BW",
+       "art": "Basiswissen",
+       "titel": "Die Pflanzenzelle",
+       "anker": "bw"
+      },
+      {
+       "code": "S",
+       "art": "Pflicht",
+       "titel": "Sichern: Fachsprache und Denkfallen",
+       "anker": "sichern"
+      },
+      {
+       "code": "F",
+       "art": "Pflicht",
+       "titel": "Fallakte – Befund Kapitel 3",
+       "anker": "fall"
+      },
+      {
+       "code": "W1",
+       "art": "Wahl",
+       "titel": "Kräuterspaziergang mit Bestimmungs-App",
+       "anker": "w1"
+      },
+      {
+       "code": "W2",
+       "art": "Wahl",
+       "titel": "Vom Fingerhut zum Medikament",
+       "anker": "w2"
+      },
+      {
+       "code": "W3",
+       "art": "Wahl",
+       "titel": "Echte Kamille oder Hundskamille?",
+       "anker": "w3"
+      }
+     ]
+    },
+    {
+     "nr": 4,
+     "titel": "Konkurrenz, Nische, Räuber und Beute",
+     "url": "oekologie/hilfen-m4.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Gauses Pantoffeltierchen",
+       "anker": "a1"
+      },
+      {
+       "code": "BW",
+       "art": "Basiswissen",
+       "titel": "Kontrollansatz im Experiment",
+       "anker": "bw"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Ökologische Nische – wer frisst wo?",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Räuber und Beute – die Lotka-Volterra-Regeln",
+       "anker": "a3"
+      },
+      {
+       "code": "S",
+       "art": "Pflicht",
+       "titel": "Sichern: Fachsprache und Denkfallen",
+       "anker": "sichern"
+      },
+      {
+       "code": "F",
+       "art": "Pflicht",
+       "titel": "Fallakte – Befund Kapitel 4",
+       "anker": "fall"
+      },
+      {
+       "code": "W1",
+       "art": "Wahl",
+       "titel": "Meisen im Garten",
+       "anker": "w1"
+      },
+      {
+       "code": "W2",
+       "art": "Wahl",
+       "titel": "Schneeschuhhase und Luchs",
+       "anker": "w2"
+      },
+      {
+       "code": "W3",
+       "art": "Wahl",
+       "titel": "Gift gegen Blattläuse?",
+       "anker": "w3"
+      }
+     ]
+    },
+    {
+     "nr": 5,
+     "titel": "Parasiten und Symbionten",
+     "url": "oekologie/hilfen-m5.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Wer nützt wem?",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Malaria – ein Parasit mit zwei Wirten",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Zecken – Parasiten vor der Haustür",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Darmbakterien und Milchsäurebakterien",
+       "anker": "a4"
+      },
+      {
+       "code": "BW",
+       "art": "Basiswissen",
+       "titel": "Prokaryot oder Eukaryot?",
+       "anker": "bw"
+      },
+      {
+       "code": "S",
+       "art": "Pflicht",
+       "titel": "Sichern: Fachsprache und Denkfallen",
+       "anker": "sichern"
+      },
+      {
+       "code": "F",
+       "art": "Pflicht",
+       "titel": "Fallakte – Befund Kapitel 5",
+       "anker": "fall"
+      },
+      {
+       "code": "W1",
+       "art": "Wahl",
+       "titel": "Der Saugwurm in der Schnecke",
+       "anker": "w1"
+      },
+      {
+       "code": "W2",
+       "art": "Wahl",
+       "titel": "Die Asiatische Tigermücke in Bayern",
+       "anker": "w2"
+      },
+      {
+       "code": "W3",
+       "art": "Wahl",
+       "titel": "Probiotischer Joghurt",
+       "anker": "w3"
+      }
+     ]
+    },
+    {
+     "nr": 6,
+     "titel": "Wachstum von Populationen",
+     "url": "oekologie/hilfen-m6.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Wachstumskurven",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Bakterien im Kartoffelsalat",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Dichteabhängig oder dichteunabhängig?",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "r- oder K-Stratege?",
+       "anker": "a4"
+      },
+      {
+       "code": "BW",
+       "art": "Basiswissen",
+       "titel": "Kennzeichen des Lebens",
+       "anker": "bw"
+      },
+      {
+       "code": "S",
+       "art": "Pflicht",
+       "titel": "Sichern: Fachsprache und Denkfallen",
+       "anker": "sichern"
+      },
+      {
+       "code": "F",
+       "art": "Pflicht",
+       "titel": "Fallakte – Befund Kapitel 6",
+       "anker": "fall"
+      },
+      {
+       "code": "W1",
+       "art": "Wahl",
+       "titel": "Wächst die Weltbevölkerung exponentiell?",
+       "anker": "w1"
+      },
+      {
+       "code": "W2",
+       "art": "Wahl",
+       "titel": "Die Mäuseplage",
+       "anker": "w2"
+      },
+      {
+       "code": "W3",
+       "art": "Wahl",
+       "titel": "Kaninchen in Australien",
+       "anker": "w3"
+      }
+     ]
+    },
+    {
+     "nr": 7,
+     "titel": "Ökosystem See: Nahrungsnetz und Energiefluss",
+     "url": "oekologie/hilfen-m7.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Das Nahrungsnetz im See",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Die Energiepyramide",
+       "anker": "a2"
+      },
+      {
+       "code": "BW",
+       "art": "Basiswissen",
+       "titel": "Zellatmung",
+       "anker": "bw"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Der See im Sommer",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Neobiota",
+       "anker": "a4"
+      },
+      {
+       "code": "S",
+       "art": "Pflicht",
+       "titel": "Sichern: Fachsprache und Denkfallen",
+       "anker": "sichern"
+      },
+      {
+       "code": "F",
+       "art": "Pflicht",
+       "titel": "Fallakte – Befund Kapitel 7",
+       "anker": "fall"
+      },
+      {
+       "code": "W1",
+       "art": "Wahl",
+       "titel": "Ein See verlandet",
+       "anker": "w1"
+      },
+      {
+       "code": "W2",
+       "art": "Wahl",
+       "titel": "Die Quagga-Muschel im Bodensee",
+       "anker": "w2"
+      },
+      {
+       "code": "W3",
+       "art": "Wahl",
+       "titel": "Biomasse oder Individuenzahl?",
+       "anker": "w3"
+      }
+     ]
+    },
+    {
+     "nr": 8,
+     "titel": "Stoffkreisläufe und Schadstoffe",
+     "url": "oekologie/hilfen-m8.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Der Kohlenstoffkreislauf",
+       "anker": "a1"
+      },
+      {
+       "code": "BW",
+       "art": "Basiswissen",
+       "titel": "Fotosynthese und Zellatmung",
+       "anker": "bw"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Stickstoff- und Wasserkreislauf",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Eutrophierung – ein See kippt um",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Die Kläranlage",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Ozon, Stickoxide und Schwermetalle",
+       "anker": "a5"
+      },
+      {
+       "code": "S",
+       "art": "Pflicht",
+       "titel": "Sichern: Fachsprache und Denkfallen",
+       "anker": "sichern"
+      },
+      {
+       "code": "F",
+       "art": "Pflicht",
+       "titel": "Fallakte – Befund Kapitel 8",
+       "anker": "fall"
+      },
+      {
+       "code": "W1",
+       "art": "Wahl",
+       "titel": "Ein Bach reinigt sich selbst",
+       "anker": "w1"
+      },
+      {
+       "code": "W2",
+       "art": "Wahl",
+       "titel": "Ihr ökologischer Fußabdruck",
+       "anker": "w2"
+      },
+      {
+       "code": "W3",
+       "art": "Wahl",
+       "titel": "Warum schon wenig Kohlenstoffmonoxid tödlich ist",
+       "anker": "w3"
+      },
+      {
+       "code": "W4",
+       "art": "Wahl",
+       "titel": "Quecksilber in der Nahrungskette",
+       "anker": "w4"
+      },
+      {
+       "code": "W5",
+       "art": "Wahl",
+       "titel": "Der globale Kohlenstoffkreislauf in Zahlen",
+       "anker": "w5"
+      }
+     ]
+    },
+    {
+     "nr": null,
+     "titel": "Ökologie-Trainer",
+     "url": "oekologie/trainer.html",
+     "aufgaben": []
+    },
+    {
+     "nr": null,
+     "titel": "Glossar",
+     "url": "oekologie/glossar.html",
+     "aufgaben": []
+    },
+    {
+     "nr": null,
+     "titel": "Fit für die Kurzarbeit – Erwartungshorizont",
+     "url": "oekologie/fit.html",
+     "aufgaben": []
     }
    ]
   }

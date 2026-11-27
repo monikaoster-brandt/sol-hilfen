@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Ökologie-Trainer · SOL Ökologie</title>
+<style>:root{--teal:#b3232f;--teal-l:#fbeaec;--purp:#23607d;--purp-l:#eaf2f6;--or:#1f7a4a;--or-l:#e8f4ec;--gold:#b49a55;--beige:#f7f0dc}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f7f7fb;color:#222;line-height:1.5}
+header{background:var(--purp);color:#fff;padding:12px 16px}header h1{margin:0;font-size:1.15rem}header p{margin:2px 0 0;font-size:.82rem;opacity:.9}
+main{max-width:860px;margin:0 auto;padding:14px}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:14px;margin-bottom:14px;scroll-margin-top:12px}
+.card h2{margin:0 0 6px;font-size:1.05rem;color:#fff;background:var(--teal);margin:-14px -14px 10px;padding:9px 14px;border-radius:12px 12px 0 0}
+.card.w h2{background:var(--or)}
+details{border:1px solid #dde;border-radius:9px;margin:8px 0;background:#fcfcfe}
+summary{cursor:pointer;padding:9px 12px;font-weight:700;color:var(--teal);list-style:none}
+summary::-webkit-details-marker{display:none}summary:before{content:"▸ ";}details[open] summary:before{content:"▾ "}
+details.l summary{color:var(--purp)}
+details div{padding:0 12px 12px}
+details img{max-width:100%;height:auto;border-radius:8px;margin-top:8px;border:1px solid #eee}
+.hint{font-size:.88rem;color:#666}
+nav.mods{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}nav.mods a{padding:6px 11px;border-radius:16px;background:var(--purp-l);color:var(--purp);text-decoration:none;font-weight:600;font-size:.88rem}nav.mods a.on{background:var(--purp);color:#fff}
+.card.f h2{background:var(--gold)}.card.b h2{background:#d97a1a}.card.s h2{background:var(--purp)}.card.f{background:var(--beige)}
+footer{font-size:.75rem;color:#666;text-align:center;padding:16px}a{color:var(--teal)}
+.tool{background:#fff;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:14px;margin-bottom:16px;scroll-margin-top:10px}
+.tool h2{margin:-14px -14px 10px;padding:9px 14px;border-radius:12px 12px 0 0;background:var(--purp);color:#fff;font-size:1.05rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0}
+label{font-size:.9rem}select,input[type=range]{vertical-align:middle}
+button{background:var(--purp);color:#fff;border:0;border-radius:8px;padding:7px 12px;font-weight:600;cursor:pointer;font-size:.9rem}
+button.alt{background:#fff;color:var(--purp);border:1.5px solid var(--purp)}button.red{background:var(--teal)}button.grn{background:var(--or)}
+canvas{width:100%;height:auto;background:#fbfcfe;border:1px solid #e1e5ee;border-radius:10px;touch-action:manipulation}
+table.m{border-collapse:collapse;width:100%;font-size:.9rem}table.m td,table.m th{border:1px solid #dde;padding:4px 6px;text-align:center}table.m th{background:var(--purp-l)}
+.big{font-size:1.6rem;font-weight:800;color:var(--purp)}
+.fb{padding:8px 10px;border-radius:8px;margin-top:8px;font-size:.92rem}.fb.ok{background:var(--or-l);color:#14532d}.fb.no{background:var(--teal-l);color:#7f1d1d}
+.cards{display:flex;flex-direction:column;gap:6px}.cards button{background:#fff;color:#222;border:1.5px solid #ccd;text-align:left;font-weight:500}
+.cards button.done{background:var(--or-l);border-color:var(--or);color:#14532d}
+.chip{display:inline-block;padding:2px 8px;border-radius:10px;background:var(--purp-l);color:var(--purp);font-size:.8rem;font-weight:700;margin-right:6px}
+.opts button{display:block;width:100%;margin:5px 0;background:#fff;color:#222;border:1.5px solid #ccd;text-align:left;font-weight:500}
+.opts button.r{background:var(--or-l);border-color:var(--or)}.opts button.f{background:var(--teal-l);border-color:var(--teal)}
+</style></head><body>
+<header><h1>Ökologie-Trainer</h1><p>SOL Biologie · BOS 13 · FOS BOS Würzburg</p></header>
+<main>
+<nav class="mods"><a href="hilfen-m1.html" class="">Modul 1</a><a href="hilfen-m2.html" class="">Modul 2</a><a href="hilfen-m3.html" class="">Modul 3</a><a href="hilfen-m4.html" class="">Modul 4</a><a href="hilfen-m5.html" class="">Modul 5</a><a href="hilfen-m6.html" class="">Modul 6</a><a href="hilfen-m7.html" class="">Modul 7</a><a href="hilfen-m8.html" class="">Modul 8</a><a href="fit.html" class="">Fit für die KA</a><a href="trainer.html">Trainer</a><a href="glossar.html">Glossar</a></nav>
+<p class="hint">Fotosynthese-Labor (Modul 1) · Pflanzen-Bestimmer (Modul 3) · Räuber-Beute-Simulator (Modul 4) · Wachstums-Simulator (Modul 6) · Eutrophierungs-Kette (Modul 8) · Quiz (alle Module)</p>
+
+<!-- ============ LABOR ============ -->
+<div class="tool" id="labor"><h2>Fotosynthese-Labor: Bläschenzählmethode (Modul 1)</h2>
+<p class="hint">Ein Spross der Wasserpest steht in Wasser mit etwas NaHCO₃ (CO₂-Quelle). Stellen Sie die Bedingungen ein, warten Sie kurz, bis sich die Pflanze angepasst hat, und zählen Sie die aufsteigenden Bläschen eine Minute lang (tippen Sie bei jedem Bläschen auf „+1“). Wer wenig Zeit hat, kann den Messwert auch automatisch anzeigen lassen.</p>
+<div class="row"><label>Lampenabstand: <select id="ld"><option>10</option><option selected>20</option><option>30</option><option>40</option><option>50</option><option>60</option></select> cm</label>
+<label>Wassertemperatur: <input type="range" id="lt" min="5" max="45" step="5" value="20"> <b id="ltv">20</b> °C</label>
+<label>NaHCO₃: <select id="lc"><option value="0">0 % (kein Zusatz)</option><option value="0.05">0,05 %</option><option value="0.1" selected>0,1 %</option><option value="0.2">0,2 %</option></select></label></div>
+<canvas id="lcv" width="760" height="300"></canvas>
+<div class="row"><button id="lstart">Stoppuhr 1 Minute starten</button><button class="alt" id="lplus">+1 Bläschen</button><span>Zeit: <b id="ltime">60</b> s</span><span>gezählt: <span class="big" id="lcount">0</span></span><button class="alt" id="lauto">Messwert automatisch anzeigen</button></div>
+<div class="row"><button class="grn" id="lsave">Messwert in Tabelle übernehmen</button><button class="alt" id="lclear">Tabelle leeren</button></div>
+<table class="m" id="ltab"><thead><tr><th>Nr.</th><th>Abstand (cm)</th><th>Temperatur (°C)</th><th>NaHCO₃ (%)</th><th>Bläschen pro Minute</th></tr></thead><tbody></tbody></table>
+<div class="row"><label>Diagramm: x-Achse <select id="lx"><option value="d">Lampenabstand</option><option value="t">Temperatur</option><option value="c">NaHCO₃</option></select></label><button class="alt" id="lplot">Diagramm zeichnen</button></div>
+<canvas id="lplotcv" width="760" height="280"></canvas>
+<p class="hint">Hinweis: Im echten Versuch erwärmt die Lampe das Wasser – stellen Sie ein Wassergefäß als Wärmefilter dazwischen und kontrollieren Sie die Temperatur.</p>
+</div>
+
+<!-- ============ RAEUBER ============ -->
+<div class="tool" id="raeuber"><h2>Räuber-Beute-Simulator (Modul 4)</h2>
+<p class="hint">Modell nach Lotka und Volterra mit einer Beuteart (Schneeschuhhase) und einer Räuberart (Luchs). Starten Sie die Simulation und beobachten Sie die Kurven. Testen Sie dann die 3. Regel mit „Beide um 50 % dezimieren“.</p>
+<div class="row"><button id="rstart">Start / Pause</button><button class="red" id="rdec">Beide um 50 % dezimieren</button><button class="alt" id="rreset">Neu starten</button>
+<label>Startwert Beute <input type="range" id="rn0" min="20" max="120" value="60"></label><label>Startwert Räuber <input type="range" id="rp0" min="5" max="40" value="15"></label></div>
+<canvas id="rcv" width="760" height="300"></canvas>
+<p class="hint"><span style="color:#1f7a4a;font-weight:700">■ Beute</span> &nbsp; <span style="color:#b3232f;font-weight:700">■ Räuber</span> &nbsp; Gestrichelte Linien: Mittelwerte seit dem Start.</p>
+</div>
+
+<!-- ============ WACHSTUM ============ -->
+<div class="tool" id="wachstum"><h2>Wachstums-Simulator (Modul 6)</h2>
+<p class="hint">Vergleichen Sie exponentielles und logistisches Wachstum. Verändern Sie die Wachstumsrate r und die Umweltkapazität K. Ein Kälteeinbruch tötet 60 % der Population – unabhängig von der Dichte.</p>
+<div class="row"><label>Modell <select id="wm"><option value="log">logistisch</option><option value="exp">exponentiell</option></select></label>
+<label>r <input type="range" id="wr" min="0.1" max="1" step="0.05" value="0.45"> <b id="wrv">0,45</b></label>
+<label>K <input type="range" id="wk" min="200" max="1500" step="100" value="1000"> <b id="wkv">1000</b></label></div>
+<div class="row"><button id="wstart">Start / Pause</button><button class="red" id="wcold">Kälteeinbruch (−60 %)</button><button class="alt" id="wreset">Neu starten</button><span>Individuen: <b id="wn">10</b></span></div>
+<canvas id="wcv" width="760" height="280"></canvas>
+</div>
+
+<!-- ============ KETTE ============ -->
+<div class="tool" id="kette"><h2>Eutrophierungs-Kette (Modul 8)</h2>
+<p class="hint">Tippen Sie die Kärtchen in der richtigen Reihenfolge an – von der Ursache bis zur Folge. Falsche Kärtchen werden kurz rot markiert.</p>
+<div class="cards" id="kcards"></div><div id="kfb"></div><div class="row"><button class="alt" id="kreset">Neu mischen</button></div>
+</div>
+
+<!-- ============ PFLANZEN ============ -->
+<div class="tool" id="pflanzen"><h2>Pflanzen-Bestimmer (Modul 3)</h2>
+<p class="hint">Wählen Sie eine Pflanze aus dem Steckbrief (oder eine eigene Pflanze) und beantworten Sie die Fragen des Bestimmungsschlüssels. Über die Links sehen Sie Fotos der Pflanzen (Wikipedia).</p>
+<div class="row"><label>Pflanze <select id="psel"></select></label><button class="alt" id="preset">Schlüssel neu starten</button></div>
+<div id="pdesc" class="fb" style="background:#f7f0dc"></div>
+<div id="pstep"></div><div id="pres"></div>
+<p class="hint" id="plinks"></p>
+</div>
+
+<!-- ============ QUIZ ============ -->
+<div class="tool" id="quiz"><h2>Quiz (alle Module)</h2>
+<div class="row"><label>Modul <select id="qm"><option value="0">alle Module gemischt</option></select></label><button id="qstart">Quiz starten</button><span id="qscore"></span></div>
+<div id="qbox"></div>
+</div>
+</main>
+<footer>© Monika Oster-Brandt · FOS BOS Würzburg · erstellt mit KI-Unterstützung</footer>
+<script>
+const QUIZ={"1": [["tf", "Bei der Fotosynthese wird Lichtenergie in chemische Energie umgewandelt.", true], ["tf", "Der bei der Fotosynthese freigesetzte Sauerstoff stammt aus dem Kohlenstoffdioxid.", false], ["tf", "Pflanzen betreiben Zellatmung nur in der Nacht.", false], ["tf", "Am Kompensationspunkt sind Fotosyntheserate und Zellatmungsrate gleich groß.", true], ["mc", "Welches Lebewesen ist heterotroph?", "Hefepilz", ["Grünalge", "Seerose", "Cyanobakterium"]], ["mc", "Bei Schwachlicht steigt die Fotosyntheserate mit der Temperatur kaum an. Warum?", "Das Licht ist der begrenzende Faktor.", ["Die Enzyme sind denaturiert.", "Der CO₂-Gehalt ist zu hoch.", "Die Zellatmung ist abgeschaltet."]], ["mc", "Woraus bauen Pflanzen Glucose auf?", "aus CO₂ und H₂O", ["aus O₂ und H₂O", "aus Stärke und CO₂", "aus Mineralstoffen und O₂"]], ["mc", "In welchem Zellorganell findet die Fotosynthese statt?", "Chloroplast", ["Mitochondrium", "Zellkern", "Ribosom"]]], "2": [["tf", "Biotop und Biozönose bilden zusammen ein Ökosystem.", true], ["tf", "Eine stenöke Art hat einen weiten Toleranzbereich.", false], ["tf", "Im Pessimum können Lebewesen überleben, wachsen und vermehren sich aber kaum.", true], ["tf", "Je wärmer das Wasser, desto mehr Sauerstoff kann sich darin lösen.", false], ["mc", "Was zeigt das Vorkommen von Steinfliegenlarven in einem Bach an?", "sauberes, sauerstoffreiches Wasser", ["stark verschmutztes Wasser", "einen hohen Nitratgehalt", "warmes, sauerstoffarmes Wasser"]], ["mc", "Welcher Faktor ist ein biotischer Umweltfaktor?", "Konkurrenz um Nahrung", ["pH-Wert", "Lichtintensität", "Sauerstoffgehalt"]], ["mc", "Welche Fischart ist stenotherm?", "Bachforelle", ["Karpfen", "Schleie", "Goldfisch"]], ["mc", "Das Minimumgesetz besagt …", "… der knappste Faktor begrenzt das Wachstum.", ["… viel Dünger hilft immer.", "… alle Faktoren wirken gleich stark.", "… nur Licht begrenzt das Wachstum."]]], "4": [["tf", "Konkurrenz zwischen Individuen derselben Art heißt intraspezifische Konkurrenz.", true], ["tf", "Die ökologische Nische ist der Ort, an dem eine Art lebt.", false], ["tf", "Nach der 1. Lotka-Volterra-Regel folgen die Maxima der Räuber den Maxima der Beute zeitlich verzögert.", true], ["tf", "Werden Räuber und Beute gleich stark dezimiert, erholt sich der Räuber schneller.", false], ["mc", "Zwei Arten mit gleichen Ansprüchen an dieselbe begrenzte Ressource …", "… können nicht dauerhaft im selben Lebensraum koexistieren.", ["… leben immer in Symbiose.", "… bilden eine gemeinsame Population.", "… haben die gleiche Körpergröße."]], ["mc", "Wodurch vermeiden Stockente und Reiherente Konkurrenz?", "Sie suchen ihre Nahrung in unterschiedlicher Wassertiefe.", ["Sie fressen genau dasselbe.", "Sie leben in verschiedenen Ökosystemen.", "Sie sind beide Räuber."]], ["mc", "Welche Kultur war in Gauses Versuch der Kontrollansatz?", "die getrennten Kulturen", ["die gemeinsame Kultur", "die Kultur mit Hefe", "es gab keinen"]]], "5": [["tf", "Parasiten töten ihren Wirt in der Regel nicht.", true], ["tf", "Beim Malariaerreger ist der Mensch der Endwirt.", false], ["tf", "Die Zecke ist ein Ektoparasit und kann Krankheitserreger übertragen.", true], ["tf", "Milchsäurebakterien konservieren Lebensmittel, weil sie den pH-Wert senken.", true], ["mc", "Wodurch wird Malaria ausgelöst?", "durch Plasmodien (einzellige Eukaryoten)", ["durch ein Virus", "durch Bakterien", "durch einen Pilz"]], ["mc", "Welche Beziehung ist eine Symbiose?", "Darmbakterien – Mensch", ["Bandwurm – Mensch", "Hecht – Rotauge", "Zecke – Reh"]], ["mc", "Was ist ein Fehlwirt?", "ein Wirt, in dem sich der Parasit nicht weiterentwickeln kann", ["der Wirt der geschlechtlichen Fortpflanzung", "ein Wirt, der den Parasiten tötet", "ein Tier, das Parasiten frisst"]]], "6": [["tf", "Exponentielles Wachstum tritt in der Natur nur kurzzeitig auf.", true], ["tf", "In der stationären Phase sind Geburtenrate und Sterberate gleich groß.", true], ["tf", "Ein Kälteeinbruch ist ein dichteabhängiger Faktor.", false], ["tf", "K-Strategen haben viele Nachkommen und betreiben kaum Brutpflege.", false], ["mc", "Was versteht man unter der Umweltkapazität K?", "die maximale Individuenzahl, die ein Lebensraum dauerhaft tragen kann", ["die Wachstumsrate einer Population", "die Zahl der Nachkommen pro Weibchen", "die Fläche eines Ökosystems"]], ["mc", "Welcher Faktor wirkt dichteabhängig?", "Ausbreitung einer Krankheit", ["Hochwasser", "Spätfrost", "Waldbrand"]], ["mc", "Feldmäuse sind …", "r-Strategen", ["K-Strategen", "Destruenten", "Produzenten"]]], "7": [["tf", "Destruenten bauen tote Biomasse zu anorganischen Stoffen ab.", true], ["tf", "Energie wird im Ökosystem wie Stoffe im Kreislauf geführt.", false], ["tf", "Im Sommer ist das Tiefenwasser eines eutrophen Sees oft sauerstoffarm.", true], ["tf", "Neobiota sind Arten, die nach 1492 durch den Menschen in ein neues Gebiet gelangt sind.", true], ["mc", "Etwa wie viel Prozent der Energie gelangen von einer Trophieebene in die nächste?", "ca. 10 %", ["ca. 1 %", "ca. 50 %", "ca. 90 %"]], ["mc", "Was passiert bei der Vollzirkulation eines Sees?", "Sauerstoff gelangt in die Tiefe, Mineralstoffe nach oben.", ["Das Wasser friert vollständig zu.", "Die Algen sterben vollständig ab.", "Die Sprungschicht wird stabiler."]], ["mc", "Der Hecht ist im Nahrungsnetz des Sees …", "Konsument 3. Ordnung (Endkonsument)", ["Produzent", "Destruent", "Konsument 1. Ordnung"]]], "8": [["tf", "Bei der Zellatmung wird Kohlenstoffdioxid freigesetzt.", true], ["tf", "Pflanzen können Luftstickstoff (N₂) direkt über die Blätter nutzen.", false], ["tf", "Bodennahes Ozon erreicht an sonnigen Tagen meist am Nachmittag sein Maximum.", true], ["tf", "Im Belebungsbecken einer Kläranlage bauen Bakterien organische Stoffe unter Sauerstoffverbrauch ab.", true], ["mc", "Welcher Mineralstoff ist in Seen meist der Minimumfaktor für das Algenwachstum?", "Phosphat", ["Calcium", "Natrium", "Chlorid"]], ["mc", "Warum ist Kohlenstoffmonoxid (CO) gefährlich?", "Es bindet viel stärker an Hämoglobin als Sauerstoff.", ["Es zerstört die Ozonschicht.", "Es löst Allergien aus.", "Es reichert sich in Fischen an."]], ["mc", "Was entfernt die chemische Reinigungsstufe einer Kläranlage?", "Phosphat", ["Sand", "Papier", "Bakterien"]]], "3": [["tf", "Bei der binären Nomenklatur wird zuerst die Gattung, dann der Artzusatz genannt.", true], ["tf", "Lippenblütengewächse haben meist einen vierkantigen Stängel.", true], ["tf", "Heilpflanzen haben grundsätzlich keine Nebenwirkungen.", false], ["tf", "Die Brennnessel zeigt stickstoffreiche Böden an.", true], ["mc", "Zu welcher Familie gehört die Echte Kamille?", "Asterngewächse", ["Lippenblütengewächse", "Doldenblütengewächse", "Rosengewächse"]], ["mc", "Welche Heilpflanze wird traditionell bei Husten eingesetzt?", "Thymian", ["Roter Fingerhut", "Hirtentäschel", "Löwenzahn"]], ["mc", "Woran erkennt man Doldenblütengewächse?", "Blütenstiele entspringen schirmartig an einem Punkt", ["vierkantiger Stängel", "vier Kronblätter über Kreuz", "Blütenkörbchen"]]]};
+const $=id=>document.getElementById(id);
+function fmt(x,d=1){return x.toFixed(d).replace('.',',')}
+function axes(ctx,W,H,pad,xl,yl,xmax,ymax,xt,yt){ctx.clearRect(0,0,W,H);ctx.strokeStyle='#888';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pad,10);ctx.lineTo(pad,H-pad);ctx.lineTo(W-10,H-pad);ctx.stroke();
+ ctx.fillStyle='#444';ctx.font='13px system-ui';ctx.fillText(xl,W/2-40,H-8);ctx.save();ctx.translate(14,H/2+40);ctx.rotate(-Math.PI/2);ctx.fillText(yl,0,0);ctx.restore();
+ ctx.font='11px system-ui';for(let i=0;i<=4;i++){let y=H-pad-(H-pad-10)*i/4;ctx.fillText(Math.round(ymax*i/4),pad-30,y+4);}
+ if(xt)for(let i=0;i<=xt.length-1;i++){}}
+/* ---------- Labor ---------- */
+const L={bub:[],t:0,rate:0,counting:false,left:60,count:0,timer:null,data:[]};
+function lrate(){const d=+$('ld').value,T=+$('lt').value,c=+$('lc').value;const I=100/(d*d);const fL=I/(I+0.15);
+ const fT=T<=30?Math.exp(-Math.pow((T-30)/14,2)):Math.exp(-Math.pow((T-30)/6,2));const fT20=Math.exp(-Math.pow(10/14,2));
+ const fC=c/(c+0.03),fC1=0.1/(0.1+0.03);let net=41*fL*(fT/fT20)*(fC/fC1)-4*(0.6+0.4*fT/fT20);return Math.max(0,net)}
+function ldraw(){const cv=$('lcv'),x=cv.getContext('2d'),W=cv.width,H=cv.height;x.clearRect(0,0,W,H);
+ const d=+$('ld').value;const lx=440-d*5;x.fillStyle='#ffe082';x.strokeStyle='#d97a1a';x.lineWidth=2;x.beginPath();x.moveTo(lx-60,110);x.lineTo(lx,130);x.lineTo(lx,190);x.lineTo(lx-60,210);x.closePath();x.fill();x.stroke();
+ x.fillStyle='#555';x.font='13px system-ui';x.fillText('Lampe',lx-55,235);x.fillText('Abstand '+d+' cm',(lx+470)/2-40,285);x.strokeStyle='#999';x.beginPath();x.moveTo(lx,270);x.lineTo(470,270);x.stroke();
+ x.fillStyle='rgba(227,242,253,.9)';x.strokeStyle='#23607d';x.fillRect(470,60,200,200);x.strokeRect(470,60,200,200);
+ x.strokeStyle='#1f7a4a';x.lineWidth=5;x.beginPath();x.moveTo(570,250);x.lineTo(570,110);x.stroke();x.fillStyle='#81c784';
+ for(let i=0;i<9;i++){x.save();x.translate(570,240-i*15);x.rotate((i%2?1:-1)*0.6);x.beginPath();x.ellipse(i%2?14:-14,0,16,5,0,0,6.3);x.fill();x.restore();}
+ const T=+$('lt').value;x.fillStyle='#23607d';x.fillText('Wasser '+T+' °C',480,80);
+ L.bub.forEach(b=>{x.beginPath();x.arc(b.x,b.y,4,0,6.3);x.strokeStyle='#23607d';x.lineWidth=1.3;x.fillStyle='#fff';x.fill();x.stroke();});}
+function lloop(){const dt=0.05;L.rate=lrate();if(Math.random()<L.rate/60*dt*1.0*(0.85+0.3*Math.random()))L.bub.push({x:570+(Math.random()*4-2),y:108});
+ L.bub.forEach(b=>b.y-=1.6);L.bub=L.bub.filter(b=>b.y>62);ldraw();}
+setInterval(lloop,50);
+$('lt').oninput=()=>$('ltv').textContent=$('lt').value;
+$('lstart').onclick=()=>{if(L.timer)clearInterval(L.timer);L.left=60;L.count=0;$('lcount').textContent=0;$('ltime').textContent=60;L.timer=setInterval(()=>{L.left--;$('ltime').textContent=L.left;if(L.left<=0){clearInterval(L.timer);L.timer=null;$('ltime').textContent='fertig';}},1000)};
+$('lplus').onclick=()=>{if(L.timer){L.count++;$('lcount').textContent=L.count}};
+$('lauto').onclick=()=>{const v=Math.round(lrate()*(0.94+0.12*Math.random()));L.count=v;$('lcount').textContent=v;$('ltime').textContent='auto'};
+function lrender(){const tb=$('ltab').querySelector('tbody');tb.innerHTML=L.data.map((r,i)=>`<tr><td>${i+1}</td><td>${r.d}</td><td>${r.t}</td><td>${String(r.c).replace('.',',')}</td><td>${r.n}</td></tr>`).join('')}
+$('lsave').onclick=()=>{L.data.push({d:+$('ld').value,t:+$('lt').value,c:+$('lc').value,n:L.count});lrender()};
+$('lclear').onclick=()=>{L.data=[];lrender()};
+$('lplot').onclick=()=>{const k=$('lx').value,cv=$('lplotcv'),x=cv.getContext('2d'),W=cv.width,H=cv.height,p=50;
+ const pts=L.data.map(r=>[k==='d'?r.d:k==='t'?r.t:r.c,r.n]).sort((a,b)=>a[0]-b[0]);if(!pts.length)return;
+ const xm=Math.max(...pts.map(q=>q[0]))*1.1||1,ym=Math.max(10,...pts.map(q=>q[1]))*1.15;
+ axes(x,W,H,p,{d:'Lampenabstand (cm)',t:'Temperatur (°C)',c:'NaHCO₃ (%)'}[k],'Bläschen pro Minute',xm,ym);
+ x.font='11px system-ui';x.fillStyle='#444';for(let i=0;i<=4;i++){const v=xm*i/4;x.fillText(k==='c'?fmt(v,2):Math.round(v),p+(W-p-10)*i/4-8,H-p+14)}
+ x.strokeStyle='#23607d';x.lineWidth=2;x.beginPath();pts.forEach((q,i)=>{const X=p+(W-p-10)*q[0]/xm,Y=H-p-(H-p-10)*q[1]/ym;i?x.lineTo(X,Y):x.moveTo(X,Y)});x.stroke();
+ pts.forEach(q=>{const X=p+(W-p-10)*q[0]/xm,Y=H-p-(H-p-10)*q[1]/ym;x.fillStyle='#b3232f';x.beginPath();x.arc(X,Y,4,0,6.3);x.fill()});};
+/* ---------- Räuber-Beute ---------- */
+const R={N:[],P:[],run:false};
+function rreset(){R.N=[+$('rn0').value];R.P=[+$('rp0').value];rdraw()}
+function rstep(){const a=0.9,b=0.04,c=0.6,d=0.012,dt=0.02;for(let k=0;k<5;k++){let n=R.N[R.N.length-1],p=R.P[R.P.length-1];R.N.push(Math.max(0.5,n+dt*(a*n-b*n*p)));R.P.push(Math.max(0.5,p+dt*(-c*p+d*n*p)));}}
+function rdraw(){const cv=$('rcv'),x=cv.getContext('2d'),W=cv.width,H=cv.height,p=50,ym=Math.max(160,...R.N)*1.05,len=Math.max(2500,R.N.length);
+ axes(x,W,H,p,'Zeit','Individuenzahl',len,ym);const draw=(A,col)=>{x.strokeStyle=col;x.lineWidth=2.2;x.beginPath();A.forEach((v,i)=>{const X=p+(W-p-10)*i/len,Y=H-p-(H-p-10)*v/ym;i?x.lineTo(X,Y):x.moveTo(X,Y)});x.stroke();
+ const m=A.reduce((s,v)=>s+v,0)/A.length;x.setLineDash([5,5]);x.lineWidth=1;x.beginPath();x.moveTo(p,H-p-(H-p-10)*m/ym);x.lineTo(W-10,H-p-(H-p-10)*m/ym);x.stroke();x.setLineDash([])};
+ draw(R.N,'#1f7a4a');draw(R.P,'#b3232f');}
+setInterval(()=>{if(R.run&&R.N.length<2500){rstep();rdraw()}},40);
+$('rstart').onclick=()=>{R.run=!R.run};$('rreset').onclick=()=>{R.run=false;rreset()};
+$('rdec').onclick=()=>{R.N[R.N.length-1]*=0.5;R.P[R.P.length-1]*=0.5;rdraw()};$('rn0').oninput=rreset;$('rp0').oninput=rreset;rreset();
+/* ---------- Wachstum ---------- */
+const G={N:[10],run:false};
+function wdraw(){const cv=$('wcv'),x=cv.getContext('2d'),W=cv.width,H=cv.height,p=55,K=+$('wk').value,ym=Math.max(1600,K*1.2);
+ axes(x,W,H,p,'Zeit','Individuenzahl',300,ym);x.strokeStyle='#1f7a4a';x.setLineDash([6,5]);x.beginPath();const yk=H-p-(H-p-10)*K/ym;x.moveTo(p,yk);x.lineTo(W-10,yk);x.stroke();x.setLineDash([]);x.fillStyle='#1f7a4a';x.fillText('K',W-24,yk-4);
+ x.strokeStyle='#23607d';x.lineWidth=2.4;x.beginPath();G.N.forEach((v,i)=>{const X=p+(W-p-10)*i/300,Y=H-p-(H-p-10)*Math.min(v,ym)/ym;i?x.lineTo(X,Y):x.moveTo(X,Y)});x.stroke();$('wn').textContent=Math.round(G.N[G.N.length-1]);}
+function wstep(){const r=+$('wr').value,K=+$('wk').value,n=G.N[G.N.length-1],dt=0.1;const dn=$('wm').value==='exp'?r*n:r*n*(1-n/K);G.N.push(Math.max(0,n+dn*dt));}
+setInterval(()=>{if(G.run&&G.N.length<300){wstep();wdraw()}},40);
+$('wstart').onclick=()=>{G.run=!G.run};$('wreset').onclick=()=>{G.run=false;G.N=[10];wdraw()};$('wcold').onclick=()=>{G.N[G.N.length-1]*=0.4;wdraw()};
+$('wr').oninput=()=>$('wrv').textContent=fmt(+$('wr').value,2);$('wk').oninput=()=>{$('wkv').textContent=$('wk').value;wdraw()};wdraw();
+/* ---------- Kette ---------- */
+const KET=['Über Gülle, Mineraldünger und Abwasser gelangen viele Phosphat- und Nitrat-Ionen in den See.','Die Algen vermehren sich massenhaft, das Wasser wird trüb.','Wasserpflanzen am Grund erhalten zu wenig Licht und sterben ab.','Die Algen sterben ab und sinken in die Tiefe.','Destruenten bauen die tote Biomasse ab und verbrauchen dabei viel Sauerstoff.','Im Tiefenwasser entsteht Sauerstoffmangel; anaerobe Bakterien bilden giftigen Schwefelwasserstoff und Methan.','Fische und andere Tiere ersticken in der Tiefe; es kommt zum Fischsterben.'];
+let kn=0;function kreset(){kn=0;$('kfb').innerHTML='';const o=KET.map((t,i)=>[Math.random(),t,i]).sort((a,b)=>a[0]-b[0]);$('kcards').innerHTML='';o.forEach(([_,t,i])=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{if(b.classList.contains('done'))return;if(i===kn){b.classList.add('done');b.textContent=(kn+1)+'. '+t;kn++;if(kn===KET.length)$('kfb').innerHTML='<div class="fb ok">Richtig! Zusätzlich wird bei Sauerstoffmangel Phosphat aus dem Sediment gelöst (Rücklösung) – der Prozess verstärkt sich selbst.</div>'}else{b.style.borderColor='#b3232f';setTimeout(()=>b.style.borderColor='',600)}};$('kcards').appendChild(b)})}
+$('kreset').onclick=kreset;kreset();
+/* ---------- Pflanzen ---------- */
+const PL=[['eigene Pflanze','Beantworten Sie die Fragen für eine Pflanze, die Sie draußen gefunden haben.',null,''],
+['Pflanze 1','Stängel vierkantig, Blätter gegenständig, gezähnt; riecht beim Zerreiben nach Zitrone; kleine weiße Blüten mit Ober- und Unterlippe.','Lippenblütengewächse','Zitronenmelisse'],
+['Pflanze 2','Gelbe, kegelförmig gewölbte Mitte aus vielen winzigen Röhrenblüten, außen ein Kranz weißer Zungenblüten; sieht aus wie eine einzige Blüte.','Asterngewächse','Echte_Kamille'],
+['Pflanze 3','Winzige weiße Blüten mit vier Kronblättern über Kreuz; Früchte flach, herz- bis dreieckförmig (Schötchen).','Kreuzblütengewächse','Hirtentäschel'],
+['Pflanze 4','Dorniger Strauch; Blätter gelappt mit kleinen Nebenblättern; weiße Blüten mit fünf Kronblättern und vielen Staubblättern.','Rosengewächse','Eingriffeliger_Weißdorn'],
+['Pflanze 5','Hoher, hohler, gerillter Stängel; Blätter fein gefiedert; riecht nach Anis; kleine gelbe Blüten, Stiele schirmartig an einem Punkt.','Doldenblütengewächse','Fenchel'],
+['Pflanze 6','Runder, hohler Stängel mit Knoten; schmale, parallelnervige Blätter; unscheinbare Blüten in hängenden Ährchen.','Süßgräser','Saat-Hafer'],
+['Pflanze 7','Sieht aus wie eine Brennnessel, hat aber keine Brennhaare; vierkantiger Stängel; weiße Lippenblüten in Etagen.','Lippenblütengewächse','Weiße_Taubnessel']];
+const KEY={1:['Bilden viele kleine Einzelblüten zusammen ein „Körbchen“, das wie eine einzige Blüte aussieht?','Asterngewächse',2],2:['Stehen kleine Blüten in (Doppel-)Dolden – die Blütenstiele entspringen wie Schirmspeichen an einem Punkt?','Doldenblütengewächse',3],
+3:['Ist die Pflanze grasartig (runder, hohler Halm mit Knoten, schmale parallelnervige Blätter, Blüten in Ährchen)?','Süßgräser',4],4:['Ist der Stängel vierkantig, sind die Blätter gegenständig und hat die Blüte eine Ober- und Unterlippe?','Lippenblütengewächse',5],
+5:['Hat die Blüte 4 Kronblätter in Kreuzform und bildet die Pflanze Schoten oder Schötchen?','Kreuzblütengewächse',6],6:['Hat die Blüte meist 5 Kelch- und 5 Kronblätter und viele Staubblätter, mit Nebenblättern am Blattgrund?','Rosengewächse',7]};
+let pk=1,path=[];function pshow(){const s=PL[+$('psel').value];$('pdesc').textContent=s[1];$('pres').innerHTML='';
+ if(pk===7){$('pstep').innerHTML='';$('pres').innerHTML='<div class="fb no">Keine der Beschreibungen passt: eine andere Familie (z. B. Brennnesselgewächse, Wegerichgewächse, Raublattgewächse).</div>';return}
+ const q=KEY[pk];$('pstep').innerHTML=`<p><span class="chip">${pk}</span>${q[0]}</p><div class="row"><button class="grn" id="pya">ja (${pk}a)</button><button class="alt" id="pno">nein (${pk}b)</button></div><p class="hint">Weg bisher: ${path.join(' – ')||'–'}</p>`;
+ $('pya').onclick=()=>{path.push(pk+'a');const fam=q[1];$('pstep').innerHTML=`<p class="hint">Weg: ${path.join(' – ')}</p>`;const ok=s[2]?(s[2]===fam?'<div class="fb ok">Richtig bestimmt: <b>'+fam+'</b>'+(s[3]?' – <a target="_blank" href="https://de.wikipedia.org/wiki/'+s[3]+'">Foto der Pflanze</a>':'')+'</div>':'<div class="fb no">Ergebnis: '+fam+'. Das passt nicht zur Beschreibung – prüfen Sie Ihre Antworten noch einmal.</div>'):'<div class="fb ok">Ergebnis: <b>'+fam+'</b></div>';$('pres').innerHTML=ok};
+ $('pno').onclick=()=>{path.push(pk+'b');pk=q[2];pshow()};}
+PL.forEach((p,i)=>{const o=document.createElement('option');o.value=i;o.textContent=p[0];$('psel').appendChild(o)});$('psel').value=1;
+$('psel').onchange=()=>{pk=1;path=[];pshow()};$('preset').onclick=()=>{pk=1;path=[];pshow()};pshow();
+$('plinks').innerHTML='Fotos (Wikipedia): '+[['Echte_Kamille','Echte Kamille'],['Gewöhnlicher_Löwenzahn','Löwenzahn'],['Echter_Thymian','Thymian'],['Echter_Salbei','Salbei'],['Zitronenmelisse','Melisse'],['Weiße_Taubnessel','Weiße Taubnessel'],['Frauenmantel','Frauenmantel'],['Hirtentäschel','Hirtentäschel'],['Echtes_Lungenkraut','Lungenkraut'],['Große_Brennnessel','Brennnessel'],['Roter_Fingerhut','Roter Fingerhut (giftig!)'],['Gefleckter_Schierling','Gefleckter Schierling (giftig!)'],['Riesen-Bärenklau','Riesen-Bärenklau']].map(a=>`<a target="_blank" href="https://de.wikipedia.org/wiki/${a[0]}">${a[1]}</a>`).join(' · ');
+/* ---------- Quiz ---------- */
+for(let i=1;i<=8;i++){const o=document.createElement('option');o.value=i;o.textContent='Modul '+i;$('qm').appendChild(o)}
+let QQ=[],qi=0,qs=0;function qnext(){if(qi>=QQ.length){$('qbox').innerHTML=`<div class="fb ok">Fertig! ${qs} von ${QQ.length} richtig.</div>`;return}
+ const q=QQ[qi];let opts=q[0]==='tf'?[['richtig',q[2]],['falsch',!q[2]]]:[[q[2],true],...q[3].map(x=>[x,false])].sort(()=>Math.random()-.5);
+ $('qbox').innerHTML=`<p><span class="chip">${qi+1}/${QQ.length}</span>${q[1]}</p><div class="opts">${opts.map((o,i)=>`<button data-r="${o[1]}">${o[0]}</button>`).join('')}</div>`;
+ $('qbox').querySelectorAll('.opts button').forEach(b=>b.onclick=()=>{const r=b.dataset.r==='true';b.classList.add(r?'r':'f');if(r)qs++;$('qbox').querySelectorAll('.opts button').forEach(c=>{c.disabled=true;if(c.dataset.r==='true')c.classList.add('r')});$('qscore').textContent=`${qs} richtig`;setTimeout(()=>{qi++;qnext()},1100)});}
+$('qstart').onclick=()=>{const m=+$('qm').value;QQ=(m?QUIZ[m]:Object.values(QUIZ).flat()).slice().sort(()=>Math.random()-.5).slice(0,m?99:15);qi=0;qs=0;$('qscore').textContent='';qnext()};
+</script></body></html>
