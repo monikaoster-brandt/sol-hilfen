@@ -1079,6 +1079,12 @@
        "art": "Wahl",
        "titel": "Kaninchen in Australien",
        "anker": "w3"
+      },
+      {
+       "code": "W4",
+       "art": "Wahl",
+       "titel": "Abituraufgabe: Die Tigermücke am Oberrhein",
+       "anker": "w4"
       }
      ]
     },
@@ -1146,6 +1152,12 @@
        "art": "Wahl",
        "titel": "Biomasse oder Individuenzahl?",
        "anker": "w3"
+      },
+      {
+       "code": "W4",
+       "art": "Wahl",
+       "titel": "Abituraufgabe: Der Waschbär – unser Nachbar",
+       "anker": "w4"
       }
      ]
     },
@@ -1231,6 +1243,12 @@
        "art": "Wahl",
        "titel": "Der globale Kohlenstoffkreislauf in Zahlen",
        "anker": "w5"
+      },
+      {
+       "code": "W6",
+       "art": "Wahl",
+       "titel": "Abituraufgabe: Der Blaufelchen im Bodensee",
+       "anker": "w6"
       }
      ]
     },
