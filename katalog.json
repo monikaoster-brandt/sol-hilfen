@@ -159,6 +159,12 @@
        "art": "Pflicht",
        "titel": "Fallakte Lena – Mias Knie",
        "anker": "p4"
+      },
+      {
+       "code": "W6",
+       "art": "Wahl",
+       "titel": "Der Erreger, der in Fresszellen überlebt",
+       "anker": "w6"
       }
      ]
     },
@@ -220,6 +226,12 @@
        "art": "Wahl",
        "titel": "Eine Zelle als Antikörperfabrik",
        "anker": "w7"
+      },
+      {
+       "code": "W8",
+       "art": "Wahl",
+       "titel": "Ein Parasit wechselt sein Kostüm",
+       "anker": "w8"
       }
      ]
     },
@@ -269,6 +281,12 @@
        "art": "Wahl",
        "titel": "Ein Impfstoff gegen den Magenkeim?",
        "anker": "w6"
+      },
+      {
+       "code": "W7",
+       "art": "Wahl",
+       "titel": "Antikörper als Giftfähre gegen Krebs",
+       "anker": "w7"
       }
      ]
     },
@@ -312,6 +330,18 @@
        "art": "Wahl",
        "titel": "Zöliakie",
        "anker": "w6"
+      },
+      {
+       "code": "W7",
+       "art": "Wahl",
+       "titel": "Wenn Antikörper die Synapse blockieren",
+       "anker": "w7"
+      },
+      {
+       "code": "W8",
+       "art": "Wahl",
+       "titel": "Ein Antikörper als Medikament gegen MS",
+       "anker": "w8"
       }
      ]
     }
