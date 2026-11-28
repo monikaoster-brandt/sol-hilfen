@@ -1713,6 +1713,98 @@
        "anker": "a6"
       }
      ]
+    },
+    {
+     "nr": 11,
+     "titel": "Eigenschaften der Alkane",
+     "url": "molekulare-stoffe/hilfen-11.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Diagramm zeichnen",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Aggregatzustand bei 20 °C",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Zusammenhang beschreiben",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Lückentext",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Viskosität",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Diesel bei Frost",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Wahl",
+       "titel": "Öl in Wasser und Hexan",
+       "anker": "a7"
+      }
+     ]
+    },
+    {
+     "nr": 12,
+     "titel": "Eigenschaften der Alkohole",
+     "url": "molekulare-stoffe/hilfen-12.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Ethanol löst sich in Wasser und Benzin",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Kettenlänge und Löslichkeit",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Petrischalen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Siedetemperaturen im Vergleich",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Ethan-1,2-diol",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Wahl",
+       "titel": "Glycerin",
+       "anker": "a6"
+      }
+     ]
     }
    ]
   },
