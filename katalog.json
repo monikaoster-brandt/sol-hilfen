@@ -1304,67 +1304,67 @@
      "aufgaben": [
       {
        "code": "1",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Akkommodation",
        "anker": "a1"
       },
       {
        "code": "2",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Strahlengang bei Fehlsichtigkeit",
        "anker": "a2"
       },
       {
        "code": "3",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Fehlsichtigkeiten vergleichen",
        "anker": "a3"
       },
       {
        "code": "4",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Brillenpass",
        "anker": "a4"
       },
       {
        "code": "5",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Bilder zuordnen",
        "anker": "a5"
       },
       {
        "code": "6",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Steckbrief Augenerkrankungen",
        "anker": "a6"
       },
       {
        "code": "7",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Glaukom bleibt lange unbemerkt",
        "anker": "a7"
       },
       {
        "code": "8",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Perspektivwechsel",
        "anker": "a8"
       },
       {
        "code": "9",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Kurzsichtigkeit nimmt zu",
        "anker": "a9"
       },
       {
        "code": "10",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Studie auswerten",
        "anker": "a10"
       },
       {
        "code": "11",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Aussagekraft der Studie",
        "anker": "a11"
       }
@@ -1377,25 +1377,25 @@
      "aufgaben": [
       {
        "code": "1",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Hormondrüsen",
        "anker": "a1"
       },
       {
        "code": "2",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Zielzellen",
        "anker": "a2"
       },
       {
        "code": "3",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Nerven- und Hormonsystem",
        "anker": "a3"
       },
       {
        "code": "4",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Transmitter oder Hormon?",
        "anker": "a4"
       }
@@ -1408,25 +1408,25 @@
      "aufgaben": [
       {
        "code": "5",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Peptidhormone",
        "anker": "a5"
       },
       {
        "code": "6",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Peptid- und Steroidhormone",
        "anker": "a6"
       },
       {
        "code": "7",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Spritze oder Tablette?",
        "anker": "a7"
       },
       {
        "code": "8",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Schnelle und langsame Hormone",
        "anker": "a8"
       }
@@ -1439,19 +1439,19 @@
      "aufgaben": [
       {
        "code": "9",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Blutzucker-Regelkreis",
        "anker": "a9"
       },
       {
        "code": "10",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Regelkreis-Begriffe",
        "anker": "a10"
       },
       {
        "code": "11",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Negative Rückkopplung",
        "anker": "a11"
       }
@@ -1464,31 +1464,31 @@
      "aufgaben": [
       {
        "code": "12",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Diagramm zum Glucose-Toleranztest",
        "anker": "a12"
       },
       {
        "code": "13",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Glucose-Toleranztest auswerten",
        "anker": "a13"
       },
       {
        "code": "14",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Hypothesen",
        "anker": "a14"
       },
       {
        "code": "15",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Typ 1 und Typ 2",
        "anker": "a15"
       },
       {
        "code": "16",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Hungern im Überfluss",
        "anker": "a16"
       }
@@ -1501,19 +1501,19 @@
      "aufgaben": [
       {
        "code": "17",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Hormonhierarchie Schilddrüse",
        "anker": "a17"
       },
       {
        "code": "18",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Regulation des Thyroxins",
        "anker": "a18"
       },
       {
        "code": "19",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Hypothalamus als Bindeglied",
        "anker": "a19"
       }
@@ -1526,25 +1526,25 @@
      "aufgaben": [
       {
        "code": "20",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Über- oder Unterfunktion?",
        "anker": "a20"
       },
       {
        "code": "21",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Kropf bei Iodmangel",
        "anker": "a21"
       },
       {
        "code": "22",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Laborbefunde",
        "anker": "a22"
       },
       {
        "code": "23",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Ursache in der Hypophyse",
        "anker": "a23"
       }
@@ -1557,25 +1557,25 @@
      "aufgaben": [
       {
        "code": "24",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Hormonkurven zuordnen",
        "anker": "a24"
       },
       {
        "code": "25",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Phasen des Zyklus",
        "anker": "a25"
       },
       {
        "code": "26",
-       "art": "Pflicht",
+       "art": "Aufgabe",
        "titel": "Empfängnisbereitschaft",
        "anker": "a26"
       },
       {
        "code": "27",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Wie die Pille wirkt",
        "anker": "a27"
       }
@@ -1588,49 +1588,49 @@
      "aufgaben": [
       {
        "code": "A1",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Schilddrüsenhormon",
        "anker": "abi-a1"
       },
       {
        "code": "A2",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Kaulquappen-Versuch",
        "anker": "abi-a2"
       },
       {
        "code": "A3",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Zusätzliches Hormon",
        "anker": "abi-a3"
       },
       {
        "code": "A4",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Basedow-Krankheit",
        "anker": "abi-a4"
       },
       {
        "code": "A5",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "TSH bei Basedow",
        "anker": "abi-a5"
       },
       {
        "code": "B1",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "TSH-Verlauf erklären",
        "anker": "abi-b1"
       },
       {
        "code": "B2",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Thyroxinverlauf einzeichnen",
        "anker": "abi-b2"
       },
       {
        "code": "B3",
-       "art": "Wahl",
+       "art": "Zusatz",
        "titel": "Wirkungsweise vergleichen",
        "anker": "abi-b3"
       }
