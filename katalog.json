@@ -2226,45 +2226,8 @@
    "module": [
     {
      "nr": 1,
-     "titel": "Saure und basische Lösungen in Alltag, Natur und Technik",
-     "url": "saeure-base/hilfen-1.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Sauer oder basisch?",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Leitfähigkeit auswerten",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Saure Lösungen und Metalle",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Bedeutung saurer und basischer Lösungen",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Wahl",
-       "titel": "Reiniger mischen?",
-       "anker": "a5"
-      }
-     ]
-    },
-    {
-     "nr": 2,
      "titel": "Rotkraut oder Blaukraut? – Indikatoren und pH-Skala",
-     "url": "saeure-base/hilfen-2.html",
+     "url": "saeure-base/hilfen-1.html",
      "aufgaben": [
       {
        "code": "A1",
@@ -2307,6 +2270,43 @@
        "art": "Pflicht",
        "titel": "pH-Wert der Haut",
        "anker": "a7"
+      }
+     ]
+    },
+    {
+     "nr": 2,
+     "titel": "Saure und basische Lösungen in Alltag, Natur und Technik",
+     "url": "saeure-base/hilfen-2.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Sauer oder basisch?",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Leitfähigkeit auswerten",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Saure Lösungen und Metalle",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Bedeutung saurer und basischer Lösungen",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Reiniger mischen?",
+       "anker": "a5"
       }
      ]
     },
