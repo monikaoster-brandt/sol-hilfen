@@ -1283,6 +1283,64 @@
      "aufgaben": []
     }
    ]
+  },
+  {
+   "id": "molekulare-stoffe-11",
+   "fach": "Chemie",
+   "schulart": "FOS",
+   "jgst": "11",
+   "zweig": "Sozialwesen / Technik",
+   "klasse": "FOS 11S / 11T",
+   "schuljahr": "2026/27",
+   "lehrplan": "LB 4 · Molekulare Stoffe und Elektronenpaarbindung",
+   "thema": "Molekulare Stoffe",
+   "art": "Unterricht",
+   "titel": "Molekulare Stoffe (Arbeitsblätter)",
+   "module": [
+    {
+     "nr": 1,
+     "titel": "Moleküle und die Atombindung",
+     "url": "molekulare-stoffe/hilfen-1.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Drei Arten der chemischen Bindung",
+       "anker": "a1"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Wie erreichen Chlor-Atome die Edelgaskonfiguration?",
+       "anker": "a4"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Elementmoleküle H₂, F₂, O₂, N₂",
+       "anker": "a6"
+      },
+      {
+       "code": "A9",
+       "art": "Pflicht",
+       "titel": "Strukturformeln zeichnen",
+       "anker": "a9"
+      },
+      {
+       "code": "A10",
+       "art": "Pflicht",
+       "titel": "Welche Bindung liegt vor?",
+       "anker": "a10"
+      },
+      {
+       "code": "A11",
+       "art": "Pflicht",
+       "titel": "Fehlersuche",
+       "anker": "a11"
+      }
+     ]
+    }
+   ]
   }
  ]
 }
