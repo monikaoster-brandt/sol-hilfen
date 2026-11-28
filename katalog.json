@@ -2210,6 +2210,354 @@
      ]
     }
    ]
+  },
+  {
+   "id": "saeure-base-11",
+   "fach": "Chemie",
+   "schulart": "FOS",
+   "jgst": "11",
+   "zweig": "Sozialwesen / Technik",
+   "klasse": "FOS 11S / 11T",
+   "schuljahr": "2026/27",
+   "lehrplan": "11S LB 5 / 11T LB 6 · Säure-Base-Reaktionen",
+   "thema": "Säure-Base-Reaktionen",
+   "art": "Unterricht",
+   "titel": "Säure-Base-Reaktionen (Arbeitsblätter; AB 7 und 9 nur 11T)",
+   "module": [
+    {
+     "nr": 1,
+     "titel": "Saure und basische Lösungen in Alltag, Natur und Technik",
+     "url": "saeure-base/hilfen-1.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Sauer oder basisch?",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Leitfähigkeit auswerten",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Saure Lösungen und Metalle",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Bedeutung saurer und basischer Lösungen",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Reiniger mischen?",
+       "anker": "a5"
+      }
+     ]
+    },
+    {
+     "nr": 2,
+     "titel": "Indikatoren und pH-Skala",
+     "url": "saeure-base/hilfen-2.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Hypothese",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Rotkohlsaft als Indikator",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "pH-Skala",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Universalindikator",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Natron und empfindliche Mägen",
+       "anker": "a5"
+      }
+     ]
+    },
+    {
+     "nr": 3,
+     "titel": "Säuren als Protonendonatoren – saure Lösungen",
+     "url": "saeure-base/hilfen-3.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Springbrunnenversuch auf Stoffebene",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Protonenübergang beschreiben",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Steckbrief Salzsäure",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Salpetersäure im Grundwasser",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Gasunfall",
+       "anker": "a5"
+      }
+     ]
+    },
+    {
+     "nr": 4,
+     "titel": "Basen als Protonenakzeptoren – basische Lösungen",
+     "url": "saeure-base/hilfen-4.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Ammoniak-Springbrunnen",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Elektronenpaare verfolgen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Säure oder Base?",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Ammoniakwasser und Natronlauge",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Kalilauge",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Wahl",
+       "titel": "Ätzende Wirkung von Ammoniak",
+       "anker": "a6"
+      }
+     ]
+    },
+    {
+     "nr": 5,
+     "titel": "Das Brønsted-Konzept – Teilcheneigenschaften",
+     "url": "saeure-base/hilfen-5.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Acide H-Atome erkennen",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Essigsäure und Wasser",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Mehrprotonige Säuren",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Säure, Base oder beides?",
+       "anker": "a4"
+      }
+     ]
+    },
+    {
+     "nr": 6,
+     "titel": "Wasser als Ampholyt",
+     "url": "saeure-base/hilfen-6.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Rolle des Wasser-Moleküls",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Warum beides?",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Leitfähigkeit von reinem Wasser",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Hydrogencarbonat-Ion",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Weitere Ampholyte?",
+       "anker": "a5"
+      }
+     ]
+    },
+    {
+     "nr": 7,
+     "titel": "Reversible Protonenübergänge (nur 11T)",
+     "url": "saeure-base/hilfen-7.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Synthese von Ammoniumchlorid",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Thermolyse",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Korrespondierende Paare",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Partner finden",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Wasser in zwei Paaren",
+       "anker": "a5"
+      }
+     ]
+    },
+    {
+     "nr": 8,
+     "titel": "Neutralisation",
+     "url": "saeure-base/hilfen-8.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Versuch auswerten",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Teilchen in Abb. 1",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Schwefelsäure und Natronlauge",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Magentabletten",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Kalklauge und Phosphorsäure",
+       "anker": "a5"
+      }
+     ]
+    },
+    {
+     "nr": 9,
+     "titel": "Stoffmengenkonzentration und Titration (nur 11T)",
+     "url": "saeure-base/hilfen-9.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Stoffmenge berechnen",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Maßlösung herstellen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Titration auswerten",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Entsorgung",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Schwefelsäure titrieren",
+       "anker": "a5"
+      }
+     ]
+    }
+   ]
   }
  ]
 }
