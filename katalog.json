@@ -1670,6 +1670,49 @@
        "anker": "a4"
       }
      ]
+    },
+    {
+     "nr": 10,
+     "titel": "Zwischenmolekulare Wechselwirkungen",
+     "url": "molekulare-stoffe/hilfen-10.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Wasser flüssig – CO₂ gasförmig",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Halogene",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "HCl und F₂",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Ammoniak und Methan",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Siedetemperaturen der Wasserstoffverbindungen",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Wahl",
+       "titel": "Siedetemperaturen zuordnen",
+       "anker": "a6"
+      }
+     ]
     }
    ]
   }
