@@ -1369,6 +1369,74 @@
        "anker": "a11"
       }
      ]
+    },
+    {
+     "nr": 2,
+     "titel": "Benennung anorganischer Moleküle",
+     "url": "molekulare-stoffe/hilfen-2.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Gefährliches Dihydrogenmonooxid?",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Moleküle benennen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Summenformeln aus Namen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Namen überprüfen",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Warum Zahlwörter?",
+       "anker": "a5"
+      }
+     ]
+    },
+    {
+     "nr": 3,
+     "titel": "Formalladung und Molekül-Ionen",
+     "url": "molekulare-stoffe/hilfen-3.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Formalladungen im Ammonium-Ion",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Strukturformeln mit Formalladungen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Mesomere Grenzformeln des Nitrat-Ions",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Wahl",
+       "titel": "Mesomerie im Schwefeltrioxid-Molekül",
+       "anker": "a4"
+      }
+     ]
     }
    ]
   }
