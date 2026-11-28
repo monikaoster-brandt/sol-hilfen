@@ -1437,6 +1437,147 @@
        "anker": "a4"
       }
      ]
+    },
+    {
+     "nr": 4,
+     "titel": "Alkane – gesättigte Kohlenwasserstoffe",
+     "url": "molekulare-stoffe/hilfen-4.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Homologe Reihe der Alkane",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Allgemeine Summenformel",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Indizes ergänzen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Verbrennung von Methan",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Energiediagramm",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Vollständige und unvollständige Verbrennung von Butan",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Wahl",
+       "titel": "Verbrennung von Octan",
+       "anker": "a7"
+      }
+     ]
+    },
+    {
+     "nr": 5,
+     "titel": "Alkene und Alkine",
+     "url": "molekulare-stoffe/hilfen-5.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Allgemeine Summenformeln",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "gesättigt – ungesättigt",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Strukturformeln zeichnen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Moleküle benennen",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Namen überprüfen",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Verbrennung von But-2-en",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Wahl",
+       "titel": "Verbrennung von Ethin",
+       "anker": "a7"
+      }
+     ]
+    },
+    {
+     "nr": 6,
+     "titel": "Alkohole (Alkanole)",
+     "url": "molekulare-stoffe/hilfen-6.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Homologe Reihe der Alkanole",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Alkanole benennen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Strukturformeln zeichnen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Fehler finden",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Verbrennung von Ethanol",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Wahl",
+       "titel": "Verbrennung von Methanol",
+       "anker": "a6"
+      }
+     ]
     }
    ]
   }
