@@ -1309,16 +1309,46 @@
        "anker": "a1"
       },
       {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Begriffe definieren",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Die neun Elementmoleküle",
+       "anker": "a3"
+      },
+      {
        "code": "A4",
        "art": "Pflicht",
        "titel": "Wie erreichen Chlor-Atome die Edelgaskonfiguration?",
        "anker": "a4"
       },
       {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Summenformel und Strukturformel vergleichen",
+       "anker": "a5"
+      },
+      {
        "code": "A6",
        "art": "Pflicht",
        "titel": "Elementmoleküle H₂, F₂, O₂, N₂",
        "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Wahl",
+       "titel": "Warum ist Stickstoff so reaktionsträge?",
+       "anker": "a7"
+      },
+      {
+       "code": "A8",
+       "art": "Pflicht",
+       "titel": "Beispiel Wasser-Molekül vervollständigen",
+       "anker": "a8"
       },
       {
        "code": "A9",
