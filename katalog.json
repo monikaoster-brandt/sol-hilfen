@@ -2281,7 +2281,7 @@
       {
        "code": "A3",
        "art": "Pflicht",
-       "titel": "pH-Skala",
+       "titel": "Bereiche der pH-Skala",
        "anker": "a3"
       },
       {
@@ -2312,26 +2312,38 @@
       {
        "code": "A2",
        "art": "Pflicht",
-       "titel": "Protonenübergang beschreiben",
+       "titel": "Hypothesenbildung: Wasserstoffchlorid + Wasser",
        "anker": "a2"
       },
       {
        "code": "A3",
        "art": "Pflicht",
-       "titel": "Steckbrief Salzsäure",
+       "titel": "Protonenübergang beschreiben",
        "anker": "a3"
       },
       {
        "code": "A4",
        "art": "Pflicht",
-       "titel": "Salpetersäure im Grundwasser",
+       "titel": "Kochsalz-Lösung und Salzsäure",
        "anker": "a4"
       },
       {
        "code": "A5",
+       "art": "Pflicht",
+       "titel": "Steckbrief Salzsäure",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Salpetersäure im Grundwasser",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
        "art": "Wahl",
        "titel": "Gasunfall",
-       "anker": "a5"
+       "anker": "a7"
       }
      ]
     },
@@ -2349,32 +2361,38 @@
       {
        "code": "A2",
        "art": "Pflicht",
-       "titel": "Elektronenpaare verfolgen",
+       "titel": "Hypothesenbildung: Ammoniak + Wasser",
        "anker": "a2"
       },
       {
        "code": "A3",
        "art": "Pflicht",
-       "titel": "Säure oder Base?",
+       "titel": "Hypothesen prüfen",
        "anker": "a3"
       },
       {
        "code": "A4",
        "art": "Pflicht",
-       "titel": "Ammoniakwasser und Natronlauge",
+       "titel": "Elektronenpaare verfolgen",
        "anker": "a4"
       },
       {
        "code": "A5",
        "art": "Pflicht",
-       "titel": "Kalilauge",
+       "titel": "Ammoniakwasser und Natronlauge",
        "anker": "a5"
       },
       {
        "code": "A6",
+       "art": "Pflicht",
+       "titel": "Kalilauge",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
        "art": "Wahl",
        "titel": "Ätzende Wirkung von Ammoniak",
-       "anker": "a6"
+       "anker": "a7"
       }
      ]
     },
