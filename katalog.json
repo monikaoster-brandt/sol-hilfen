@@ -1322,7 +1322,7 @@
       },
       {
        "code": "4",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Brillenpass",
        "anker": "a4"
       },
@@ -1364,7 +1364,7 @@
       },
       {
        "code": "11",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Aussagekraft der Studie",
        "anker": "a11"
       }
@@ -1395,7 +1395,7 @@
       },
       {
        "code": "4",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Transmitter oder Hormon?",
        "anker": "a4"
       }
@@ -1426,7 +1426,7 @@
       },
       {
        "code": "8",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Schnelle und langsame Hormone",
        "anker": "a8"
       }
@@ -1488,7 +1488,7 @@
       },
       {
        "code": "16",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Hungern im Überfluss",
        "anker": "a16"
       }
@@ -1544,7 +1544,7 @@
       },
       {
        "code": "23",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Ursache in der Hypophyse",
        "anker": "a23"
       }
@@ -1575,7 +1575,7 @@
       },
       {
        "code": "27",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Wie die Pille wirkt",
        "anker": "a27"
       }
@@ -1588,49 +1588,49 @@
      "aufgaben": [
       {
        "code": "A1",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Schilddrüsenhormon",
        "anker": "abi-a1"
       },
       {
        "code": "A2",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Kaulquappen-Versuch",
        "anker": "abi-a2"
       },
       {
        "code": "A3",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Zusätzliches Hormon",
        "anker": "abi-a3"
       },
       {
        "code": "A4",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Basedow-Krankheit",
        "anker": "abi-a4"
       },
       {
        "code": "A5",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "TSH bei Basedow",
        "anker": "abi-a5"
       },
       {
        "code": "B1",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "TSH-Verlauf erklären",
        "anker": "abi-b1"
       },
       {
        "code": "B2",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Thyroxinverlauf einzeichnen",
        "anker": "abi-b2"
       },
       {
        "code": "B3",
-       "art": "Zusatz",
+       "art": "Aufgabe",
        "titel": "Wirkungsweise vergleichen",
        "anker": "abi-b3"
       }
