@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aktionspotenzial interaktiv · Biologie BOS 13 / FOS 13</title>
+<style>
+:root{--navy:#183643;--teal:#2a7f83;--lteal:#e4f1f0;--orange:#e07b39;--red:#c0392b;--blue:#2f6fb0;--green:#2d8a4e;--purp:#6c4f9e;--gray:#6b7b80}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Calibri,Arial,sans-serif;color:var(--navy);background:#f5f8f8}
+header{background:var(--navy);color:#fff;padding:14px 20px}
+header h1{margin:0;font-size:1.35rem}
+header p{margin:4px 0 0;color:#cfe5e4;font-size:.92rem}
+main{max-width:1180px;margin:0 auto;padding:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:12px 14px}
+.card h2{margin:0 0 8px;font-size:1.02rem;color:var(--teal)}
+canvas{width:100%;display:block;border-radius:8px}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 18px;margin-top:4px}
+label{font-size:.9rem;display:block}
+input[type=range]{width:100%}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+button{background:var(--teal);color:#fff;border:0;border-radius:6px;padding:8px 14px;font-size:.95rem;cursor:pointer}
+button.sec{background:#fff;color:var(--teal);border:1.5px solid var(--teal)}
+button:hover{filter:brightness(1.08)}
+.phase{font-size:1.05rem;font-weight:700;margin:2px 0 6px}
+.expl{font-size:.93rem;line-height:1.45;min-height:5.6em}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.85rem;margin-top:6px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+.tasks li{margin:5px 0;font-size:.93rem}
+.chk{display:flex;align-items:center;gap:6px;font-size:.9rem}
+.val{font-weight:700;color:var(--teal)}
+footer{text-align:center;font-size:.8rem;color:var(--gray);padding:16px}
+.note{font-size:.82rem;color:var(--gray);margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+<h1>Aktionspotenzial interaktiv</h1>
+<p>Reizen Sie eine Nervenzelle und beobachten Sie Membranpotenzial und Ionenkanäle · Biologie BOS 13 / FOS 13 · Neurobiologie</p>
+</header>
+<main>
+<div class="grid">
+ <div class="card">
+  <h2>Membran des Axons</h2>
+  <canvas id="mem" width="560" height="360"></canvas>
+  <div class="legend">
+   <span><span class="dot" style="background:#7f8c8d"></span>Na⁺</span>
+   <span><span class="dot" style="background:#e07b39"></span>K⁺</span>
+   <span><span class="dot" style="background:#6c4f9e"></span>organische Anionen A⁻</span>
+  </div>
+ </div>
+ <div class="card">
+  <h2>Oszilloskop: Membranpotenzial</h2>
+  <canvas id="osc" width="560" height="360"></canvas>
+  <div class="phase" id="phase">Ruhepotenzial</div>
+  <div class="expl" id="expl"></div>
+ </div>
+</div>
+
+<div class="card" style="margin-top:14px">
+ <h2>Versuchssteuerung</h2>
+ <div class="controls">
+  <label>Reizstärke (kurzer Reiz, 0,5 ms): <span class="val" id="sv"></span>
+   <input type="range" id="stim" min="0" max="40" step="1" value="15"></label>
+  <label>Zweiter Reiz nach: <span class="val" id="gv"></span>
+   <input type="range" id="gap" min="0.5" max="12" step="0.5" value="6"></label>
+  <label>Anhaltender Reiz (Stärke): <span class="val" id="dv"></span>
+   <input type="range" id="dc" min="0" max="40" step="2" value="0"></label>
+  <label>Geschwindigkeit: <span class="val" id="spv"></span>
+   <input type="range" id="speed" min="1" max="10" step="1" value="3"></label>
+ </div>
+ <div class="btns">
+  <button id="b1">Einzelreiz auslösen</button>
+  <button id="b2">Doppelreiz auslösen</button>
+  <button class="sec" id="bpause">Pause</button>
+  <button class="sec" id="breset">Zurücksetzen</button>
+ </div>
+ <div class="controls" style="margin-top:8px">
+  <span class="chk"><input type="checkbox" id="ttx"> <label for="ttx">Gift TTX: spannungsgesteuerte Na⁺-Kanäle blockiert</label></span>
+  <span class="chk"><input type="checkbox" id="kblock"> <label for="kblock">spannungsgesteuerte K⁺-Kanäle blockiert</label></span>
+  <span class="chk"><input type="checkbox" id="thr" checked> <label for="thr">Schwellenwert anzeigen</label></span>
+ </div>
+ <p class="note">Modell: vereinfachtes Hodgkin-Huxley-Modell, auf ein Ruhepotenzial von −70 mV verschoben. Die Werte sind Modellwerte und gelten nicht für jede Nervenzelle. Die Ionen in der Membranansicht sind stark vereinfacht (in Wirklichkeit fließt nur ein winziger Bruchteil der Ionen). Der anhaltende Reiz wird wie bei einer Sinneszelle in einzelne Erregungen umgesetzt.</p>
+</div>
+
+<div class="card" style="margin-top:14px">
+ <h2>Forschungsaufträge</h2>
+ <ol class="tasks">
+  <li><b>Ermitteln Sie</b> die kleinste Reizstärke, die gerade noch ein Aktionspotenzial auslöst! <b>Beschreiben Sie</b>, wie sich das Aktionspotenzial bei noch stärkeren Reizen verändert!</li>
+  <li><b>Beobachten Sie</b> die Na⁺- und K⁺-Kanäle während eines Aktionspotenzials und <b>ordnen Sie</b> ihre Zustände den Phasen <b>zu</b>!</li>
+  <li><b>Lösen Sie</b> Doppelreize (Reizstärke 15) mit 1,5 ms, 4 ms und 10 ms Abstand <b>aus</b>! <b>Wiederholen Sie</b> den Versuch mit 4 ms Abstand und der Reizstärke 40! <b>Erklären Sie</b> Ihre Beobachtungen mit der absoluten und relativen Refraktärzeit!</li>
+  <li><b>Stellen Sie</b> einen anhaltenden Reiz der Stärke 10, 20 und 40 <b>ein</b>! <b>Vergleichen Sie</b> Höhe und Anzahl der Aktionspotenziale und <b>erläutern Sie</b>, wie die Reizstärke verschlüsselt wird!</li>
+  <li><b>Untersuchen Sie</b> die Wirkung von TTX und eines K⁺-Kanal-Blockers! <b>Erklären Sie</b> die Unterschiede!</li>
+ </ol>
+</div>
+</main>
+<footer>M. Oster-Brandt, FOS BOS Würzburg · erstellt mit KI-Unterstützung · eigene Darstellung</footer>
+
+<script>
+// ---------------- Hodgkin-Huxley (Ruhe auf -70 mV verschoben) ----------------
+const SHIFT = -5, PHI = 3; // PHI: Temperaturfaktor -> kürzere Aktionspotenziale (≈ 1 ms) // klassisches HH ruht bei ca. -65 mV
+const C = 1, gNaMax = 120, gKMax = 36, gL = 0.3, ENa = 50 + SHIFT, EK = -77 + SHIFT, EL = -54.4 + SHIFT;
+let V, m, h, n, t, trace, stimEvents, running = true, tLast = performance.now();
+const am = v => { v -= SHIFT; return 0.1 * (v + 40) / (1 - Math.exp(-(v + 40) / 10)); };
+const bm = v => { v -= SHIFT; return 4 * Math.exp(-(v + 65) / 18); };
+const ah = v => { v -= SHIFT; return 0.07 * Math.exp(-(v + 65) / 20); };
+const bh = v => { v -= SHIFT; return 1 / (1 + Math.exp(-(v + 35) / 10)); };
+const an = v => { v -= SHIFT; return 0.01 * (v + 55) / (1 - Math.exp(-(v + 55) / 10)); };
+const bn = v => { v -= SHIFT; return 0.125 * Math.exp(-(v + 65) / 80); };
+const $ = id => document.getElementById(id);
+function reset() {
+  V = -70; m = am(V) / (am(V) + bm(V)); h = ah(V) / (ah(V) + bh(V)); n = an(V) / (an(V) + bn(V));
+  for (let i = 0; i < 3000; i++) step(0.01, 0); // einschwingen
+  t = 0; trace = []; stimEvents = []; particles = []; spawnBase();
+}
+let INa = 0, IK = 0;
+function step(dt, Iext) {
+  const gNa = $("ttx") && $("ttx").checked ? 0 : gNaMax * m * m * m * h;
+  const gK = $("kblock") && $("kblock").checked ? 0 : gKMax * n * n * n * n;
+  INa = gNa * (V - ENa); IK = gK * (V - EK);
+  const IL = gL * (V - EL);
+  V += dt * (Iext - INa - IK - IL) / C;
+  m += PHI * dt * (am(V) * (1 - m) - bm(V) * m);
+  h += PHI * dt * (ah(V) * (1 - h) - bh(V) * h);
+  n += PHI * dt * (an(V) * (1 - n) - bn(V) * n);
+}
+const WINDOW = 20; // ms im Oszilloskop
+function stimAt(time) {
+  let I = 0;
+  for (const s of stimEvents) if (time >= s.t && time < s.t + 0.5) I += s.a * 2;
+  return I;
+}
+function fire(double) {
+  const a = +$("stim").value; const t0 = t + 1;
+  stimEvents.push({ t: t0, a: a });
+  if (double) stimEvents.push({ t: t0 + +$("gap").value, a: a });
+}
+// ---------------- Teilchen-Animation ----------------
+let particles = [], uAcc = 0;
+const MEM = { top: 150, bot: 210 }; // Membran-y im Canvas
+const CH = { na: 150, kv: 290, leak: 400, pump: 490 }; // x-Positionen
+function rnd(a, b) { return a + Math.random() * (b - a); }
+function spawnBase() {
+  particles = [];
+  for (let i = 0; i < 26; i++) particles.push({ x: rnd(10, 550), y: rnd(15, 130), k: "na" });
+  for (let i = 0; i < 4; i++) particles.push({ x: rnd(10, 550), y: rnd(15, 130), k: "k" });
+  for (let i = 0; i < 24; i++) particles.push({ x: rnd(10, 550), y: rnd(285, 345), k: "k" });
+  for (let i = 0; i < 4; i++) particles.push({ x: rnd(10, 550), y: rnd(285, 345), k: "na" });
+  for (let i = 0; i < 12; i++) particles.push({ x: rnd(10, 550), y: rnd(285, 345), k: "a" });
+}
+let naAcc = 0, kAcc = 0, leakAcc = 0, pumpAcc = 0;
+const BASE = { kOut: 4, naIn: 4 };
+function moveIons(dtReal) {
+  // Ströme in Ionen-Durchtritte übersetzen (rein anschaulich)
+
+  while (naAcc > 1) { naAcc--; transit("na", CH.na, -1); }
+  while (kAcc > 1) { kAcc--; transit("k", CH.kv, +1); }
+  while (leakAcc > 1) { leakAcc--; transit("k", CH.leak, Math.random() < 0.5 ? +1 : -1); }
+  while (pumpAcc > 1) {
+    pumpAcc--;
+    const kOut = particles.filter(p => p.k === "k" && !p.tr && p.y < 140).length, naIn = particles.filter(p => p.k === "na" && !p.tr && p.y > 220).length;
+    if (naIn > BASE.naIn) transit("na", CH.pump, +1);
+    if (kOut > BASE.kOut) transit("k", CH.pump, -1);
+  }
+  for (const p of particles) {
+    if (p.tr) {
+      p.y += p.tr.v * dtReal * 2.5;
+      if ((p.tr.v < 0 && p.y < 118) || (p.tr.v > 0 && p.y > 285)) p.tr = null;
+      continue;
+    }
+    p.x += rnd(-0.6, 0.6); p.y += rnd(-0.6, 0.6);
+    if (p.y < 200) p.y = Math.min(Math.max(p.y, 12), 128); else p.y = Math.min(Math.max(p.y, 282), 348);
+    p.x = Math.min(Math.max(p.x, 8), 552);
+  }
+}
+function transit(kind, x, dir) {
+  // dir +1 = von innen nach außen, -1 = von außen nach innen
+  const pool = particles.filter(p => p.k === kind && !p.tr && (dir > 0 ? p.y > 200 : p.y < 200));
+  if (!pool.length) return;
+  pool.sort((a, b) => Math.abs(a.x - x) - Math.abs(b.x - x));
+  const p = pool[Math.floor(Math.random() * Math.min(4, pool.length))];
+  p.x = x + rnd(-4, 4); p.y = dir > 0 ? 235 : 125; p.tr = { v: dir > 0 ? -1 : 1 };
+}
+// ---------------- Zeichnen ----------------
+const memC = $("mem"), mctx = memC.getContext("2d"), oscC = $("osc"), octx = oscC.getContext("2d");
+function drawMem() {
+  const c = mctx; c.clearRect(0, 0, 560, 360);
+  c.fillStyle = "#eaf3fb"; c.fillRect(0, 0, 560, 145); c.fillStyle = "#fdf3e7"; c.fillRect(0, 215, 560, 145);
+  c.fillStyle = "#183643"; c.font = "bold 13px Segoe UI, Arial"; c.fillText("außen", 8, 18); c.fillText("innen", 8, 352);
+  // Lipide
+  for (let x = 6; x < 560; x += 14) {
+    if (Object.values(CH).some(cx => Math.abs(x - cx) < 26)) continue;
+    for (const [y, d] of [[150, 1], [210, -1]]) {
+      c.fillStyle = "#f0c987"; c.strokeStyle = "#b68a3a"; c.beginPath(); c.arc(x, y, 6, 0, 7); c.fill(); c.stroke();
+      c.beginPath(); c.moveTo(x - 2, y + d * 6); c.lineTo(x - 2, y + d * 22); c.moveTo(x + 2, y + d * 6); c.lineTo(x + 2, y + d * 22); c.stroke();
+    }
+  }
+  // Ladung an der Membran
+  c.font = "bold 15px Arial";
+  const plusOut = V < -10; // in Ruhe außen +, bei Ladungsumkehr außen −
+  for (let x = 20; x < 560; x += 40) {
+    if (Object.values(CH).some(cx => Math.abs(x - cx) < 30)) continue;
+    c.fillStyle = plusOut ? "#c0392b" : "#2f6fb0"; c.fillText(plusOut ? "+" : "−", x - 4, 138);
+    c.fillStyle = plusOut ? "#2f6fb0" : "#c0392b"; c.fillText(plusOut ? "−" : "+", x - 4, 233);
+  }
+  // Kanäle
+  const naOpen = ($("ttx").checked ? 0 : m * m * m * h), naInact = 1 - h, kOpen = ($("kblock").checked ? 0 : Math.pow(n, 4));
+  channel(CH.na, "#9ec5e8", "#2f6fb0", Math.min(1, naOpen * 2.5), naInact > 0.6 && naOpen < 0.05, "Na⁺-Kanal", $("ttx").checked ? "blockiert" : (naOpen > 0.05 ? "offen" : (naInact > 0.6 ? "inaktiviert" : "geschlossen")));
+  channel(CH.kv, "#f5c49b", "#e07b39", Math.min(1, kOpen * 2.2), false, "K⁺-Kanal", $("kblock").checked ? "blockiert" : (kOpen > 0.08 ? "offen" : "geschlossen"));
+  channel(CH.leak, "#9fd4d2", "#2a7f83", 0.55, false, "K⁺-Leckkanal", "immer offen");
+  // Pumpe
+  c.fillStyle = "#d9cbe9"; c.strokeStyle = "#6c4f9e"; c.lineWidth = 2; roundRect(c, CH.pump - 22, 140, 44, 80, 16); c.fill(); c.stroke(); c.lineWidth = 1;
+  c.fillStyle = "#6c4f9e"; c.font = "bold 11px Segoe UI, Arial"; c.textAlign = "center"; c.fillText("Na⁺-K⁺-", CH.pump, 176); c.fillText("Pumpe", CH.pump, 190); c.textAlign = "left";
+  // Ionen
+  for (const p of particles) {
+    c.beginPath(); c.arc(p.x, p.y, p.k === "a" ? 8 : 6, 0, 7);
+    c.fillStyle = p.k === "na" ? "#7f8c8d" : p.k === "k" ? "#e07b39" : "#6c4f9e"; c.fill();
+  }
+}
+function channel(x, fill, stroke, open, inact, name, state) {
+  const c = mctx, w = 16 - 8 * (1 - open);
+  c.fillStyle = fill; c.strokeStyle = stroke; c.lineWidth = 2;
+  roundRect(c, x - 24, 140, 24 - w / 2 + 6, 80, 10); c.fill(); c.stroke();
+  roundRect(c, x + w / 2 - 6, 140, 24 - w / 2 + 6, 80, 10); c.fill(); c.stroke();
+  if (open < 0.08 && !inact) { c.fillStyle = stroke; c.fillRect(x - 8, 172, 16, 14); }
+  if (inact) { c.fillStyle = stroke; c.beginPath(); c.arc(x, 226, 8, 0, 7); c.fill(); c.fillRect(x - 2, 214, 4, 10); }
+  c.lineWidth = 1; c.fillStyle = "rgba(255,255,255,.85)"; c.fillRect(x - 42, 243, 84, 29); c.fillStyle = stroke; c.font = "bold 11px Segoe UI, Arial"; c.textAlign = "center";
+  c.fillText(name, x, 254 + (x === CH.kv ? 0 : 0)); c.font = "11px Segoe UI, Arial"; c.fillText(state, x, 267); c.textAlign = "left";
+}
+function roundRect(c, x, y, w, h, r) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
+function drawOsc() {
+  const c = octx, W = 560, H = 360, L = 52, R = 10, T = 14, B = 40;
+  c.clearRect(0, 0, W, H); c.fillStyle = "#0f2e2b"; c.fillRect(L, T, W - L - R, H - T - B);
+  const y = v => T + (40 - v) / 140 * (H - T - B);
+  const t0 = Math.max(0, t - WINDOW), x = tt => L + (tt - t0) / WINDOW * (W - L - R);
+  c.strokeStyle = "rgba(160,220,210,.18)"; c.lineWidth = 1;
+  for (let v = -100; v <= 40; v += 10) { c.beginPath(); c.moveTo(L, y(v)); c.lineTo(W - R, y(v)); c.stroke(); }
+  for (let k = Math.ceil(t0); k <= t0 + WINDOW; k++) { c.beginPath(); c.moveTo(x(k), T); c.lineTo(x(k), H - B); c.stroke(); }
+  c.fillStyle = "#183643"; c.font = "12px Segoe UI, Arial"; c.textAlign = "right";
+  for (const v of [30, 0, -50, -70, -90]) c.fillText(v + " mV", L - 4, y(v) + 4);
+  c.textAlign = "center"; c.fillText("Zeit (ms)", L + (W - L - R) / 2, H - 6);
+  for (let k = Math.ceil(t0 / 5) * 5; k <= t0 + WINDOW; k += 5) c.fillText(k.toFixed(0), x(k), H - B + 15);
+  c.textAlign = "left";
+  if ($("thr").checked) { c.strokeStyle = "#f5c49b"; c.setLineDash([6, 5]); c.beginPath(); c.moveTo(L, y(-55)); c.lineTo(W - R, y(-55)); c.stroke(); c.setLineDash([]); c.fillStyle = "#f5c49b"; c.fillText("Schwellenwert ≈ −55 mV (Modell)", L + 6, y(-55) - 5); }
+  c.strokeStyle = "#cfd8da"; c.beginPath(); c.moveTo(L, y(-70)); c.lineTo(W - R, y(-70)); c.stroke();
+  // Reize markieren
+  for (const s of stimEvents) if (s.t >= t0 && s.t <= t) { c.fillStyle = "#9fd4d2"; c.beginPath(); c.moveTo(x(s.t), H - B - 2); c.lineTo(x(s.t) - 6, H - B - 12); c.lineTo(x(s.t) + 6, H - B - 12); c.fill(); }
+  c.strokeStyle = "#ff6b5b"; c.lineWidth = 2.2; c.beginPath(); let first = true;
+  for (const [tt, v] of trace) { if (tt < t0) continue; const X = x(tt), Y = y(v); if (first) { c.moveTo(X, Y); first = false; } else c.lineTo(X, Y); }
+  c.stroke(); c.lineWidth = 1;
+  c.fillStyle = "#fff"; c.font = "bold 13px Segoe UI, Arial"; c.fillText(V.toFixed(0) + " mV", W - R - 70, T + 18);
+}
+// ---------------- Phasenerkennung + Erklärung ----------------
+let lastV = -70;
+const TXT = {
+  "Ruhepotenzial": "Die spannungsgesteuerten Kanäle sind geschlossen. Durch die K⁺-Leckkanäle wandern K⁺-Ionen entlang ihres Konzentrationsgradienten nach außen, der Ladungsgradient zieht sie zurück. Die Natrium-Kalium-Ionenpumpe erhält die Konzentrationsgradienten.",
+  "unterschwellige Depolarisation": "Der Reiz verringert die Spannung an der Membran. Der Schwellenwert wird nicht erreicht – die Spannung kehrt ohne Aktionspotenzial zum Ruhepotenzial zurück.",
+  "Depolarisation": "Am Schwellenwert öffnen sich die spannungsgesteuerten Na⁺-Kanäle. Na⁺-Ionen strömen entlang ihres Konzentrations- und Ladungsgradienten ein – die Innenseite wird positiv (Ladungsumkehr).",
+  "Repolarisation": "Die Na⁺-Kanäle sind inaktiviert. Die spannungsgesteuerten K⁺-Kanäle haben sich verzögert geöffnet: K⁺-Ionen strömen aus, die Innenseite wird wieder negativ.",
+  "Hyperpolarisation": "Die K⁺-Kanäle schließen sich nur langsam. Es strömen noch K⁺-Ionen aus: Das Membranpotenzial sinkt kurz unter das Ruhepotenzial. Die Na⁺-Kanäle werden in dieser Zeit wieder aktivierbar (Refraktärzeit)."
+};
+function phase(dv) {
+  if (V > -50 && dv > 0.5) return "Depolarisation";
+  if (V > -66 && dv < -0.3 && n > 0.45) return "Repolarisation";
+  if (V < -71) return "Hyperpolarisation";
+  if (V > -68 && dv > 0.05 && n < 0.45) return "unterschwellige Depolarisation";
+  if (V > -50) return dv >= 0 ? "Depolarisation" : "Repolarisation";
+  return "Ruhepotenzial";
+}
+let curPhase = "";
+function showPhase(p) {
+  if (p === curPhase) return; curPhase = p;
+  $("phase").textContent = p; $("phase").style.color = { "Depolarisation": "#2f6fb0", "Repolarisation": "#2d8a4e", "Hyperpolarisation": "#6c4f9e" }[p] || "#183643";
+  $("expl").textContent = TXT[p];
+}
+// ---------------- Hauptschleife ----------------
+function loop(now) {
+  const dtReal = Math.min(50, now - tLast); tLast = now;
+  if (running) {
+    const simMs = dtReal * 0.0006 * +$("speed").value; // Zeitlupe
+    const steps = Math.max(1, Math.round(simMs / 0.01));
+    for (let i = 0; i < steps; i++) {
+      // Dauerreiz: anhaltender Reiz löst in einem Abstand, der von der Reizstärke abhängt, Einzelerregungen aus (vereinfachte Sinneszelle)
+      const D = +$("dc").value;
+      if (D > 0) { uAcc += 0.005 * D * 0.01; if (uAcc >= 1) { uAcc = 0; stimEvents.push({ t: t + 0.01, a: 15 }); } } else uAcc = 0;
+      step(0.01, stimAt(t)); t += 0.01; if (i % 3 === 0) trace.push([t, V]);
+      // Ionen-Durchtritte proportional zum Strom (anschaulich, ca. 6 Na⁺ und 6 K⁺ pro Aktionspotenzial)
+      naAcc += Math.max(0, -INa) * 0.01 * 0.009; kAcc += Math.max(0, IK) * 0.01 * 0.009; leakAcc += 0.01 * 0.15; pumpAcc += 0.01 * 0.6;
+    }
+    if (stimEvents.length > 200) stimEvents = stimEvents.filter(s => s.t > t - WINDOW - 1);
+    if (trace.length > 6000) trace = trace.slice(-5000);
+    const dv = (V - lastV) / Math.max(simMs, 1e-6) ; lastV = V;
+    showPhase(phase(dv));
+    moveIons(dtReal / 16 * +$("speed").value / 3);
+  }
+  drawMem(); drawOsc();
+  requestAnimationFrame(loop);
+}
+function labels() {
+  $("sv").textContent = $("stim").value; $("gv").textContent = (+$("gap").value).toLocaleString("de-DE") + " ms";
+  $("dv").textContent = $("dc").value === "0" ? "aus" : $("dc").value; $("spv").textContent = $("speed").value + "×";
+}
+["stim", "gap", "dc", "speed"].forEach(id => $(id).addEventListener("input", labels));
+$("b1").onclick = () => fire(false); $("b2").onclick = () => fire(true);
+$("bpause").onclick = () => { running = !running; $("bpause").textContent = running ? "Pause" : "Weiter"; };
+$("breset").onclick = () => { reset(); $("dc").value = 0; labels(); };
+reset(); labels(); requestAnimationFrame(loop);
+</script>
+</body>
+</html>
