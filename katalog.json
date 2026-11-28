@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-27",
+ "stand": "2026-11-28",
  "autorin": "M. Oster-Brandt, FOS BOS Würzburg (erstellt mit KI-Unterstützung)",
  "einheiten": [
   {
@@ -116,6 +116,12 @@
        "art": "Wahl",
        "titel": "Viren gegen Bakterien",
        "anker": "w8"
+      },
+      {
+       "code": "W9",
+       "art": "Wahl",
+       "titel": "Ethik: Antibiotika im Schweinestall",
+       "anker": "w9"
       }
      ]
     },
@@ -287,6 +293,12 @@
        "art": "Wahl",
        "titel": "Antikörper als Giftfähre gegen Krebs",
        "anker": "w7"
+      },
+      {
+       "code": "W8",
+       "art": "Wahl",
+       "titel": "Ethik: Impfpflicht – ja oder nein?",
+       "anker": "w8"
       }
      ]
     },
