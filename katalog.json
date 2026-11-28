@@ -1578,6 +1578,98 @@
        "anker": "a6"
       }
      ]
+    },
+    {
+     "nr": 8,
+     "titel": "Elektronegativität und polare Atombindung",
+     "url": "molekulare-stoffe/hilfen-8.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Knallgasreaktion",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Verlauf der Elektronegativität im PSE",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Edelgase",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Chlor – Wasserstoffchlorid – Natriumchlorid",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "ΔEN und Bindungsart",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Strukturformeln mit Partialladungen",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Pflicht",
+       "titel": "Bindungen nach Polarität ordnen",
+       "anker": "a7"
+      },
+      {
+       "code": "A8",
+       "art": "Pflicht",
+       "titel": "Warum reagieren Wasserstoff und Sauerstoff?",
+       "anker": "a8"
+      },
+      {
+       "code": "A9",
+       "art": "Wahl",
+       "titel": "Ist HF ein Salz?",
+       "anker": "a9"
+      }
+     ]
+    },
+    {
+     "nr": 9,
+     "titel": "Dipolmoleküle",
+     "url": "molekulare-stoffe/hilfen-9.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Prüfschema ordnen",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Dipol oder kein Dipol?",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Den Versuch erklären",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Wahl",
+       "titel": "Ist CO₂ ein Dipol?",
+       "anker": "a4"
+      }
+     ]
     }
    ]
   }
