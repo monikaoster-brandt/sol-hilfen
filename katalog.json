@@ -2588,6 +2588,170 @@
      ]
     }
    ]
+  },
+  {
+   "id": "vk-mikroskopieren",
+   "fach": "Biologie",
+   "schulart": "FOS",
+   "jgst": "10",
+   "zweig": "Vorklasse",
+   "klasse": "Vorklasse (VK)",
+   "schuljahr": "2026/27",
+   "lehrplan": "Zellbiologie",
+   "thema": "Mikroskopieren",
+   "art": "Unterricht",
+   "titel": "Mikroskopieren – Zellen sichtbar machen",
+   "module": [
+    {
+     "nr": 1,
+     "titel": "Mikroskopieren – Zellen sichtbar machen",
+     "url": "vk-biologie/hilfen-mikroskopieren.html",
+     "aufgaben": [
+      {
+       "code": "1",
+       "art": "Aufgabe",
+       "titel": "Mikroskop beschriften",
+       "anker": "a1"
+      },
+      {
+       "code": "2",
+       "art": "Aufgabe",
+       "titel": "Funktionen der Bauteile",
+       "anker": "a2"
+      },
+      {
+       "code": "3",
+       "art": "Aufgabe",
+       "titel": "Gesamtvergrößerung berechnen",
+       "anker": "a3"
+      },
+      {
+       "code": "4",
+       "art": "Aufgabe",
+       "titel": "Kleinstes Objektiv zuerst",
+       "anker": "a4"
+      },
+      {
+       "code": "F",
+       "art": "Fehlersuche",
+       "titel": "„Ich sehe nichts!“",
+       "anker": "aF"
+      },
+      {
+       "code": "5",
+       "art": "Aufgabe",
+       "titel": "Zwiebelhaut zeichnen",
+       "anker": "a5"
+      },
+      {
+       "code": "6",
+       "art": "Aufgabe",
+       "titel": "Wasserpest: Plasmaströmung und Zeichnung",
+       "anker": "a6"
+      },
+      {
+       "code": "7",
+       "art": "Aufgabe",
+       "titel": "Zwiebel und Wasserpest vergleichen",
+       "anker": "a7"
+      },
+      {
+       "code": "8",
+       "art": "Aufgabe",
+       "titel": "Keine Chloroplasten in der Zwiebelhaut",
+       "anker": "a8"
+      },
+      {
+       "code": "9",
+       "art": "Aufgabe",
+       "titel": "Mundschleimhaut",
+       "anker": "a9"
+      },
+      {
+       "code": "E1",
+       "art": "Expertenaufgabe",
+       "titel": "Vergrößerung einer Zelle",
+       "anker": "aE1"
+      },
+      {
+       "code": "A1",
+       "art": "Ohne Fachraum",
+       "titel": "Führerschein ordnen",
+       "anker": "aA1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vk-enzyme",
+   "fach": "Biologie",
+   "schulart": "FOS",
+   "jgst": "10",
+   "zweig": "Vorklasse",
+   "klasse": "Vorklasse (VK)",
+   "schuljahr": "2026/27",
+   "lehrplan": "Ernährung und Verdauung",
+   "thema": "Enzyme",
+   "art": "Unterricht",
+   "titel": "Enzyme – die Werkzeuge der Verdauung",
+   "module": [
+    {
+     "nr": 1,
+     "titel": "Enzyme – die Werkzeuge der Verdauung",
+     "url": "vk-biologie/hilfen-enzyme.html",
+     "aufgaben": [
+      {
+       "code": "1",
+       "art": "Aufgabe",
+       "titel": "Speichel und Stärke (Video 2)",
+       "anker": "a1"
+      },
+      {
+       "code": "3",
+       "art": "Aufgabe",
+       "titel": "Energiediagramm erklären",
+       "anker": "a3"
+      },
+      {
+       "code": "5",
+       "art": "Aufgabe",
+       "titel": "Schlüssel-Schloss-Modell beschreiben",
+       "anker": "a5"
+      },
+      {
+       "code": "6",
+       "art": "Aufgabe",
+       "titel": "Substratspezifität",
+       "anker": "a6"
+      },
+      {
+       "code": "8",
+       "art": "Aufgabe",
+       "titel": "Kompartimentierung",
+       "anker": "a8"
+      },
+      {
+       "code": "9",
+       "art": "Aufgabe",
+       "titel": "Ananas gegen Gelatine",
+       "anker": "a9"
+      },
+      {
+       "code": "10",
+       "art": "Aufgabe",
+       "titel": "Katalase im Energiediagramm",
+       "anker": "a10"
+      },
+      {
+       "code": "11",
+       "art": "Aufgabe",
+       "titel": "Grenzen des Modells",
+       "anker": "a11"
+      }
+     ]
+    }
+   ]
   }
  ]
 }

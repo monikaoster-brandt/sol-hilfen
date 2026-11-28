@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hilfen Mikroskopieren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: ruhig, ermutigend, Schulmaterial
+   IDEA: ein Stapel Tippkarten, die man nacheinander aufdeckt
+   PICTURE: die Karten selbst – Hilfe 1 grün, Hilfe 2 bernstein
+   COLOUR and TYPE: Tannengrün der Arbeitsblätter, Bernstein als Akzent; Atkinson Hyperlegible (gut lesbar)
+   LAYOUT: eine Spalte, Aufgaben-Navigation oben, Karten untereinander */
+:root{color-scheme:light dark;--bg:light-dark(#f6faf8,#0f1a16);--card:light-dark(#ffffff,#16241f);--ink:light-dark(#18261f,#e6f0ec);--muted:light-dark(#4f645b,#9fb5ac);--green:light-dark(#1f4e3d,#7fc4bc);--h1:light-dark(#e3f1ec,#1d3a31);--h2:light-dark(#fdf1df,#3a2c17);--amber:light-dark(#9a5b10,#f2b66a);--line:light-dark(#cfe0d9,#2a3d36)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Atkinson Hyperlegible",system-ui,sans-serif;overflow-x:clip}
+header{background:var(--green);color:light-dark(#fff,#0f1a16);padding:22px max(5vw,16px) 18px}
+header h1{margin:0;font-size:clamp(26px,6vw,36px);line-height:1.1}
+header p{margin:6px 0 0;font-size:15px;opacity:.9}
+nav{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:10px max(5vw,16px);display:flex;gap:8px;overflow-x:auto}
+nav a{flex:none;min-width:44px;height:44px;display:grid;place-items:center;border-radius:22px;border:2px solid var(--green);color:var(--green);font-weight:700;text-decoration:none;padding:0 12px}
+nav a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+main{max-width:760px;margin:0 auto;padding:18px max(4vw,14px) 40px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:18px;font-size:15px;color:var(--muted)}
+section.task{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:16px;scroll-margin-top:76px}
+section.task h2{margin:0 0 4px;font-size:21px;color:var(--green)}
+section.task .q{margin:0 0 12px}
+.q b{font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+button{font:inherit;font-weight:700;min-height:46px;padding:0 18px;border-radius:12px;border:2px solid var(--green);background:transparent;color:var(--green);cursor:pointer}
+button.h2b{border-color:var(--amber);color:var(--amber)}
+button[disabled]{opacity:.4;cursor:not-allowed}
+.hint{display:none;margin-top:12px;border-radius:12px;padding:12px 14px}
+.hint.open{display:block;animation:in .25s ease}
+.hint.one{background:var(--h1)}.hint.two{background:var(--h2)}
+.hint strong{display:block;font-size:14px;margin-bottom:2px}
+.hint.one strong{color:var(--green)}.hint.two strong{color:var(--amber)}
+@keyframes in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hint.open{animation:none}}
+#wortspeicher h2,#satz h2{color:var(--green);font-size:22px;margin:28px 0 10px}
+.words{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:10px}
+.w{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.w b{display:block;color:var(--green)}
+.w span{font-size:15px}
+.satz{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+footer{text-align:center;font-size:13px;color:var(--muted);padding:10px 16px 30px}
+.term{font:inherit;min-height:0;padding:0 2px;border:0;border-bottom:2px dotted var(--green);border-radius:0;background:none;color:inherit;font-weight:inherit;cursor:pointer}
+.term:hover{background:var(--h1)}
+#sheet{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--card);border-top:3px solid var(--green);box-shadow:0 -6px 24px rgba(0,0,0,.18);padding:16px max(5vw,16px) 22px;transform:translateY(110%);transition:transform .2s ease}
+#sheet.open{transform:none}
+#sheet b{display:block;color:var(--green);font-size:19px;margin-bottom:4px}
+#sheet .x{position:absolute;top:8px;right:10px;min-height:40px;padding:0 12px;font-size:15px}
+@media (prefers-reduced-motion:reduce){#sheet{transition:none}}
+footer{padding-bottom:120px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Hilfen: Mikroskopieren</h1>
+  <p>Biologie Vorklasse · Arbeitsblatt „Mikroskopieren – Zellen sichtbar machen“</p>
+</header>
+<nav id="nav" aria-label="Aufgaben"></nav>
+<main>
+  <div class="tip"><b>Tipp:</b> Unterstrichene Fachbegriffe können Sie antippen – dann erscheint eine Erklärung.<br>Versuchen Sie es zuerst allein. Öffnen Sie dann <b>Hilfe 1</b>. Wenn Sie danach noch nicht weiterkommen, öffnen Sie <b>Hilfe 2</b>. Ganz unten finden Sie den <a href="#wortspeicher">Wortspeicher</a> und Satzbausteine.</div>
+  <div id="tasks"></div>
+  <section id="wortspeicher"><h2>Wortspeicher</h2><div class="words" id="words"></div></section>
+  <section id="satz"><h2>Satzbausteine</h2><div id="satzlist"></div></section>
+</main>
+<div id="sheet" role="dialog" aria-live="polite"><button class="x" id="sx">Schließen</button><b id="st"></b><span id="sd"></span></div>
+<footer>Material: Monika Oster-Brandt, FOS BOS Würzburg (erstellt mit KI-Unterstützung)</footer>
+<script>
+{
+const T=[
+ ["1","<b>Beschriften Sie</b> die Teile 1 bis 12 des Lichtmikroskops (Abb. 1)!","Beginnen Sie oben: Durch welches Teil schauen Sie hinein? Welches Teil liegt direkt über dem Präparat? Die Wörter stehen im Wortspeicher unten. Tipp: Die beiden Drehknöpfe am Stativ sind verschieden groß.","Oben: 1 Okular, 2 Tubus. Rechts von oben: 3 Revolver, 4 Objektiv, 5 Objekttisch, 6 Objektklemme … – Unten: Lichtquelle, Fuß. Links: Stativ, großer Knopf = Grobtrieb, kleiner Knopf = Feintrieb. Es fehlt noch: der Kondensor mit Blende."],
+ ["2","<b>Ordnen Sie</b> den Bauteilen ihre Funktion <b>zu</b>!","Lesen Sie jede Funktion und fragen Sie sich: Wo am Mikroskop passiert das? Licht kommt von unten, das Auge ist oben.","„Durch das … schaut man hinein.“ – „Mit dem … stellt man grob scharf, mit dem … genau.“ – „Die … regelt die Helligkeit.“ – „Der … trägt die Objektive.“"],
+ ["3","<b>Berechnen Sie</b> die Gesamtvergrößerungen!","Die Gesamtvergrößerung erhält man, wenn man die Vergrößerung des Okulars mit der Vergrößerung des Objektivs malnimmt.","Beispiel: Okular 10-fach, Objektiv 4-fach: 10 · 4 = 40. Das Bild ist 40-fach vergrößert. Rechnen Sie die anderen Felder genauso."],
+ ["4","<b>Begründen Sie</b>, warum man immer mit dem kleinsten Objektiv beginnt!","Denken Sie an zwei Dinge: Wie groß ist der Ausschnitt, den man sieht? Und wie nah ist das Objektiv dem Deckglas?","„Mit dem kleinsten Objektiv sieht man einen großen Ausschnitt, deshalb …“ – „Außerdem ist der Abstand zum Präparat groß, sodass …“"],
+ ["F","„Ich sehe nichts!“ – Fehlersuche am Mikroskop","Prüfen Sie der Reihe nach: Ist die Lichtquelle an? Ist die Blende offen? Ist das kleinste Objektiv eingerastet (es klickt)? Liegt das Objekt genau über dem Loch im Objekttisch?","Immer noch nichts? Fahren Sie den Objekttisch – von der Seite schauend – nah an das Objektiv heran. Schauen Sie dann durch das Okular und drehen Sie den Grobtrieb ganz langsam, bis ein Bild erscheint. Erst dann mit dem Feintrieb scharf stellen. Sehen Sie schwarze Kreise? Das sind Luftblasen – suchen Sie eine andere Stelle."],
+ ["5","Zwiebelhaut: <b>Fertigen Sie</b> eine mikroskopische Zeichnung von drei Zellen <b>an</b> und <b>beschriften Sie</b> sie!","Zeichnen Sie zuerst nur die Umrisse von drei Zellen, die nebeneinander liegen – groß, mindestens eine halbe Seite. Die Zellen sehen aus wie lang gezogene Ziegelsteine. Danach: den Zellkern einzeichnen (dunkler, runder Fleck).","Beschriftung: Die dicke Grenze zwischen den Zellen ist die Zellwand. Die Zellmembran liegt innen eng an der Zellwand an. Der große helle Raum ist die Vakuole. Das Zellplasma ist eine dünne Schicht am Rand und um den Zellkern. Kopf: „Küchenzwiebel, Epidermiszellen, 400-fach, Methylenblau“."],
+ ["6","Wasserpest: <b>Beschreiben Sie</b> die Bewegung der Chloroplasten! <b>Fertigen Sie</b> eine Zeichnung von zwei Zellen <b>an</b>!","Beobachten Sie einen Chloroplasten (grünes Körnchen) eine Minute lang. Wohin bewegt er sich? Bewegen sich alle in dieselbe Richtung? Die Bewegung nennt man Plasmaströmung.","„Die Chloroplasten bewegen sich … am Rand der Zelle entlang.“ – „Sie werden vom Zellplasma mitgenommen.“ Beschriften Sie: Zellwand, Chloroplast, Zellplasma, Vakuole (Zellkern nur, wenn Sie ihn sehen)."],
+ ["7","<b>Vergleichen Sie</b> Zwiebelhautzellen und Wasserpestzellen!","Gehen Sie die Tabelle Zeile für Zeile durch und schauen Sie auf Ihre beiden Zeichnungen: Was ist bei beiden gleich? Was ist nur bei einer Zelle zu sehen?","„Beide Zellen besitzen eine …, ein … und eine …“ – „Nur die Wasserpestzellen besitzen …, deshalb sind sie grün.“"],
+ ["8","<b>Erklären Sie</b>, warum die Zellen der Zwiebelhaut keine Chloroplasten besitzen!","Was passiert in den Chloroplasten? Was brauchen sie dafür? Wo wächst die Zwiebel – über oder unter der Erde?","„In den Chloroplasten findet die Fotosynthese statt. Dafür braucht die Pflanze …“ – „Die Zwiebel wächst …, deshalb …“"],
+ ["9","Mundschleimhaut: <b>Zeichnen Sie</b> zwei Zellen und <b>nennen Sie</b> zwei Unterschiede zu einer Pflanzenzelle!","Schauen Sie auf die Form: Sind die Zellen eckig wie bei der Zwiebel? Gibt es eine dicke Grenze (Zellwand)? Gibt es eine große helle Vakuole?","„Die Mundschleimhautzellen haben keine …“ – „Sie sind … statt eckig.“ – „Die Zellen werden nur von der … begrenzt.“"],
+ ["E1","Expertenaufgabe: <b>Berechnen Sie</b>, wie lang eine 0,2 mm lange Zelle bei 400-facher Vergrößerung erscheint!","Vergrößerung heißt: Man nimmt die echte Länge mal die Vergrößerung. Achten Sie auf die Einheit (mm).","0,2 mm · 400 = … mm. Rechnen Sie das Ergebnis in Zentimeter um (10 mm = 1 cm) und suchen Sie einen Gegenstand mit dieser Länge."],
+ ["A1","Ohne Fachraum: <b>Bringen Sie</b> die Schritte des Mikroskop-Führerscheins in die richtige Reihenfolge!","Fragen Sie sich bei jedem Schritt: Was muss vorher schon passiert sein? Man kann erst scharf stellen, wenn das Präparat auf dem Tisch liegt.","Reihenfolge-Gerüst: Tragen → Licht an und kleinstes Objektiv → Präparat einlegen → von der Seite annähern → mit dem Grobtrieb suchen → mit dem Feintrieb scharf stellen → größeres Objektiv → aufräumen."]];
+const W=[["das Okular","die Linse, durch die man hineinschaut"],["das Objektiv (die Objektive)","die Linse direkt über dem Präparat; es gibt mehrere mit verschiedener Vergrößerung"],["der Tubus","das Rohr zwischen Okular und Objektiv"],["der Revolver","das Drehteil, das die Objektive trägt"],["der Objekttisch","die Fläche, auf die man den Objektträger legt"],["die Objektklemme","hält den Objektträger fest"],["der Kondensor mit Blende","bündelt das Licht; mit der Blende regelt man die Helligkeit"],["die Lichtquelle","die Lampe unten im Mikroskop"],["der Grobtrieb","großer Drehknopf: grob scharf stellen"],["der Feintrieb","kleiner Drehknopf: genau scharf stellen"],["das Stativ","der Arm, an dem man das Mikroskop trägt"],["der Fuß","die schwere Grundplatte"],["der Objektträger","das Glasplättchen, auf dem das Objekt liegt"],["das Deckglas","das sehr dünne Glas, das man auf das Objekt legt"],["das Präparat","das fertig vorbereitete Objekt zum Mikroskopieren"],["die Vergrößerung","wie viel größer man etwas sieht, z. B. 400-fach"],["die Zellwand","feste Hülle um Pflanzenzellen"],["die Zellmembran","dünne Haut um jede Zelle"],["das Zellplasma","die flüssige Grundmasse in der Zelle"],["der Zellkern","enthält die Erbinformation, steuert die Zelle"],["die Vakuole","großer, mit Zellsaft gefüllter Raum in Pflanzenzellen"],["der Chloroplast (die Chloroplasten)","grünes Körnchen; hier findet die Fotosynthese statt"]];
+const S=[["Beschreiben (was man sieht)","„Man sieht …“ – „Die Zellen sind … geformt.“ – „Die Chloroplasten bewegen sich …“"],["Vergleichen","„Beide Zellen besitzen …“ – „Im Gegensatz zu … haben …“ – „Nur … besitzen …“"],["Erklären / Begründen","„…, weil …“ – „Deshalb …“ – „Der Grund dafür ist, dass …“"]];
+const G=[
+ ["Okulars?","das Okular","Die Linse ganz oben, durch die man in das Mikroskop schaut. Sie vergrößert z. B. 10-fach."],
+ ["Objektivs?|Objektive","das Objektiv","Die Linse direkt über dem Präparat. Ein Mikroskop hat mehrere Objektive mit verschiedener Vergrößerung (z. B. 4-, 10- und 40-fach)."],
+ ["Grobtrieb","der Grobtrieb","Der große Drehknopf. Damit bewegt man den Objekttisch schnell auf und ab, um das Bild zu finden."],
+ ["Feintrieb","der Feintrieb","Der kleine Drehknopf. Damit stellt man das Bild genau scharf."],
+ ["Objekttisch","der Objekttisch","Die Fläche mit einem Loch in der Mitte, auf die man den Objektträger legt."],
+ ["Blende","die Blende","Damit regelt man, wie viel Licht durch das Präparat fällt."],
+ ["Kondensor","der Kondensor","Linsen unter dem Objekttisch, die das Licht auf das Präparat bündeln."],
+ ["Lichtquelle","die Lichtquelle","Die Lampe unten im Mikroskop. Das Licht geht von unten durch das Präparat."],
+ ["Revolver","der Revolver","Das Drehteil, an dem die Objektive befestigt sind. Durch Drehen wechselt man das Objektiv."],
+ ["Gesamtvergrößerungen|Gesamtvergrößerung|Vergrößerung","die Vergrößerung","Gibt an, wie viel größer man etwas sieht. Gesamtvergrößerung = Okular mal Objektiv."],
+ ["Luftblasen","die Luftblasen","Im Mikroskop sieht man sie als runde Kreise mit dickem, schwarzem Rand. Man zeichnet sie nicht."],
+ ["Präparat","das Präparat","Das vorbereitete Objekt auf dem Objektträger, meist mit Wasser und Deckglas."],
+ ["Deckglas","das Deckglas","Ein sehr dünnes Glasplättchen, das man auf das Objekt im Wassertropfen legt."],
+ ["Zellwand","die Zellwand","Eine feste Hülle um Pflanzenzellen. Sie gibt der Zelle ihre Form. Tierzellen haben keine Zellwand."],
+ ["Zellmembran","die Zellmembran","Eine sehr dünne Haut um jede Zelle. Bei Pflanzenzellen liegt sie eng an der Zellwand an."],
+ ["Zellplasma","das Zellplasma","Die flüssige Grundmasse in der Zelle, in der die Zellbestandteile liegen."],
+ ["Zellkerns?","der Zellkern","Er enthält die Erbinformation und steuert die Zelle. Im Mikroskop: ein runder, dunklerer Fleck."],
+ ["Vakuole","die Vakuole","Ein großer Raum in der Pflanzenzelle, der mit Zellsaft gefüllt ist."],
+ ["Chloroplasten|Chloroplast","der Chloroplast","Ein grünes Zellorganell in Pflanzenzellen. Hier findet die Fotosynthese statt."],
+ ["Fotosynthese","die Fotosynthese","Pflanzen stellen mithilfe von Licht aus Kohlenstoffdioxid und Wasser Traubenzucker her."],
+ ["Plasmaströmung","die Plasmaströmung","Das Zellplasma bewegt sich in der Zelle und nimmt die Chloroplasten mit."],
+ ["Pflanzenzelle","die Pflanzenzelle","Eine Zelle einer Pflanze. Sie hat eine Zellwand, eine große Vakuole und oft Chloroplasten."]];
+const L="[A-Za-zÄÖÜäöüß-]";
+function link(html){
+  const parts=html.split(/(<[^>]+>)/); const keep=[];
+  G.forEach((g,gi)=>{const re=new RegExp("(?<!"+L+")("+g[0]+")(?!"+L+")","g");
+    for(let i=0;i<parts.length;i+=2){parts[i]=parts[i].replace(re,m=>{keep.push(`<button class="term" data-g="${gi}">${m}</button>`);return "\u0001"+(keep.length-1)+"\u0002";});}});
+  return parts.join("").replace(/\u0001(\d+)\u0002/g,(_,k)=>keep[k]);}
+const nav=document.getElementById('nav'), box=document.getElementById('tasks');
+nav.innerHTML=T.map(t=>`<a href="#a${t[0]}" aria-label="${t[0]==="F"?"Fehlersuche":"Aufgabe "+t[0]}">${t[0]==="F"?"Ich sehe nichts":t[0]}</a>`).join('')+`<a href="#wortspeicher">Wörter</a>`;
+box.innerHTML=T.map(t=>`<section class="task" id="a${t[0]}"><h2>${t[0]==="F"?"Fehlersuche":"Aufgabe "+t[0]}</h2><p class="q">${link(t[1])}</p>
+<div class="btns"><button class="b1" data-n="${t[0]}">Hilfe 1 zeigen</button><button class="h2b b2" data-n="${t[0]}" disabled>Hilfe 2 zeigen</button></div>
+<div class="hint one" id="h1-${t[0]}"><strong>Hilfe 1 – Denkanstoß</strong>${link(t[2])}</div>
+<div class="hint two" id="h2-${t[0]}"><strong>Hilfe 2 – ${["F","A1","3"].includes(t[0])?"Schritt für Schritt":"Satzbausteine"}</strong>${link(t[3])}</div></section>`).join('');
+document.getElementById('words').innerHTML=W.map(w=>`<div class="w"><b>${w[0]}</b><span>${w[1]}</span></div>`).join('');
+document.getElementById('satzlist').innerHTML=S.map(s=>`<div class="satz"><b>${s[0]}:</b> ${s[1]}</div>`).join('');
+const sh=document.getElementById('sheet');
+document.addEventListener('click',e=>{const t=e.target.closest('.term');if(!t)return;const g=G[+t.dataset.g];document.getElementById('st').textContent=g[1];document.getElementById('sd').textContent=g[2];sh.classList.add('open');});
+document.getElementById('sx').addEventListener('click',()=>sh.classList.remove('open'));
+box.addEventListener('click',e=>{
+  if(e.target.closest('.term')) return;
+  const b=e.target.closest('button'); if(!b) return; const n=b.dataset.n;
+  if(b.classList.contains('b1')){const h=document.getElementById('h1-'+n);const o=h.classList.toggle('open');b.textContent=o?'Hilfe 1 verbergen':'Hilfe 1 zeigen';b.parentNode.querySelector('.b2').disabled=!o&&!document.getElementById('h2-'+n).classList.contains('open');}
+  else{const h=document.getElementById('h2-'+n);const o=h.classList.toggle('open');b.textContent=o?'Hilfe 2 verbergen':'Hilfe 2 zeigen';}
+});
+const jump=()=>{const id=location.hash.slice(1);if(id){const el=document.getElementById(id);if(el)el.scrollIntoView();}};
+window.addEventListener('hashchange',jump); jump();
+}
+</script>
+</body>
+</html>

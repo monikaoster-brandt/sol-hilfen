@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hilfen Enzyme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: ruhig, ermutigend, Schulmaterial
+   IDEA: ein Stapel Tippkarten, die man nacheinander aufdeckt
+   PICTURE: die Karten selbst – Hilfe 1 grün, Hilfe 2 bernstein
+   COLOUR and TYPE: Tannengrün der Arbeitsblätter, Bernstein als Akzent; Atkinson Hyperlegible (gut lesbar)
+   LAYOUT: eine Spalte, Aufgaben-Navigation oben, Karten untereinander */
+:root{color-scheme:light dark;--bg:light-dark(#f6faf8,#0f1a16);--card:light-dark(#ffffff,#16241f);--ink:light-dark(#18261f,#e6f0ec);--muted:light-dark(#4f645b,#9fb5ac);--green:light-dark(#1f4e3d,#7fc4bc);--h1:light-dark(#e3f1ec,#1d3a31);--h2:light-dark(#fdf1df,#3a2c17);--amber:light-dark(#9a5b10,#f2b66a);--line:light-dark(#cfe0d9,#2a3d36)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Atkinson Hyperlegible",system-ui,sans-serif;overflow-x:clip}
+header{background:var(--green);color:light-dark(#fff,#0f1a16);padding:22px max(5vw,16px) 18px}
+header h1{margin:0;font-size:clamp(26px,6vw,36px);line-height:1.1}
+header p{margin:6px 0 0;font-size:15px;opacity:.9}
+nav{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:10px max(5vw,16px);display:flex;gap:8px;overflow-x:auto}
+nav a{flex:none;min-width:44px;height:44px;display:grid;place-items:center;border-radius:22px;border:2px solid var(--green);color:var(--green);font-weight:700;text-decoration:none;padding:0 12px}
+nav a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+main{max-width:760px;margin:0 auto;padding:18px max(4vw,14px) 40px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:18px;font-size:15px;color:var(--muted)}
+section.task{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:16px;scroll-margin-top:76px}
+section.task h2{margin:0 0 4px;font-size:21px;color:var(--green)}
+section.task .q{margin:0 0 12px}
+.q b{font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+button{font:inherit;font-weight:700;min-height:46px;padding:0 18px;border-radius:12px;border:2px solid var(--green);background:transparent;color:var(--green);cursor:pointer}
+button.h2b{border-color:var(--amber);color:var(--amber)}
+button[disabled]{opacity:.4;cursor:not-allowed}
+.hint{display:none;margin-top:12px;border-radius:12px;padding:12px 14px}
+.hint.open{display:block;animation:in .25s ease}
+.hint.one{background:var(--h1)}.hint.two{background:var(--h2)}
+.hint strong{display:block;font-size:14px;margin-bottom:2px}
+.hint.one strong{color:var(--green)}.hint.two strong{color:var(--amber)}
+@keyframes in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hint.open{animation:none}}
+#wortspeicher h2,#satz h2{color:var(--green);font-size:22px;margin:28px 0 10px}
+.words{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:10px}
+.w{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.w b{display:block;color:var(--green)}
+.w span{font-size:15px}
+.satz{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+footer{text-align:center;font-size:13px;color:var(--muted);padding:10px 16px 30px}
+.term{font:inherit;min-height:0;padding:0 2px;border:0;border-bottom:2px dotted var(--green);border-radius:0;background:none;color:inherit;font-weight:inherit;cursor:pointer}
+.term:hover{background:var(--h1)}
+#sheet{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--card);border-top:3px solid var(--green);box-shadow:0 -6px 24px rgba(0,0,0,.18);padding:16px max(5vw,16px) 22px;transform:translateY(110%);transition:transform .2s ease}
+#sheet.open{transform:none}
+#sheet b{display:block;color:var(--green);font-size:19px;margin-bottom:4px}
+#sheet .x{position:absolute;top:8px;right:10px;min-height:40px;padding:0 12px;font-size:15px}
+@media (prefers-reduced-motion:reduce){#sheet{transition:none}}
+footer{padding-bottom:120px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Hilfen: Enzyme</h1>
+  <p>Biologie Vorklasse · Arbeitsblatt „Enzyme – die Werkzeuge der Verdauung“</p>
+</header>
+<nav id="nav" aria-label="Aufgaben"></nav>
+<main>
+  <div class="tip"><b>Tipp:</b> Unterstrichene Fachbegriffe können Sie antippen – dann erscheint eine Erklärung.<br>Versuchen Sie es zuerst allein. Öffnen Sie dann <b>Hilfe 1</b>. Wenn Sie danach noch nicht weiterkommen, öffnen Sie <b>Hilfe 2</b>. Ganz unten finden Sie den <a href="#wortspeicher">Wortspeicher</a> und Satzbausteine.</div>
+  <div id="tasks"></div>
+  <section id="wortspeicher"><h2>Wortspeicher</h2><div class="words" id="words"></div></section>
+  <section id="satz"><h2>Satzbausteine</h2><div id="satzlist"></div></section>
+</main>
+<div id="sheet" role="dialog" aria-live="polite"><button class="x" id="sx">Schließen</button><b id="st"></b><span id="sd"></span></div>
+<footer>Material: Monika Oster-Brandt, FOS BOS Würzburg (erstellt mit KI-Unterstützung)</footer>
+<script>
+{
+const T=[
+ ["1","<b>Beschreiben</b> Sie Ihre Beobachtungen in Video 2! <b>Erläutern</b> Sie mithilfe des Stärkenachweises, was mit der Stärke geschieht!","Schauen Sie in M1: Welche Farbe zeigt Stärke mit Lugolscher Lösung? Was bedeutet es, wenn diese Färbung verschwindet?","„Nach Zugabe von Speichel wird die Lösung …“ – „Die Blaufärbung verschwindet, weil …“ – „Die Amylase hat die Stärke in … gespalten.“"],
+ ["3","<b>Erklären</b> Sie mithilfe des Energiediagramms, warum die Stärke in Video 2 durch den Speichel schnell gespalten wird!","Vergleichen Sie Kurve A und Kurve B: Welcher „Berg“ ist niedriger? Was bedeutet ein niedrigerer „Berg“ für die Teilchen bei 37 °C?","„Ohne Enzym ist die Aktivierungsenergie so hoch, dass …“ – „Die Amylase senkt …“ – „Dadurch …“ – „Die Reaktionsenergie bleibt …“"],
+ ["5","<b>Beschreiben</b> Sie die Schritte 1 bis 4 der Abbildung 2 am Beispiel von Video 2!","Gehen Sie die vier Stationen des Kreislaufs nacheinander durch. Ersetzen Sie „Substrat“ durch Stärke, „Enzym“ durch Amylase und „Produkte“ durch Maltose.","„(1) Ein Stärkemolekül passt …“ – „(2) Es entsteht ein …“ – „(3) Im aktiven Zentrum wird … Die Maltose ist noch …“ – „(4) Die Maltose löst sich …, die Amylase …“"],
+ ["6","<b>Entscheiden</b> Sie, welches Substrat umgesetzt werden kann, und <b>begründen</b> Sie mit dem Begriff „Substratspezifität“!","Vergleichen Sie die Form jedes Substrats mit der Form des aktiven Zentrums – wie bei Schlüssel und Schloss.","„Nur Substrat … passt in das aktive Zentrum, weil …“ – „Das Enzym ist substratspezifisch, das heißt …“"],
+ ["8","<b>Erläutern</b> Sie den Begriff Kompartimentierung! <b>Begründen</b> Sie, warum die Stärkeverdauung im Magen unterbrochen wird!","Lesen Sie in M5 nach: Welche Bedingungen herrschen im Mund, im Magen und im Dünndarm? Wo arbeitet die Speichel-Amylase?","„Kompartimentierung bedeutet, dass …“ – „Im Magen ist es …, deshalb …“ – „Im Dünndarm wird die Stärke durch … weiter gespalten.“"],
+ ["9","Video 3 (Ananas gegen Gelatine): <b>Beschreiben</b>, <b>erklären</b> und <b>beurteilen</b> Sie!","Gelatine besteht aus Eiweiß, Bromelain ist eine Protease. Was macht eine Protease mit Eiweißmolekülen? Zu c): Welches Substrat passt in das aktive Zentrum der Amylase?","„Die Eiweißmoleküle passen in … und werden …“ – „Die Vermutung ist falsch, weil die Amylase nur …“"],
+ ["10","Video 4 (Katalase): <b>Skizzieren</b> Sie ein Energiediagramm und <b>erklären</b> Sie Ihre Beobachtung!","Zeichnen Sie das Diagramm wie Abbildung 1, aber mit Wasserstoffperoxid als Edukt und Wasser + Sauerstoff als Produkten.","Checkliste: Achsen „Energie“ und „Reaktionsverlauf“ – zwei Kurven – Aktivierungsenergie ohne und mit Katalase – Reaktionsenergie – Edukt und Produkte beschriftet."],
+ ["11","<b>Nennen</b> Sie zwei Unterschiede zwischen Schlüssel mit Schloss und Substrat mit Enzym!","Was passiert mit einem Schlüssel beim Aufschließen – und was mit dem Substrat im aktiven Zentrum? Ist ein Schloss beweglich?","„Ein Schlüssel …, ein Substrat dagegen …“ – „Ein Schloss ist …, ein Enzym dagegen …“"]];
+const W=[["das Enzym (die Enzyme)","ein Eiweißstoff, der eine Reaktion im Körper schneller macht"],["der Biokatalysator","beschleunigt Reaktionen und wird dabei nicht verbraucht"],["das Substrat","der Stoff, den ein Enzym umsetzt (z. B. Stärke)"],["das Produkt","der Stoff, der bei der Reaktion entsteht (z. B. Maltose)"],["das aktive Zentrum","die „Tasche“ im Enzym, in die das Substrat genau passt"],["der Enzym-Substrat-Komplex","Enzym und Substrat sind kurz miteinander verbunden"],["der Enzym-Produkt-Komplex","das Substrat ist gespalten, die Produkte hängen noch kurz am Enzym"],["spalten","etwas in kleinere Teile zerlegen"],["die Aktivierungsenergie","die Startenergie einer Reaktion („der Berg“)"],["die Reaktionsenergie","der Energieunterschied zwischen Edukten und Produkten"],["substratspezifisch","ein Enzym bindet nur ein bestimmtes Substrat"],["wirkungsspezifisch","ein Enzym macht nur eine bestimmte Reaktion"],["die Kompartimentierung","Aufteilung in Abschnitte mit unterschiedlichen Bedingungen"],["die Blindprobe","eine Vergleichsprobe ohne den gesuchten Stoff"]];
+const S=[["Beschreiben (was man sieht)","„Zuerst … Dann … Am Ende …“ – „Die Lösung färbt sich …“ – „Man beobachtet, dass …“"],["Erklären (warum es so ist)","„…, weil …“ – „Der Grund dafür ist, dass …“ – „Dadurch …“ – „Deshalb …“"],["Begründen / Beurteilen","„Die Aussage ist richtig/falsch, weil …“ – „Das bedeutet, dass …“"]];
+const G=[
+ ["Enzym-Substrat-Komplex","Enzym-Substrat-Komplex","Enzym und Substrat sind kurz miteinander verbunden. Das Substrat liegt im aktiven Zentrum, ist aber noch nicht gespalten."],
+ ["Enzym-Produkt-Komplex","Enzym-Produkt-Komplex","Das Substrat ist schon gespalten, die Produkte hängen aber noch kurz am Enzym."],
+ ["aktive[ns]? Zentrum","das aktive Zentrum","Die „Tasche“ im Enzym. Nur ein Substrat mit genau passender Form passt hinein – wie ein Schlüssel ins Schloss."],
+ ["Aktivierungsenergie","die Aktivierungsenergie","Die Startenergie, die eine Reaktion braucht („der Berg“). Enzyme machen diesen Berg niedriger."],
+ ["Reaktionsenergie","die Reaktionsenergie","Der Energieunterschied zwischen den Edukten und den Produkten. Das Enzym verändert ihn nicht."],
+ ["Substratspezifität|substratspezifisch","substratspezifisch / die Substratspezifität","Ein Enzym bindet nur ein ganz bestimmtes Substrat."],
+ ["Kompartimentierung","die Kompartimentierung","Der Verdauungstrakt ist in Abschnitte aufgeteilt (Mund, Magen, Dünndarm), in denen unterschiedliche Bedingungen herrschen."],
+ ["Energiediagramms?|Energiediagramm","das Energiediagramm","Ein Diagramm, das zeigt, wie sich die Energie während einer Reaktion verändert."],
+ ["Lugolsche[nr]? Lösung","die Lugolsche Lösung","Eine gelbbraune Iod-Lösung. Mit Stärke färbt sie sich blau-violett."],
+ ["Stärkenachweise?s?","der Stärkenachweis","Ein Test, ob Stärke vorhanden ist: Mit Lugolscher Lösung wird Stärke blau-violett."],
+ ["Blindprobe","die Blindprobe","Eine Vergleichsprobe ohne den gesuchten Stoff, z. B. Wasser."],
+ ["Blaufärbung","die Blaufärbung","Die blau-violette Farbe, die Stärke mit Lugolscher Lösung zeigt."],
+ ["Amylase","die Amylase","Ein Enzym, das Stärke in Maltose spaltet. Es ist z. B. im Speichel."],
+ ["Protease","die Protease","Ein Enzym, das Eiweiße (Proteine) spaltet."],
+ ["Bromelain","das Bromelain","Eine Protease aus frischer Ananas. Sie spaltet Eiweiße."],
+ ["Katalase","die Katalase","Ein Enzym in fast allen Zellen. Es spaltet das Zellgift Wasserstoffperoxid in Wasser und Sauerstoff."],
+ ["Maltose","die Maltose","Malzzucker. Ein Zucker aus zwei Glucose-Bausteinen. Er schmeckt süß."],
+ ["Stärkemolekül|Stärke","die Stärke","Ein Kohlenhydrat aus einer langen Kette von Glucose-Bausteinen, z. B. in Brot und Kartoffeln."],
+ ["Gelatine","die Gelatine","Ein Stoff aus Eiweiß. Er wird beim Abkühlen fest (wie bei Gummibärchen)."],
+ ["Eiweißmolekülen?|Eiweiße?|Proteine?","das Eiweiß / das Protein","Ein Nährstoff, z. B. in Fleisch, Fisch, Eiern und Milchprodukten. Bausteine: Aminosäuren."],
+ ["Substrats?|Substrate","das Substrat","Der Stoff, den ein Enzym umsetzt (z. B. Stärke bei der Amylase)."],
+ ["Produkten|Produkte","das Produkt","Der Stoff, der bei der Reaktion entsteht (z. B. Maltose)."],
+ ["Edukte?","das Edukt","Ein Ausgangsstoff einer Reaktion."],
+ ["Enzyme?","das Enzym","Ein Eiweißstoff, der eine Reaktion im Körper schneller macht. Es wird dabei nicht verbraucht."],
+ ["gespalten|spaltet|spalten","spalten","Etwas in kleinere Teile zerlegen."]];
+const L="[A-Za-zÄÖÜäöüß-]";
+function link(html){
+  const parts=html.split(/(<[^>]+>)/); const keep=[];
+  G.forEach((g,gi)=>{const re=new RegExp("(?<!"+L+")("+g[0]+")(?!"+L+")","g");
+    for(let i=0;i<parts.length;i+=2){parts[i]=parts[i].replace(re,m=>{keep.push(`<button class="term" data-g="${gi}">${m}</button>`);return "\u0001"+(keep.length-1)+"\u0002";});}});
+  return parts.join("").replace(/\u0001(\d+)\u0002/g,(_,k)=>keep[k]);}
+const nav=document.getElementById('nav'), box=document.getElementById('tasks');
+nav.innerHTML=T.map(t=>`<a href="#a${t[0]}" aria-label="Aufgabe ${t[0]}">${t[0]}</a>`).join('')+`<a href="#wortspeicher">Wörter</a>`;
+box.innerHTML=T.map(t=>`<section class="task" id="a${t[0]}"><h2>Aufgabe ${t[0]}</h2><p class="q">${link(t[1])}</p>
+<div class="btns"><button class="b1" data-n="${t[0]}">Hilfe 1 zeigen</button><button class="h2b b2" data-n="${t[0]}" disabled>Hilfe 2 zeigen</button></div>
+<div class="hint one" id="h1-${t[0]}"><strong>Hilfe 1 – Denkanstoß</strong>${link(t[2])}</div>
+<div class="hint two" id="h2-${t[0]}"><strong>Hilfe 2 – Satzbausteine</strong>${link(t[3])}</div></section>`).join('');
+document.getElementById('words').innerHTML=W.map(w=>`<div class="w"><b>${w[0]}</b><span>${w[1]}</span></div>`).join('');
+document.getElementById('satzlist').innerHTML=S.map(s=>`<div class="satz"><b>${s[0]}:</b> ${s[1]}</div>`).join('');
+const sh=document.getElementById('sheet');
+document.addEventListener('click',e=>{const t=e.target.closest('.term');if(!t)return;const g=G[+t.dataset.g];document.getElementById('st').textContent=g[1];document.getElementById('sd').textContent=g[2];sh.classList.add('open');});
+document.getElementById('sx').addEventListener('click',()=>sh.classList.remove('open'));
+box.addEventListener('click',e=>{
+  if(e.target.closest('.term')) return;
+  const b=e.target.closest('button'); if(!b) return; const n=b.dataset.n;
+  if(b.classList.contains('b1')){const h=document.getElementById('h1-'+n);const o=h.classList.toggle('open');b.textContent=o?'Hilfe 1 verbergen':'Hilfe 1 zeigen';b.parentNode.querySelector('.b2').disabled=!o&&!document.getElementById('h2-'+n).classList.contains('open');}
+  else{const h=document.getElementById('h2-'+n);const o=h.classList.toggle('open');b.textContent=o?'Hilfe 2 verbergen':'Hilfe 2 zeigen';}
+});
+const jump=()=>{const id=location.hash.slice(1);if(id){const el=document.getElementById(id);if(el)el.scrollIntoView();}};
+window.addEventListener('hashchange',jump); jump();
+}
+</script>
+</body>
+</html>
