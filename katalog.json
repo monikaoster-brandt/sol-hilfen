@@ -1285,530 +1285,6 @@
    ]
   },
   {
-   "id": "molekulare-stoffe-11",
-   "fach": "Chemie",
-   "schulart": "FOS",
-   "jgst": "11",
-   "zweig": "Sozialwesen / Technik",
-   "klasse": "FOS 11S / 11T",
-   "schuljahr": "2026/27",
-   "lehrplan": "LB 4 · Molekulare Stoffe und Elektronenpaarbindung",
-   "thema": "Molekulare Stoffe",
-   "art": "Unterricht",
-   "titel": "Molekulare Stoffe (Arbeitsblätter)",
-   "module": [
-    {
-     "nr": 1,
-     "titel": "Moleküle und die Atombindung",
-     "url": "molekulare-stoffe/hilfen-1.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Drei Arten der chemischen Bindung",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Begriffe definieren",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Die neun Elementmoleküle",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Wie erreichen Chlor-Atome die Edelgaskonfiguration?",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Pflicht",
-       "titel": "Summenformel und Strukturformel vergleichen",
-       "anker": "a5"
-      },
-      {
-       "code": "A6",
-       "art": "Pflicht",
-       "titel": "Elementmoleküle H₂, F₂, O₂, N₂",
-       "anker": "a6"
-      },
-      {
-       "code": "A7",
-       "art": "Wahl",
-       "titel": "Warum ist Stickstoff so reaktionsträge?",
-       "anker": "a7"
-      },
-      {
-       "code": "A8",
-       "art": "Pflicht",
-       "titel": "Beispiel Wasser-Molekül vervollständigen",
-       "anker": "a8"
-      },
-      {
-       "code": "A9",
-       "art": "Pflicht",
-       "titel": "Strukturformeln zeichnen",
-       "anker": "a9"
-      },
-      {
-       "code": "A10",
-       "art": "Pflicht",
-       "titel": "Welche Bindung liegt vor?",
-       "anker": "a10"
-      },
-      {
-       "code": "A11",
-       "art": "Pflicht",
-       "titel": "Fehlersuche",
-       "anker": "a11"
-      }
-     ]
-    },
-    {
-     "nr": 2,
-     "titel": "Benennung anorganischer Moleküle",
-     "url": "molekulare-stoffe/hilfen-2.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Gefährliches Dihydrogenmonooxid?",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Moleküle benennen",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Summenformeln aus Namen",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Namen überprüfen",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Wahl",
-       "titel": "Warum Zahlwörter?",
-       "anker": "a5"
-      }
-     ]
-    },
-    {
-     "nr": 3,
-     "titel": "Formalladung und Molekül-Ionen",
-     "url": "molekulare-stoffe/hilfen-3.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Formalladungen im Ammonium-Ion",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Strukturformeln mit Formalladungen",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Mesomere Grenzformeln des Nitrat-Ions",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Wahl",
-       "titel": "Mesomerie im Schwefeltrioxid-Molekül",
-       "anker": "a4"
-      }
-     ]
-    },
-    {
-     "nr": 4,
-     "titel": "Alkane – gesättigte Kohlenwasserstoffe",
-     "url": "molekulare-stoffe/hilfen-4.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Homologe Reihe der Alkane",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Allgemeine Summenformel",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Indizes ergänzen",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Verbrennung von Methan",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Pflicht",
-       "titel": "Energiediagramm",
-       "anker": "a5"
-      },
-      {
-       "code": "A6",
-       "art": "Pflicht",
-       "titel": "Vollständige und unvollständige Verbrennung von Butan",
-       "anker": "a6"
-      },
-      {
-       "code": "A7",
-       "art": "Wahl",
-       "titel": "Verbrennung von Octan",
-       "anker": "a7"
-      }
-     ]
-    },
-    {
-     "nr": 5,
-     "titel": "Alkene und Alkine",
-     "url": "molekulare-stoffe/hilfen-5.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Allgemeine Summenformeln",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "gesättigt – ungesättigt",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Strukturformeln zeichnen",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Moleküle benennen",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Pflicht",
-       "titel": "Namen überprüfen",
-       "anker": "a5"
-      },
-      {
-       "code": "A6",
-       "art": "Pflicht",
-       "titel": "Verbrennung von But-2-en",
-       "anker": "a6"
-      },
-      {
-       "code": "A7",
-       "art": "Wahl",
-       "titel": "Verbrennung von Ethin",
-       "anker": "a7"
-      }
-     ]
-    },
-    {
-     "nr": 6,
-     "titel": "Alkohole (Alkanole)",
-     "url": "molekulare-stoffe/hilfen-6.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Homologe Reihe der Alkanole",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Alkanole benennen",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Strukturformeln zeichnen",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Fehler finden",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Pflicht",
-       "titel": "Verbrennung von Ethanol",
-       "anker": "a5"
-      },
-      {
-       "code": "A6",
-       "art": "Wahl",
-       "titel": "Verbrennung von Methanol",
-       "anker": "a6"
-      }
-     ]
-    },
-    {
-     "nr": 8,
-     "titel": "Elektronegativität und polare Atombindung",
-     "url": "molekulare-stoffe/hilfen-8.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Knallgasreaktion",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Verlauf der Elektronegativität im PSE",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Edelgase",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Chlor – Wasserstoffchlorid – Natriumchlorid",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Pflicht",
-       "titel": "ΔEN und Bindungsart",
-       "anker": "a5"
-      },
-      {
-       "code": "A6",
-       "art": "Pflicht",
-       "titel": "Strukturformeln mit Partialladungen",
-       "anker": "a6"
-      },
-      {
-       "code": "A7",
-       "art": "Pflicht",
-       "titel": "Bindungen nach Polarität ordnen",
-       "anker": "a7"
-      },
-      {
-       "code": "A8",
-       "art": "Pflicht",
-       "titel": "Warum reagieren Wasserstoff und Sauerstoff?",
-       "anker": "a8"
-      },
-      {
-       "code": "A9",
-       "art": "Wahl",
-       "titel": "Ist HF ein Salz?",
-       "anker": "a9"
-      }
-     ]
-    },
-    {
-     "nr": 9,
-     "titel": "Dipolmoleküle",
-     "url": "molekulare-stoffe/hilfen-9.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Prüfschema ordnen",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Dipol oder kein Dipol?",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Den Versuch erklären",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Wahl",
-       "titel": "Ist CO₂ ein Dipol?",
-       "anker": "a4"
-      }
-     ]
-    },
-    {
-     "nr": 10,
-     "titel": "Zwischenmolekulare Wechselwirkungen",
-     "url": "molekulare-stoffe/hilfen-10.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Wasser flüssig – CO₂ gasförmig",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Halogene",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "HCl und F₂",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Ammoniak und Methan",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Pflicht",
-       "titel": "Siedetemperaturen der Wasserstoffverbindungen",
-       "anker": "a5"
-      },
-      {
-       "code": "A6",
-       "art": "Wahl",
-       "titel": "Siedetemperaturen zuordnen",
-       "anker": "a6"
-      }
-     ]
-    },
-    {
-     "nr": 11,
-     "titel": "Eigenschaften der Alkane",
-     "url": "molekulare-stoffe/hilfen-11.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Diagramm zeichnen",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Aggregatzustand bei 20 °C",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Zusammenhang beschreiben",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Lückentext",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Pflicht",
-       "titel": "Viskosität",
-       "anker": "a5"
-      },
-      {
-       "code": "A6",
-       "art": "Pflicht",
-       "titel": "Diesel bei Frost",
-       "anker": "a6"
-      },
-      {
-       "code": "A7",
-       "art": "Wahl",
-       "titel": "Öl in Wasser und Hexan",
-       "anker": "a7"
-      }
-     ]
-    },
-    {
-     "nr": 12,
-     "titel": "Eigenschaften der Alkohole",
-     "url": "molekulare-stoffe/hilfen-12.html",
-     "aufgaben": [
-      {
-       "code": "A1",
-       "art": "Pflicht",
-       "titel": "Ethanol löst sich in Wasser und Benzin",
-       "anker": "a1"
-      },
-      {
-       "code": "A2",
-       "art": "Pflicht",
-       "titel": "Kettenlänge und Löslichkeit",
-       "anker": "a2"
-      },
-      {
-       "code": "A3",
-       "art": "Pflicht",
-       "titel": "Petrischalen",
-       "anker": "a3"
-      },
-      {
-       "code": "A4",
-       "art": "Pflicht",
-       "titel": "Siedetemperaturen im Vergleich",
-       "anker": "a4"
-      },
-      {
-       "code": "A5",
-       "art": "Pflicht",
-       "titel": "Ethan-1,2-diol",
-       "anker": "a5"
-      },
-      {
-       "code": "A6",
-       "art": "Wahl",
-       "titel": "Glycerin",
-       "anker": "a6"
-      }
-     ]
-    }
-   ]
-  },
-  {
    "id": "informationssysteme-bos13",
    "fach": "Biologie",
    "schulart": "BOS",
@@ -2157,6 +1633,579 @@
        "art": "Wahl",
        "titel": "Wirkungsweise vergleichen",
        "anker": "abi-b3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "molekulare-stoffe-11",
+   "fach": "Chemie",
+   "schulart": "FOS",
+   "jgst": "11",
+   "zweig": "Sozialwesen / Technik",
+   "klasse": "FOS 11S / 11T",
+   "schuljahr": "2026/27",
+   "lehrplan": "LB 4 · Molekulare Stoffe und Elektronenpaarbindung",
+   "thema": "Molekulare Stoffe",
+   "art": "Unterricht",
+   "titel": "Molekulare Stoffe (Arbeitsblätter)",
+   "module": [
+    {
+     "nr": 1,
+     "titel": "Moleküle und die Atombindung",
+     "url": "molekulare-stoffe/hilfen-1.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Drei Arten der chemischen Bindung",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Begriffe definieren",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Die neun Elementmoleküle",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Wie erreichen Chlor-Atome die Edelgaskonfiguration?",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Summenformel und Strukturformel vergleichen",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Elementmoleküle H₂, F₂, O₂, N₂",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Wahl",
+       "titel": "Warum ist Stickstoff so reaktionsträge?",
+       "anker": "a7"
+      },
+      {
+       "code": "A8",
+       "art": "Pflicht",
+       "titel": "Beispiel Wasser-Molekül vervollständigen",
+       "anker": "a8"
+      },
+      {
+       "code": "A9",
+       "art": "Pflicht",
+       "titel": "Strukturformeln zeichnen",
+       "anker": "a9"
+      },
+      {
+       "code": "A10",
+       "art": "Pflicht",
+       "titel": "Welche Bindung liegt vor?",
+       "anker": "a10"
+      },
+      {
+       "code": "A11",
+       "art": "Pflicht",
+       "titel": "Fehlersuche",
+       "anker": "a11"
+      }
+     ]
+    },
+    {
+     "nr": 2,
+     "titel": "Benennung anorganischer Moleküle",
+     "url": "molekulare-stoffe/hilfen-2.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Gefährliches Dihydrogenmonooxid?",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Moleküle benennen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Summenformeln aus Namen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Namen überprüfen",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "Warum Zahlwörter?",
+       "anker": "a5"
+      }
+     ]
+    },
+    {
+     "nr": 3,
+     "titel": "Formalladung und Molekül-Ionen",
+     "url": "molekulare-stoffe/hilfen-3.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Formalladungen im Ammonium-Ion",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Strukturformeln mit Formalladungen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Mesomere Grenzformeln des Nitrat-Ions",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Wahl",
+       "titel": "Mesomerie im Schwefeltrioxid-Molekül",
+       "anker": "a4"
+      }
+     ]
+    },
+    {
+     "nr": 4,
+     "titel": "Alkane – gesättigte Kohlenwasserstoffe",
+     "url": "molekulare-stoffe/hilfen-4.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Homologe Reihe der Alkane",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Allgemeine Summenformel",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Indizes ergänzen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Verbrennung von Methan",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Energiediagramm",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Vollständige und unvollständige Verbrennung von Butan",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Wahl",
+       "titel": "Verbrennung von Octan",
+       "anker": "a7"
+      }
+     ]
+    },
+    {
+     "nr": 5,
+     "titel": "Alkene und Alkine",
+     "url": "molekulare-stoffe/hilfen-5.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Allgemeine Summenformeln",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "gesättigt – ungesättigt",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Strukturformeln zeichnen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Moleküle benennen",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Namen überprüfen",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Verbrennung von But-2-en",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Wahl",
+       "titel": "Verbrennung von Ethin",
+       "anker": "a7"
+      }
+     ]
+    },
+    {
+     "nr": 6,
+     "titel": "Alkohole (Alkanole)",
+     "url": "molekulare-stoffe/hilfen-6.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Homologe Reihe der Alkanole",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Alkanole benennen",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Strukturformeln zeichnen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Fehler finden",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Verbrennung von Ethanol",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Wahl",
+       "titel": "Verbrennung von Methanol",
+       "anker": "a6"
+      }
+     ]
+    },
+    {
+     "nr": 7,
+     "titel": "Raumformel und EPA-Modell",
+     "url": "molekulare-stoffe/hilfen-7.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Strukturformeln und Elektronenpaare",
+       "anker": "a1"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Raumformeln (Keilstrichformeln)",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Molekülgestalt und Bindungswinkel",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Warum werden die Winkel kleiner?",
+       "anker": "a6"
+      },
+      {
+       "code": "A8",
+       "art": "Pflicht",
+       "titel": "CO₂ und Methanal",
+       "anker": "a8"
+      },
+      {
+       "code": "A9",
+       "art": "Pflicht",
+       "titel": "Ionen mit Formalladungen",
+       "anker": "a9"
+      },
+      {
+       "code": "A10",
+       "art": "Pflicht",
+       "titel": "H₃O⁺ und NH₃ vergleichen",
+       "anker": "a10"
+      }
+     ]
+    },
+    {
+     "nr": 8,
+     "titel": "Elektronegativität und polare Atombindung",
+     "url": "molekulare-stoffe/hilfen-8.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Knallgasreaktion",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Verlauf der Elektronegativität im PSE",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Edelgase",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Chlor – Wasserstoffchlorid – Natriumchlorid",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "ΔEN und Bindungsart",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Strukturformeln mit Partialladungen",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Pflicht",
+       "titel": "Bindungen nach Polarität ordnen",
+       "anker": "a7"
+      },
+      {
+       "code": "A8",
+       "art": "Pflicht",
+       "titel": "Warum reagieren Wasserstoff und Sauerstoff?",
+       "anker": "a8"
+      },
+      {
+       "code": "A9",
+       "art": "Wahl",
+       "titel": "Ist HF ein Salz?",
+       "anker": "a9"
+      }
+     ]
+    },
+    {
+     "nr": 9,
+     "titel": "Dipolmoleküle",
+     "url": "molekulare-stoffe/hilfen-9.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Prüfschema ordnen",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Dipol oder kein Dipol?",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Den Versuch erklären",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Wahl",
+       "titel": "Ist CO₂ ein Dipol?",
+       "anker": "a4"
+      }
+     ]
+    },
+    {
+     "nr": 10,
+     "titel": "Zwischenmolekulare Wechselwirkungen",
+     "url": "molekulare-stoffe/hilfen-10.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Wasser flüssig – CO₂ gasförmig",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Halogene",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "HCl und F₂",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Ammoniak und Methan",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Siedetemperaturen der Wasserstoffverbindungen",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Wahl",
+       "titel": "Siedetemperaturen zuordnen",
+       "anker": "a6"
+      }
+     ]
+    },
+    {
+     "nr": 11,
+     "titel": "Eigenschaften der Alkane",
+     "url": "molekulare-stoffe/hilfen-11.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Diagramm zeichnen",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Aggregatzustand bei 20 °C",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Zusammenhang beschreiben",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Lückentext",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Viskosität",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Pflicht",
+       "titel": "Diesel bei Frost",
+       "anker": "a6"
+      },
+      {
+       "code": "A7",
+       "art": "Wahl",
+       "titel": "Öl in Wasser und Hexan",
+       "anker": "a7"
+      }
+     ]
+    },
+    {
+     "nr": 12,
+     "titel": "Eigenschaften der Alkohole",
+     "url": "molekulare-stoffe/hilfen-12.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Pflicht",
+       "titel": "Ethanol löst sich in Wasser und Benzin",
+       "anker": "a1"
+      },
+      {
+       "code": "A2",
+       "art": "Pflicht",
+       "titel": "Kettenlänge und Löslichkeit",
+       "anker": "a2"
+      },
+      {
+       "code": "A3",
+       "art": "Pflicht",
+       "titel": "Petrischalen",
+       "anker": "a3"
+      },
+      {
+       "code": "A4",
+       "art": "Pflicht",
+       "titel": "Siedetemperaturen im Vergleich",
+       "anker": "a4"
+      },
+      {
+       "code": "A5",
+       "art": "Pflicht",
+       "titel": "Ethan-1,2-diol",
+       "anker": "a5"
+      },
+      {
+       "code": "A6",
+       "art": "Wahl",
+       "titel": "Glycerin",
+       "anker": "a6"
       }
      ]
     }
