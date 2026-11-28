@@ -1715,6 +1715,360 @@
      ]
     }
    ]
+  },
+  {
+   "id": "informationssysteme-bos13",
+   "fach": "Biologie",
+   "schulart": "BOS",
+   "jgst": "13",
+   "zweig": "Gesundheit",
+   "klasse": "BOS 13U",
+   "schuljahr": "2026/27",
+   "lehrplan": "LB 2 · Informations- und Steuerungssysteme",
+   "thema": "Sehstörungen und Hormonsystem",
+   "art": "Unterricht",
+   "titel": "Sehstörungen und Hormonsystem",
+   "module": [
+    {
+     "nr": 1,
+     "titel": "Sehstörungen und Augenerkrankungen",
+     "url": "bos13-steuerung/hilfen-sehstoerungen.html",
+     "aufgaben": [
+      {
+       "code": "1",
+       "art": "Pflicht",
+       "titel": "Akkommodation",
+       "anker": "a1"
+      },
+      {
+       "code": "2",
+       "art": "Pflicht",
+       "titel": "Strahlengang bei Fehlsichtigkeit",
+       "anker": "a2"
+      },
+      {
+       "code": "3",
+       "art": "Pflicht",
+       "titel": "Fehlsichtigkeiten vergleichen",
+       "anker": "a3"
+      },
+      {
+       "code": "4",
+       "art": "Wahl",
+       "titel": "Brillenpass",
+       "anker": "a4"
+      },
+      {
+       "code": "5",
+       "art": "Pflicht",
+       "titel": "Bilder zuordnen",
+       "anker": "a5"
+      },
+      {
+       "code": "6",
+       "art": "Pflicht",
+       "titel": "Steckbrief Augenerkrankungen",
+       "anker": "a6"
+      },
+      {
+       "code": "7",
+       "art": "Pflicht",
+       "titel": "Glaukom bleibt lange unbemerkt",
+       "anker": "a7"
+      },
+      {
+       "code": "8",
+       "art": "Pflicht",
+       "titel": "Perspektivwechsel",
+       "anker": "a8"
+      },
+      {
+       "code": "9",
+       "art": "Pflicht",
+       "titel": "Kurzsichtigkeit nimmt zu",
+       "anker": "a9"
+      },
+      {
+       "code": "10",
+       "art": "Pflicht",
+       "titel": "Studie auswerten",
+       "anker": "a10"
+      },
+      {
+       "code": "11",
+       "art": "Wahl",
+       "titel": "Aussagekraft der Studie",
+       "anker": "a11"
+      }
+     ]
+    },
+    {
+     "nr": 2,
+     "titel": "Hormonsystem · AB 1 Hormone – Botenstoffe des Körpers",
+     "url": "bos13-steuerung/hilfen-hormone.html",
+     "aufgaben": [
+      {
+       "code": "1",
+       "art": "Pflicht",
+       "titel": "Hormondrüsen",
+       "anker": "a1"
+      },
+      {
+       "code": "2",
+       "art": "Pflicht",
+       "titel": "Zielzellen",
+       "anker": "a2"
+      },
+      {
+       "code": "3",
+       "art": "Pflicht",
+       "titel": "Nerven- und Hormonsystem",
+       "anker": "a3"
+      },
+      {
+       "code": "4",
+       "art": "Wahl",
+       "titel": "Transmitter oder Hormon?",
+       "anker": "a4"
+      }
+     ]
+    },
+    {
+     "nr": 3,
+     "titel": "Hormonsystem · AB 2 Wirkung in der Zielzelle",
+     "url": "bos13-steuerung/hilfen-hormone.html",
+     "aufgaben": [
+      {
+       "code": "5",
+       "art": "Pflicht",
+       "titel": "Peptidhormone",
+       "anker": "a5"
+      },
+      {
+       "code": "6",
+       "art": "Pflicht",
+       "titel": "Peptid- und Steroidhormone",
+       "anker": "a6"
+      },
+      {
+       "code": "7",
+       "art": "Pflicht",
+       "titel": "Spritze oder Tablette?",
+       "anker": "a7"
+      },
+      {
+       "code": "8",
+       "art": "Wahl",
+       "titel": "Schnelle und langsame Hormone",
+       "anker": "a8"
+      }
+     ]
+    },
+    {
+     "nr": 4,
+     "titel": "Hormonsystem · AB 3 Regelkreis des Blutzuckers",
+     "url": "bos13-steuerung/hilfen-hormone.html",
+     "aufgaben": [
+      {
+       "code": "9",
+       "art": "Pflicht",
+       "titel": "Blutzucker-Regelkreis",
+       "anker": "a9"
+      },
+      {
+       "code": "10",
+       "art": "Pflicht",
+       "titel": "Regelkreis-Begriffe",
+       "anker": "a10"
+      },
+      {
+       "code": "11",
+       "art": "Pflicht",
+       "titel": "Negative Rückkopplung",
+       "anker": "a11"
+      }
+     ]
+    },
+    {
+     "nr": 5,
+     "titel": "Hormonsystem · AB 4 Diabetes mellitus",
+     "url": "bos13-steuerung/hilfen-hormone.html",
+     "aufgaben": [
+      {
+       "code": "12",
+       "art": "Pflicht",
+       "titel": "Diagramm zum Glucose-Toleranztest",
+       "anker": "a12"
+      },
+      {
+       "code": "13",
+       "art": "Pflicht",
+       "titel": "Glucose-Toleranztest auswerten",
+       "anker": "a13"
+      },
+      {
+       "code": "14",
+       "art": "Pflicht",
+       "titel": "Hypothesen",
+       "anker": "a14"
+      },
+      {
+       "code": "15",
+       "art": "Pflicht",
+       "titel": "Typ 1 und Typ 2",
+       "anker": "a15"
+      },
+      {
+       "code": "16",
+       "art": "Wahl",
+       "titel": "Hungern im Überfluss",
+       "anker": "a16"
+      }
+     ]
+    },
+    {
+     "nr": 6,
+     "titel": "Hormonsystem · AB 5 Hormonhierarchie und Schilddrüse",
+     "url": "bos13-steuerung/hilfen-hormone.html",
+     "aufgaben": [
+      {
+       "code": "17",
+       "art": "Pflicht",
+       "titel": "Hormonhierarchie Schilddrüse",
+       "anker": "a17"
+      },
+      {
+       "code": "18",
+       "art": "Pflicht",
+       "titel": "Regulation des Thyroxins",
+       "anker": "a18"
+      },
+      {
+       "code": "19",
+       "art": "Pflicht",
+       "titel": "Hypothalamus als Bindeglied",
+       "anker": "a19"
+      }
+     ]
+    },
+    {
+     "nr": 7,
+     "titel": "Hormonsystem · AB 6 Schilddrüsenstörungen",
+     "url": "bos13-steuerung/hilfen-hormone.html",
+     "aufgaben": [
+      {
+       "code": "20",
+       "art": "Pflicht",
+       "titel": "Über- oder Unterfunktion?",
+       "anker": "a20"
+      },
+      {
+       "code": "21",
+       "art": "Pflicht",
+       "titel": "Kropf bei Iodmangel",
+       "anker": "a21"
+      },
+      {
+       "code": "22",
+       "art": "Pflicht",
+       "titel": "Laborbefunde",
+       "anker": "a22"
+      },
+      {
+       "code": "23",
+       "art": "Wahl",
+       "titel": "Ursache in der Hypophyse",
+       "anker": "a23"
+      }
+     ]
+    },
+    {
+     "nr": 8,
+     "titel": "Hormonsystem · AB 7 Menstruationszyklus",
+     "url": "bos13-steuerung/hilfen-hormone.html",
+     "aufgaben": [
+      {
+       "code": "24",
+       "art": "Pflicht",
+       "titel": "Hormonkurven zuordnen",
+       "anker": "a24"
+      },
+      {
+       "code": "25",
+       "art": "Pflicht",
+       "titel": "Phasen des Zyklus",
+       "anker": "a25"
+      },
+      {
+       "code": "26",
+       "art": "Pflicht",
+       "titel": "Empfängnisbereitschaft",
+       "anker": "a26"
+      },
+      {
+       "code": "27",
+       "art": "Wahl",
+       "titel": "Wie die Pille wirkt",
+       "anker": "a27"
+      }
+     ]
+    },
+    {
+     "nr": 9,
+     "titel": "Hormonsystem · Abituraufgaben (vereinfacht)",
+     "url": "bos13-steuerung/hilfen-hormone.html",
+     "aufgaben": [
+      {
+       "code": "A1",
+       "art": "Wahl",
+       "titel": "Schilddrüsenhormon",
+       "anker": "abi-a1"
+      },
+      {
+       "code": "A2",
+       "art": "Wahl",
+       "titel": "Kaulquappen-Versuch",
+       "anker": "abi-a2"
+      },
+      {
+       "code": "A3",
+       "art": "Wahl",
+       "titel": "Zusätzliches Hormon",
+       "anker": "abi-a3"
+      },
+      {
+       "code": "A4",
+       "art": "Wahl",
+       "titel": "Basedow-Krankheit",
+       "anker": "abi-a4"
+      },
+      {
+       "code": "A5",
+       "art": "Wahl",
+       "titel": "TSH bei Basedow",
+       "anker": "abi-a5"
+      },
+      {
+       "code": "B1",
+       "art": "Wahl",
+       "titel": "TSH-Verlauf erklären",
+       "anker": "abi-b1"
+      },
+      {
+       "code": "B2",
+       "art": "Wahl",
+       "titel": "Thyroxinverlauf einzeichnen",
+       "anker": "abi-b2"
+      },
+      {
+       "code": "B3",
+       "art": "Wahl",
+       "titel": "Wirkungsweise vergleichen",
+       "anker": "abi-b3"
+      }
+     ]
+    }
+   ]
   }
  ]
 }
